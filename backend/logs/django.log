@@ -1,0 +1,661 @@
+[INFO] 2025-08-29 09:16:40,015 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:04,718 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:17:05,101 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:14,315 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:17:15,095 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:16,272 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:17:16,751 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:17,942 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:17:18,410 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:27,626 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:17:28,130 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:29,280 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:17:29,673 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:17:41,463 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-29 09:17:59,560 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:17:59,565 django.server: "GET /accounts/ HTTP/1.1" 500 80783
+[ERROR] 2025-08-29 09:18:02,058 django.request: Internal Server Error: /accounts/api/v1
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:02,060 django.server: "GET /accounts/api/v1 HTTP/1.1" 500 80575
+[ERROR] 2025-08-29 09:18:02,473 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:02,475 django.server: "GET /favicon.ico HTTP/1.1" 500 80350
+[ERROR] 2025-08-29 09:18:08,230 django.request: Internal Server Error: /accounts/api/v1/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:08,232 django.server: "GET /accounts/api/v1/ HTTP/1.1" 500 80698
+[ERROR] 2025-08-29 09:18:08,360 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:08,363 django.server: "GET /favicon.ico HTTP/1.1" 500 80351
+[ERROR] 2025-08-29 09:18:33,580 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:33,582 django.server: "GET /accounts/ HTTP/1.1" 500 80783
+[ERROR] 2025-08-29 09:18:33,784 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:33,786 django.server: "GET /accounts/ HTTP/1.1" 500 80509
+[ERROR] 2025-08-29 09:18:33,907 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:33,911 django.server: "GET /favicon.ico HTTP/1.1" 500 80344
+[ERROR] 2025-08-29 09:18:36,954 django.request: Internal Server Error: /accounts
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:36,955 django.server: "GET /accounts HTTP/1.1" 500 80498
+[ERROR] 2025-08-29 09:18:37,072 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:18:37,074 django.server: "GET /favicon.ico HTTP/1.1" 500 80343
+[ERROR] 2025-08-29 09:19:01,908 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:19:01,911 django.server: "GET /accounts/ HTTP/1.1" 500 80783
+[ERROR] 2025-08-29 09:19:02,129 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:19:02,131 django.server: "GET /accounts/ HTTP/1.1" 500 80509
+[ERROR] 2025-08-29 09:19:02,248 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:19:02,251 django.server: "GET /favicon.ico HTTP/1.1" 500 80344
+[INFO] 2025-08-29 09:19:26,447 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:19:26,835 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:19:30,999 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:19:31,616 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:19:46,919 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:19:47,453 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:20:00,850 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:20:01,245 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-29 09:20:04,155 django.request: Internal Server Error: /accounts/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:20:04,168 django.server: "GET /accounts/ HTTP/1.1" 500 80646
+[ERROR] 2025-08-29 09:20:04,430 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/deprecation.py", line 119, in __call__
+    response = self.process_request(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 192, in get_host
+    if domain and validate_host(domain, allowed_hosts):
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 832, in validate_host
+    return any(
+        pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+    )
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/http/request.py", line 833, in <genexpr>
+    pattern == "*" or is_same_domain(host, pattern) for pattern in allowed_hosts
+                      ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/http.py", line 235, in is_same_domain
+    pattern = pattern.lower()
+              ^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'lower'
+[ERROR] 2025-08-29 09:20:04,432 django.server: "GET /favicon.ico HTTP/1.1" 500 80344
+[INFO] 2025-08-29 09:21:16,416 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/vendapay/settings.py changed, reloading.
+[INFO] 2025-08-29 09:21:27,023 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-29 09:21:27,930 django.request: Not Found: /accounts/
+[WARNING] 2025-08-29 09:21:27,931 django.server: "GET /accounts/ HTTP/1.1" 404 2453
+[WARNING] 2025-08-29 09:21:28,110 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-29 09:21:28,111 django.server: "GET /favicon.ico HTTP/1.1" 404 2362
+[INFO] 2025-08-29 09:21:45,455 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:21:45,862 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:21:47,069 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:21:47,424 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:21:53,770 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:21:54,174 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:21:57,432 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:21:58,017 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:21:59,265 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:21:59,710 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:22:06,506 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:22:28,920 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/views.py changed, reloading.
+[INFO] 2025-08-29 09:22:29,449 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-29 09:22:30,919 django.request: Not Found: /accounts/
+[WARNING] 2025-08-29 09:22:30,920 django.server: "GET /accounts/ HTTP/1.1" 404 2453
+[WARNING] 2025-08-29 09:22:35,714 django.request: Not Found: /accounts/users
+[WARNING] 2025-08-29 09:22:35,715 django.server: "GET /accounts/users HTTP/1.1" 404 2468
+[INFO] 2025-08-29 09:22:43,107 django.server: "GET /accounts/api/v1/users HTTP/1.1" 301 0
+[WARNING] 2025-08-29 09:22:43,157 django.request: Unauthorized: /accounts/api/v1/users/
+[WARNING] 2025-08-29 09:22:43,158 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 401 5225
+[INFO] 2025-08-29 09:22:43,231 django.server: "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[INFO] 2025-08-29 09:22:43,235 django.server: "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+[INFO] 2025-08-29 09:22:43,237 django.server: "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+[INFO] 2025-08-29 09:22:43,248 django.server: "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+[INFO] 2025-08-29 09:22:43,252 django.server: "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[INFO] 2025-08-29 09:22:43,259 django.server: "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[INFO] 2025-08-29 09:22:43,275 django.server: "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[INFO] 2025-08-29 09:22:43,276 django.server: "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+[INFO] 2025-08-29 09:22:43,276 django.server: "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[INFO] 2025-08-29 09:22:43,276 django.server: "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+[INFO] 2025-08-29 09:22:43,277 django.server: "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[INFO] 2025-08-29 09:22:43,366 django.server: "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[INFO] 2025-08-29 09:23:14,593 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/vendapay/settings.py changed, reloading.
+[INFO] 2025-08-29 09:23:15,315 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-29 09:23:16,062 django.request: Internal Server Error: /accounts/api/v1/users/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `type_user` is not valid for model `Account` in `apps.accounts.api.serializers.AccountsSerializer`.
+[ERROR] 2025-08-29 09:23:16,066 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 500 151899
+[ERROR] 2025-08-29 09:23:18,053 django.request: Internal Server Error: /accounts/api/v1/users/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `type_user` is not valid for model `Account` in `apps.accounts.api.serializers.AccountsSerializer`.
+[ERROR] 2025-08-29 09:23:18,056 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 500 151899
+[ERROR] 2025-08-29 09:23:18,913 django.request: Internal Server Error: /accounts/api/v1/users/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `type_user` is not valid for model `Account` in `apps.accounts.api.serializers.AccountsSerializer`.
+[ERROR] 2025-08-29 09:23:18,916 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 500 151899
+[INFO] 2025-08-29 09:33:55,223 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:33:55,811 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-29 09:33:56,877 django.request: Internal Server Error: /accounts/api/v1/users/
+Traceback (most recent call last):
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `date_of_birth` is not valid for model `Account` in `apps.accounts.api.serializers.AccountsSerializer`.
+[ERROR] 2025-08-29 09:33:56,881 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 500 152558
+[INFO] 2025-08-29 09:36:31,448 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-29 09:36:32,681 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-29 09:36:33,604 django.server: "GET /accounts/api/v1/users/ HTTP/1.1" 200 13473
+[INFO] 2025-08-29 09:38:58,810 django.server: "POST /accounts/api/v1/users/ HTTP/1.1" 201 13510
+[INFO] 2025-08-29 09:41:57,931 django.server: "GET /accounts/api/v1/users/1 HTTP/1.1" 301 0
+[INFO] 2025-08-29 09:41:57,973 django.server: "GET /accounts/api/v1/users/1/ HTTP/1.1" 200 14940
+[INFO] 2025-08-29 09:42:01,357 django.server: "GET /accounts/api/v1/users/2 HTTP/1.1" 301 0
+[INFO] 2025-08-29 09:42:01,417 django.server: "GET /accounts/api/v1/users/2/ HTTP/1.1" 200 14970
+[INFO] 2025-08-29 09:42:12,715 django.server: "PUT /accounts/api/v1/users/2/ HTTP/1.1" 200 14970
+[INFO] 2025-08-29 12:36:35,004 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-29 12:36:40,307 django.request: Not Found: /accounts/
+[WARNING] 2025-08-29 12:36:40,310 django.server: "GET /accounts/ HTTP/1.1" 404 2453
