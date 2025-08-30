@@ -1,7 +1,7 @@
-from django.urls import path, include
+from django.urls import path
+from . import views  # se tiver views web
 
 urlpatterns = [
-    # Inclui as URLs da API a partir da subpasta 'api', com a versão 'v1'
-    path('api/v1/', include('apps.accounts.api.urls')),
-    # Outras URLs do app...
+    # Exemplo de rota web
+    # path('', views.dashboard, name='dashboard'),
 ]

@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     # Add these lines for Django REST Framework
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
 
     # Default Django apps
     'django.contrib.admin',
@@ -36,6 +37,7 @@ INSTALLED_APPS = [
     # Your apps
     'apps.core',
     'apps.accounts',
+    'apps.sales'
 ]
 
 MIDDLEWARE = [
