@@ -1,6 +1,7 @@
-# apps/accounts/api/serializers.py
+from django.db import models
 from rest_framework import serializers
 from ..models import Account
+
 
 class AccountsSerializer(serializers.ModelSerializer):
     """
@@ -8,8 +9,52 @@ class AccountsSerializer(serializers.ModelSerializer):
     - Inclui o campo extra `full_name`.
     - Permite criação com senha obrigatória.
     - Atualização de senha é opcional.
+    - Mostra totais vendidos e comissão paga, filtráveis por múltiplos parâmetros.
     """
     full_name = serializers.SerializerMethodField(read_only=True)
+    total_sold = serializers.SerializerMethodField(read_only=True)
+    total_commission_paid = serializers.SerializerMethodField(read_only=True)
+
+    def get_full_name(self, obj):
+        return obj.get_full_name()
+
+    def _get_date_filtered_qs(self, obj):
+        """
+        Retorna o queryset de vendas do vendedor filtrado por:
+        - start_date
+        - end_date
+        - month
+        - year
+        Recebe os parâmetros via query_params.
+        """
+        qs = obj.daily_sales.filter(is_active=True)
+        params = self.context['request'].query_params
+
+        start = params.get('start_date')
+        end = params.get('end_date')
+        month = params.get('month')
+        year = params.get('year')
+
+        if start:
+            qs = qs.filter(sale_date__gte=start)
+        if end:
+            qs = qs.filter(sale_date__lte=end)
+        if year:
+            qs = qs.filter(sale_date__year=year)
+        if month:
+            qs = qs.filter(sale_date__month=month)
+
+        return qs
+
+    def get_total_sold(self, obj):
+        qs = self._get_date_filtered_qs(obj)
+        result = qs.aggregate(total=models.Sum('total_amount'))
+        return result['total'] or 0
+
+    def get_total_commission_paid(self, obj):
+        qs = self._get_date_filtered_qs(obj)
+        result = qs.aggregate(total=models.Sum('calculated_commission'))
+        return result['total'] or 0
 
     class Meta:
         model = Account
@@ -17,17 +62,14 @@ class AccountsSerializer(serializers.ModelSerializer):
             'id', 'username', 'first_name', 'last_name', 'email',
             'user_type', 'document', 'phone',
             'commission_rate', 'commission_active', 'commission_start_date',
-            'is_active', 'password', 'full_name',
+            'is_active', 'password', 'full_name', 'total_sold', 'total_commission_paid'
         ]
         extra_kwargs = {
-            'password': {'write_only': True, 'required': False},  # não obrigatório no update
+            'password': {'write_only': True, 'required': False},
             'first_name': {'required': True},
             'last_name': {'required': False, 'allow_blank': True},
             'email': {'required': True},
         }
-
-    def get_full_name(self, obj):
-        return obj.get_full_name()
 
     def create(self, validated_data):
         password = validated_data.pop('password')
@@ -40,7 +82,7 @@ class AccountsSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         password = validated_data.pop('password', None)
         instance = super().update(instance, validated_data)
-        if password:  # só altera se realmente veio
+        if password:
             instance.set_password(password)
             instance.save()
         return instance

@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     # Your apps
     'apps.core',
     'apps.accounts',
-    'apps.sales'
+    'apps.sales',
+    'apps.commissions',
 ]
 
 MIDDLEWARE = [

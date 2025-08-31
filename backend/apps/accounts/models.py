@@ -2,7 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from apps.core.models import BaseModel
-
+from django.db.models import Sum, F, DecimalField
 class Account(AbstractUser, BaseModel):
     """
     Modelo de usuário customizado.
@@ -69,6 +69,24 @@ class Account(AbstractUser, BaseModel):
             self.commission_active and 
             self.is_active
         )
+    
+    def total_sold(self, start_date=None, end_date=None):
+        qs = self.daily_sales.filter(is_active=True)
+        if start_date:
+            qs = qs.filter(sale_date__gte=start_date)
+        if end_date:
+            qs = qs.filter(sale_date__lte=end_date)
+        result = qs.aggregate(total=Sum('total_amount'))
+        return result['total'] or 0
+
+    def total_commission_paid(self, start_date=None, end_date=None):
+        qs = self.daily_sales.filter(is_active=True)
+        if start_date:
+            qs = qs.filter(sale_date__gte=start_date)
+        if end_date:
+            qs = qs.filter(sale_date__lte=end_date)
+        result = qs.aggregate(total=Sum('calculated_commission'))
+        return result['total'] or 0
     
     class Meta:
         verbose_name = "Usuário"

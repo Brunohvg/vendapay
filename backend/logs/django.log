@@ -1,0 +1,1030 @@
+[INFO] 2025-08-30 15:25:41,645 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-30 15:26:33,065 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-30 15:27:26,260 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-30 15:27:26,682 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-30 15:27:27,807 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-30 15:27:28,335 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-30 15:27:46,183 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-30 15:27:46,580 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-30 15:29:31,960 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-30 15:29:35,950 django.request: Not Found: /
+[WARNING] 2025-08-30 15:29:35,950 django.server: "GET / HTTP/1.1" 404 2626
+[INFO] 2025-08-30 15:29:46,012 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 5330
+[INFO] 2025-08-30 15:29:53,127 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 11813
+[INFO] 2025-08-30 15:30:15,418 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 11813
+[WARNING] 2025-08-30 15:31:19,611 django.request: Bad Request: /api/v1/sales/sales/
+[WARNING] 2025-08-30 15:31:19,612 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 400 11956
+[INFO] 2025-08-30 15:31:32,546 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 201 12081
+[WARNING] 2025-08-30 15:31:48,992 django.request: Bad Request: /api/v1/sales/sales/
+[WARNING] 2025-08-30 15:31:48,993 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 400 11874
+[INFO] 2025-08-30 15:32:07,699 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 201 12081
+[INFO] 2025-08-30 15:32:45,870 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 201 12081
+[INFO] 2025-08-31 10:03:09,024 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:03:09,666 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:03:11,842 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:03:12,283 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 10:03:14,729 django.request: Bad Request: /api/v1/sales/sales/
+[WARNING] 2025-08-31 10:03:14,729 django.server: "POST /api/v1/sales/sales/ HTTP/1.1" 400 11446
+[INFO] 2025-08-31 10:03:14,759 django.server: "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,759 django.server: "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,762 django.server: "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,763 django.server: "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,763 django.server: "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,763 django.server: "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,776 django.server: "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,781 django.server: "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[INFO] 2025-08-31 10:03:14,788 django.server: "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+[INFO] 2025-08-31 10:03:14,790 django.server: "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[INFO] 2025-08-31 10:03:14,791 django.server: "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[INFO] 2025-08-31 10:03:14,841 django.server: "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[WARNING] 2025-08-31 10:03:14,893 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:03:31,234 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 12420
+[INFO] 2025-08-31 10:03:50,192 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:03:50,644 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:03:51,915 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:03:52,363 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:03:54,336 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 11630
+[INFO] 2025-08-31 10:04:32,099 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:04:32,536 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:04:33,963 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 12420
+[INFO] 2025-08-31 10:06:28,607 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/models.py changed, reloading.
+[INFO] 2025-08-31 10:06:28,974 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:06:30,196 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/models.py changed, reloading.
+[INFO] 2025-08-31 10:06:30,525 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:07:25,901 django.server: "OPTIONS /api/v1/sales/sales/ HTTP/1.1" 200 14124
+[INFO] 2025-08-31 10:07:28,241 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 12420
+[INFO] 2025-08-31 10:07:57,555 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 5330
+[WARNING] 2025-08-31 10:07:57,625 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:08:19,711 django.server: "GET /api/v1/accounts/ HTTP/1.1" 200 5354
+[WARNING] 2025-08-31 10:08:19,836 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 10:08:21,687 django.request: Forbidden: /api/v1/accounts/users/
+[WARNING] 2025-08-31 10:08:21,688 django.server: "GET /api/v1/accounts/users/ HTTP/1.1" 403 5122
+[INFO] 2025-08-31 10:08:43,679 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:08:44,098 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:09:15,355 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:09:15,664 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:09:23,153 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:09:23,530 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:09:27,745 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:09:28,151 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:09:36,405 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 200 12420
+[INFO] 2025-08-31 10:09:50,108 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:09:50,554 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 10:09:51,253 django.request: Not Found: /api/v1/sales/sales/
+[WARNING] 2025-08-31 10:09:51,254 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 404 12520
+[INFO] 2025-08-31 10:09:57,780 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12266
+[INFO] 2025-08-31 10:10:02,137 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12266
+[INFO] 2025-08-31 10:10:08,253 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12266
+[WARNING] 2025-08-31 10:10:20,203 django.request: Not Found: /api/v1/sales/sales/
+[WARNING] 2025-08-31 10:10:20,203 django.server: "GET /api/v1/sales/sales/ HTTP/1.1" 404 12520
+[WARNING] 2025-08-31 10:10:31,943 django.request: Not Found: /api/v1/sales/vidal/
+[WARNING] 2025-08-31 10:10:31,943 django.server: "GET /api/v1/sales/vidal/ HTTP/1.1" 404 12520
+[INFO] 2025-08-31 10:17:25,988 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-31 10:17:33,685 django.request: Internal Server Error: /api/v1/sales/vidal/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 663, in get_context
+    raw_data_put_form = self.get_raw_data_form(data, view, 'PUT', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'values'
+[ERROR] 2025-08-31 10:17:33,688 django.server: "GET /api/v1/sales/vidal/ HTTP/1.1" 500 105449
+[WARNING] 2025-08-31 10:17:33,767 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:19:26,875 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:20:28,653 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/urls.py changed, reloading.
+[INFO] 2025-08-31 10:20:29,078 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:20:44,977 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:21:02,611 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:21:04,176 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12366
+[WARNING] 2025-08-31 10:21:38,631 django.request: Not Found: /api/v1/user/
+[WARNING] 2025-08-31 10:21:38,632 django.server: "GET /api/v1/user/ HTTP/1.1" 404 8417
+[WARNING] 2025-08-31 10:21:45,690 django.request: Forbidden: /api/v1/users/
+[WARNING] 2025-08-31 10:21:45,691 django.server: "GET /api/v1/users/ HTTP/1.1" 403 5068
+[INFO] 2025-08-31 10:21:54,050 django.server: "GET /admin/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 10:21:54,074 django.server: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4209
+[INFO] 2025-08-31 10:21:54,153 django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[INFO] 2025-08-31 10:21:54,154 django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[INFO] 2025-08-31 10:21:54,155 django.server: "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[INFO] 2025-08-31 10:21:54,157 django.server: "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[INFO] 2025-08-31 10:21:54,157 django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[INFO] 2025-08-31 10:21:54,159 django.server: "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[INFO] 2025-08-31 10:21:54,160 django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[INFO] 2025-08-31 10:21:57,497 django.server: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 10:21:57,514 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[INFO] 2025-08-31 10:21:57,579 django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[INFO] 2025-08-31 10:21:57,630 django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[INFO] 2025-08-31 10:21:57,630 django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[INFO] 2025-08-31 10:22:01,255 django.server: "GET /api/v1/users/ HTTP/1.1" 200 20831
+[INFO] 2025-08-31 10:22:01,292 django.server: "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[INFO] 2025-08-31 10:22:07,661 django.server: "GET /api/v1/users/?ordering=email HTTP/1.1" 200 20944
+[INFO] 2025-08-31 10:22:33,737 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12400
+[WARNING] 2025-08-31 10:23:37,399 django.request: Bad Request: /api/v1/sales/
+[WARNING] 2025-08-31 10:23:37,399 django.server: "POST /api/v1/sales/ HTTP/1.1" 400 11503
+[INFO] 2025-08-31 10:40:25,467 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/apps.py changed, reloading.
+[INFO] 2025-08-31 10:40:25,846 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:40:27,095 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/apps.py changed, reloading.
+[INFO] 2025-08-31 10:40:27,456 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:41:45,741 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:41:53,216 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[WARNING] 2025-08-31 10:41:53,434 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:41:55,521 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:41:55,556 django.server: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[INFO] 2025-08-31 10:41:55,566 django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[INFO] 2025-08-31 10:41:55,569 django.server: "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[INFO] 2025-08-31 10:41:55,570 django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[INFO] 2025-08-31 10:41:55,573 django.server: "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[INFO] 2025-08-31 10:41:55,576 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:41:55,577 django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[INFO] 2025-08-31 10:41:55,580 django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[INFO] 2025-08-31 10:41:55,581 django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[INFO] 2025-08-31 10:41:55,584 django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[INFO] 2025-08-31 10:41:55,596 django.server: "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[INFO] 2025-08-31 10:41:55,626 django.server: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[INFO] 2025-08-31 10:41:55,662 django.server: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[INFO] 2025-08-31 10:41:59,605 django.server: "GET /admin/auth/group/1/change/ HTTP/1.1" 200 14486
+[INFO] 2025-08-31 10:41:59,632 django.server: "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[INFO] 2025-08-31 10:41:59,638 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:41:59,644 django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[INFO] 2025-08-31 10:41:59,648 django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[INFO] 2025-08-31 10:41:59,648 django.server: "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+[INFO] 2025-08-31 10:41:59,649 django.server: "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+[INFO] 2025-08-31 10:41:59,688 django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+[INFO] 2025-08-31 10:41:59,759 django.server: "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[INFO] 2025-08-31 10:42:02,100 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:42:11,244 django.server: "GET /api/v1/users/ HTTP/1.1" 200 20831
+[INFO] 2025-08-31 10:42:16,874 django.server: "GET /api/v1/users/ HTTP/1.1" 200 20831
+[INFO] 2025-08-31 10:43:18,656 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 10:43:19,187 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:43:33,310 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 10:43:36,206 django.server: "GET /api/v1/users/ HTTP/1.1" 200 20831
+[ERROR] 2025-08-31 10:43:52,639 django.request: Internal Server Error: /api/v1/users/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py", line 33, in create
+    password = validated_data.pop('password')
+KeyError: 'password'
+[ERROR] 2025-08-31 10:43:52,644 django.server: "POST /api/v1/users/ HTTP/1.1" 500 125412
+[INFO] 2025-08-31 10:43:54,714 django.server: "GET /api/v1/users/ HTTP/1.1" 200 20831
+[INFO] 2025-08-31 10:44:01,860 django.server: "POST /api/v1/users/ HTTP/1.1" 201 14579
+[INFO] 2025-08-31 10:44:06,922 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[INFO] 2025-08-31 10:44:10,508 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:44:10,541 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:44:12,075 django.server: "GET /admin/auth/group/1/change/ HTTP/1.1" 200 14486
+[INFO] 2025-08-31 10:44:12,114 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:44:14,732 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[INFO] 2025-08-31 10:44:14,788 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 10:44:14,835 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:44:16,660 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 28047
+[INFO] 2025-08-31 10:44:16,702 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:44:16,713 django.server: "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+[INFO] 2025-08-31 10:44:16,713 django.server: "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+[INFO] 2025-08-31 10:44:16,791 django.server: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[INFO] 2025-08-31 10:44:16,794 django.server: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[INFO] 2025-08-31 10:44:20,850 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[WARNING] 2025-08-31 10:44:20,928 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:44:22,273 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 28048
+[INFO] 2025-08-31 10:44:22,307 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:44:29,284 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[INFO] 2025-08-31 10:44:29,332 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 10:44:29,382 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:44:30,862 django.server: "GET /admin/accounts/account/3/change/ HTTP/1.1" 200 28138
+[INFO] 2025-08-31 10:44:30,899 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 10:44:30,976 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:44:33,391 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[INFO] 2025-08-31 10:44:37,471 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 28047
+[INFO] 2025-08-31 10:44:37,513 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:44:41,451 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[INFO] 2025-08-31 10:44:41,609 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 28048
+[INFO] 2025-08-31 10:44:42,470 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12486
+[WARNING] 2025-08-31 10:44:42,577 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:44:43,298 django.server: "GET /admin/auth/group/1/change/ HTTP/1.1" 200 14486
+[INFO] 2025-08-31 10:44:44,057 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:44:44,674 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[INFO] 2025-08-31 10:44:53,523 django.server: "GET /api/v1/users/5 HTTP/1.1" 301 0
+[INFO] 2025-08-31 10:44:53,593 django.server: "GET /api/v1/users/5/ HTTP/1.1" 200 15284
+[INFO] 2025-08-31 10:45:01,131 django.server: "PUT /api/v1/users/5/ HTTP/1.1" 200 15286
+[INFO] 2025-08-31 10:45:05,495 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21504
+[INFO] 2025-08-31 10:45:06,577 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:45:08,259 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12481
+[INFO] 2025-08-31 10:45:08,301 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:45:11,057 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 28048
+[INFO] 2025-08-31 10:45:11,087 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:45:21,140 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12481
+[WARNING] 2025-08-31 10:45:21,218 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 10:45:21,546 django.server: "GET /admin/auth/group/ HTTP/1.1" 200 11160
+[INFO] 2025-08-31 10:45:22,152 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[WARNING] 2025-08-31 10:45:22,211 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 10:45:22,804 django.request: Not Found: /api/v1/accounts/users/
+[WARNING] 2025-08-31 10:45:22,806 django.server: "GET /api/v1/accounts/users/ HTTP/1.1" 404 8447
+[WARNING] 2025-08-31 10:45:24,391 django.request: Not Found: /api/v1/accounts/users/2/
+[WARNING] 2025-08-31 10:45:24,392 django.server: "GET /api/v1/accounts/users/2/ HTTP/1.1" 404 8453
+[INFO] 2025-08-31 10:45:30,409 django.server: "GET /api/v1/users/5/ HTTP/1.1" 200 15286
+[INFO] 2025-08-31 10:45:36,911 django.server: "PUT /api/v1/users/5/ HTTP/1.1" 200 15288
+[INFO] 2025-08-31 10:45:44,606 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[INFO] 2025-08-31 10:45:46,687 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12480
+[INFO] 2025-08-31 10:45:46,738 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:45:48,506 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 28048
+[INFO] 2025-08-31 10:45:48,541 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 10:45:56,130 django.server: "GET /api/v1/users/5/ HTTP/1.1" 200 15288
+[INFO] 2025-08-31 10:46:01,247 django.server: "PUT /api/v1/users/5/ HTTP/1.1" 200 15286
+[INFO] 2025-08-31 10:46:03,891 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 28048
+[INFO] 2025-08-31 10:46:03,926 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 12:12:55,397 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:12:55,929 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:13:03,492 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 12:13:03,934 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:13:11,781 django.server: "GET /api/v1/users/5/ HTTP/1.1" 200 15286
+[INFO] 2025-08-31 12:13:16,928 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11679
+[INFO] 2025-08-31 12:14:41,455 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/models.py changed, reloading.
+[INFO] 2025-08-31 12:14:42,019 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:14:59,248 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:15:06,737 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11679
+[INFO] 2025-08-31 12:16:59,931 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:17:00,426 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:17:03,511 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[INFO] 2025-08-31 12:17:04,907 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[INFO] 2025-08-31 12:17:09,988 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[WARNING] 2025-08-31 12:17:10,051 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:17:15,440 django.server: "GET /admin/ HTTP/1.1" 200 7872
+[WARNING] 2025-08-31 12:17:15,499 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:17:18,436 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12481
+[INFO] 2025-08-31 12:17:18,478 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 12:17:22,719 django.server: "GET /admin/accounts/account/4/change/ HTTP/1.1" 200 28059
+[INFO] 2025-08-31 12:17:22,759 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 12:17:29,292 django.server: "POST /admin/accounts/account/4/change/ HTTP/1.1" 200 28292
+[INFO] 2025-08-31 12:17:29,322 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 12:17:45,187 django.server: "POST /admin/accounts/account/4/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 12:17:45,204 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12693
+[INFO] 2025-08-31 12:17:45,277 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 12:17:45,338 django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[WARNING] 2025-08-31 12:17:45,352 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:17:48,670 django.server: "GET /admin/accounts/account/4/change/ HTTP/1.1" 200 28088
+[INFO] 2025-08-31 12:17:49,541 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 12491
+[INFO] 2025-08-31 12:17:50,305 django.server: "GET /admin/ HTTP/1.1" 200 8255
+[INFO] 2025-08-31 12:17:52,675 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[INFO] 2025-08-31 12:17:53,606 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[INFO] 2025-08-31 12:17:55,569 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11047
+[INFO] 2025-08-31 12:18:20,982 django.server: "POST /api/v1/sales/ HTTP/1.1" 201 10349
+[INFO] 2025-08-31 12:19:45,350 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:19:45,839 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 12:19:49,252 django.request: Bad Request: /api/v1/sales/
+[WARNING] 2025-08-31 12:19:49,253 django.server: "POST /api/v1/sales/ HTTP/1.1" 400 10262
+[INFO] 2025-08-31 12:19:53,876 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11313
+[INFO] 2025-08-31 12:20:02,960 django.server: "GET /api/v1/sales/4 HTTP/1.1" 301 0
+[INFO] 2025-08-31 12:20:03,000 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 11712
+[INFO] 2025-08-31 12:21:25,117 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:21:25,676 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:21:27,948 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 11864
+[INFO] 2025-08-31 12:22:43,310 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:22:43,843 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:22:46,099 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:22:46,513 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:22:47,813 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:22:48,198 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:22:49,467 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:22:49,946 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:22:52,591 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 11986
+[INFO] 2025-08-31 12:22:59,701 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 11986
+[INFO] 2025-08-31 12:23:05,600 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 11962
+[WARNING] 2025-08-31 12:23:21,403 django.request: Bad Request: /api/v1/sales/
+[WARNING] 2025-08-31 12:23:21,404 django.server: "POST /api/v1/sales/ HTTP/1.1" 400 10272
+[INFO] 2025-08-31 12:25:25,202 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 11986
+[INFO] 2025-08-31 12:27:12,346 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:27:12,897 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:27:16,066 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 12110
+[WARNING] 2025-08-31 12:27:16,127 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:27:28,650 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:27:29,221 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:27:29,935 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 12108
+[WARNING] 2025-08-31 12:27:30,006 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:27:32,561 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:27:33,057 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:28:11,537 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:28:11,978 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:28:50,364 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:28:50,899 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:28:59,962 django.server: "PUT /api/v1/sales/4/ HTTP/1.1" 200 12107
+[INFO] 2025-08-31 12:29:11,608 django.server: "PUT /api/v1/sales/4/ HTTP/1.1" 200 12112
+[WARNING] 2025-08-31 12:29:27,368 django.request: Bad Request: /api/v1/sales/4/
+[WARNING] 2025-08-31 12:29:27,369 django.server: "PUT /api/v1/sales/4/ HTTP/1.1" 400 11920
+[INFO] 2025-08-31 12:29:31,749 django.server: "PUT /api/v1/sales/4/ HTTP/1.1" 200 12115
+[INFO] 2025-08-31 12:31:47,703 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:31:48,105 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:31:50,272 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:31:50,702 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:32:32,513 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:32:32,953 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:32:44,898 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:36:05,404 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:36:05,767 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:36:11,405 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15485
+[INFO] 2025-08-31 12:36:32,091 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12240
+[INFO] 2025-08-31 12:36:38,479 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12240
+[WARNING] 2025-08-31 12:36:51,898 django.request: Bad Request: /api/v1/sales/
+[WARNING] 2025-08-31 12:36:51,899 django.server: "POST /api/v1/sales/ HTTP/1.1" 400 10269
+[WARNING] 2025-08-31 12:36:52,009 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 12:37:11,038 django.server: "POST /api/v1/sales/ HTTP/1.1" 201 10549
+[INFO] 2025-08-31 12:37:18,382 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15487
+[INFO] 2025-08-31 12:48:11,907 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:48:12,485 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:48:15,751 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:48:16,263 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:50:00,489 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:50:00,975 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:50:08,316 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:50:08,732 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:50:10,020 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-08-31 12:50:10,380 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:50:41,551 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:50:41,929 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:50:43,205 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:50:43,546 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:51:00,237 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:51:00,585 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:51:02,810 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:51:03,212 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:52:14,006 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:52:14,389 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:52:26,314 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:52:33,756 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15435
+[INFO] 2025-08-31 12:52:39,278 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15435
+[WARNING] 2025-08-31 12:53:09,725 django.request: Not Found: /api/v1/accounts/users/4/
+[WARNING] 2025-08-31 12:53:09,726 django.server: "GET /api/v1/accounts/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 404 8499
+[WARNING] 2025-08-31 12:53:13,571 django.request: Not Found: /api/v1/accounts/users/
+[WARNING] 2025-08-31 12:53:13,572 django.server: "GET /api/v1/accounts/users/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 404 8493
+[INFO] 2025-08-31 12:53:19,226 django.server: "GET /api/v1/users/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 200 22824
+[INFO] 2025-08-31 12:53:50,694 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 200 15811
+[INFO] 2025-08-31 12:54:08,413 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-4 HTTP/1.1" 200 15779
+[INFO] 2025-08-31 12:56:18,001 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:56:18,490 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:56:40,384 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:56:40,904 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:56:43,179 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:56:43,671 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:56:44,799 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:56:45,232 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:56:48,625 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:56:49,045 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:56:51,031 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-04 HTTP/1.1" 200 15787
+[INFO] 2025-08-31 12:57:03,098 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-28 HTTP/1.1" 200 15809
+[INFO] 2025-08-31 12:57:08,747 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 200 15811
+[INFO] 2025-08-31 12:57:20,766 django.server: "GET /api/v1/users/?start_date=2025-08-01&end_date=2025-08-1 HTTP/1.1" 200 22781
+[INFO] 2025-08-31 12:59:08,265 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:59:08,705 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:59:19,300 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:59:19,686 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:59:20,990 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:59:21,458 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:59:22,750 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 12:59:23,206 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 12:59:47,184 django.server: "GET /api/v1/users/4/?month=2025-08 HTTP/1.1" 200 15555
+[INFO] 2025-08-31 12:59:52,992 django.server: "GET /api/v1/users/4/?month=2025-05 HTTP/1.1" 200 15531
+[INFO] 2025-08-31 13:00:18,529 django.server: "GET /api/v1/users/4/?quarter=2025-Q3 HTTP/1.1" 200 15571
+[INFO] 2025-08-31 13:02:34,547 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:02:34,940 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:02:46,471 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:02:46,866 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:03:03,698 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:03:04,103 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:04:07,903 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:04:08,302 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:04:18,806 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:04:19,188 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:05:03,350 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:05:03,708 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 13:07:07,588 django.request: Not Found: /api/v1/accounts/users/4/
+[WARNING] 2025-08-31 13:07:07,588 django.server: "GET /api/v1/accounts/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 404 8499
+[WARNING] 2025-08-31 13:15:22,321 django.request: Not Found: /api/v1/accounts/users/4/
+[WARNING] 2025-08-31 13:15:22,322 django.server: "GET /api/v1/accounts/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 404 8499
+[INFO] 2025-08-31 13:15:27,421 django.server: "GET /api/v1/users/4/?start_date=2025-08-01&end_date=2025-08-31 HTTP/1.1" 200 15811
+[WARNING] 2025-08-31 13:16:28,433 django.request: Not Found: /api/v1/users/4/users/
+[WARNING] 2025-08-31 13:16:28,434 django.server: "GET /api/v1/users/4/users/?month=8&year=2025 HTTP/1.1" 404 8466
+[WARNING] 2025-08-31 13:16:28,472 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 13:16:38,808 django.server: "GET /api/v1/users/4/??month=8&year=2025 HTTP/1.1" 200 15631
+[INFO] 2025-08-31 13:17:05,997 django.server: "GET /api/v1/users/?is_active=true HTTP/1.1" 200 21535
+[INFO] 2025-08-31 13:18:09,087 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21994
+[INFO] 2025-08-31 13:19:46,533 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:19:46,962 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:19:50,249 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:19:50,701 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:19:55,430 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21998
+[WARNING] 2025-08-31 13:19:55,513 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 13:19:58,231 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21998
+[INFO] 2025-08-31 13:20:11,719 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 13:20:12,116 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 13:21:42,615 django.server: "GET /api/v1/users/4/?month=8 HTTP/1.1" 200 15507
+[INFO] 2025-08-31 19:19:45,654 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:19:55,798 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21994
+[INFO] 2025-08-31 19:20:06,968 django.server: "GET /api/v1/monthly-reports HTTP/1.1" 301 0
+[INFO] 2025-08-31 19:20:06,998 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15679
+[WARNING] 2025-08-31 19:20:07,067 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:20:41,323 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15679
+[INFO] 2025-08-31 19:21:30,561 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21994
+[ERROR] 2025-08-31 19:21:45,923 django.request: Internal Server Error: /api/v1/monthly-reports/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: commissions_monthlycommissionreport.total_sales_amount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py", line 19, in perform_create
+    report = serializer.save()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: commissions_monthlycommissionreport.total_sales_amount
+[ERROR] 2025-08-31 19:21:45,929 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 500 228849
+[WARNING] 2025-08-31 19:22:00,870 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:22:05,782 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21994
+[INFO] 2025-08-31 19:23:35,223 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:23:35,676 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:23:48,462 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15679
+[INFO] 2025-08-31 19:24:01,270 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 201 12217
+[INFO] 2025-08-31 19:24:25,898 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16304
+[INFO] 2025-08-31 19:25:49,541 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16304
+[INFO] 2025-08-31 19:25:51,499 django.server: "GET /api/v1/monthly-reports/1 HTTP/1.1" 301 0
+[INFO] 2025-08-31 19:25:51,541 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 200 14291
+[WARNING] 2025-08-31 19:27:44,623 django.request: Bad Request: /api/v1/users/
+[WARNING] 2025-08-31 19:27:44,625 django.server: "POST /api/v1/users/ HTTP/1.1" 400 14717
+[WARNING] 2025-08-31 19:27:57,351 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:28:09,286 django.server: "PUT /api/v1/monthly-reports/1/ HTTP/1.1" 200 14291
+[INFO] 2025-08-31 19:28:31,111 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15435
+[WARNING] 2025-08-31 19:28:31,183 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:29:04,560 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16304
+[INFO] 2025-08-31 19:29:08,478 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16304
+[INFO] 2025-08-31 19:32:33,973 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 19:32:34,405 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:32:35,637 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-08-31 19:32:36,079 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:33:25,735 django.server: "GET /api/v1/users/4/ HTTP/1.1" 200 15435
+[WARNING] 2025-08-31 19:33:25,862 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:33:42,655 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12721
+[INFO] 2025-08-31 19:33:45,317 django.server: "GET /api/v1/sales/4/ HTTP/1.1" 200 12115
+[INFO] 2025-08-31 19:33:54,207 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 12721
+[INFO] 2025-08-31 19:35:07,741 django.server: "GET /api/v1/sales/?seller=4&is_active=True HTTP/1.1" 200 12925
+[WARNING] 2025-08-31 19:35:07,913 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:35:23,008 django.server: "GET /api/v1/sales/?seller=4&is_active=True HTTP/1.1" 200 12925
+[INFO] 2025-08-31 19:36:14,671 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:36:15,156 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:36:17,529 django.server: "GET /api/v1/sales/?seller=4&is_active=True HTTP/1.1" 200 15222
+[INFO] 2025-08-31 19:36:54,728 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16304
+[INFO] 2025-08-31 19:37:02,179 django.server: "GET /api/v1/monthly-reports/4 HTTP/1.1" 301 0
+[WARNING] 2025-08-31 19:37:02,274 django.request: Not Found: /api/v1/monthly-reports/4/
+[WARNING] 2025-08-31 19:37:02,274 django.server: "GET /api/v1/monthly-reports/4/ HTTP/1.1" 404 13515
+[WARNING] 2025-08-31 19:37:02,348 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:39:19,953 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:39:20,368 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:22,243 django.server: "GET /admin/ HTTP/1.1" 200 8255
+[INFO] 2025-08-31 19:40:22,296 django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[INFO] 2025-08-31 19:40:22,296 django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[WARNING] 2025-08-31 19:40:22,315 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:40:31,748 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:32,207 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:36,571 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:37,126 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:43,430 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:43,801 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:47,042 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:47,495 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:50,714 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:51,091 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:54,439 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/admin.py changed, reloading.
+[INFO] 2025-08-31 19:40:54,820 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:40:57,072 django.server: "GET /admin/ HTTP/1.1" 200 9518
+[INFO] 2025-08-31 19:40:58,165 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 14787
+[INFO] 2025-08-31 19:40:58,221 django.server: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[INFO] 2025-08-31 19:40:58,227 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:40:58,261 django.server: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[INFO] 2025-08-31 19:40:58,264 django.server: "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[INFO] 2025-08-31 19:40:58,264 django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[WARNING] 2025-08-31 19:40:58,317 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:41:03,109 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 10300
+[INFO] 2025-08-31 19:41:03,170 django.server: "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[INFO] 2025-08-31 19:41:04,096 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 19:41:04,112 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 12415
+[INFO] 2025-08-31 19:41:04,177 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:41:04,209 django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[INFO] 2025-08-31 19:41:09,104 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 12255
+[INFO] 2025-08-31 19:41:09,206 django.server: "GET /admin/ HTTP/1.1" 200 9851
+[INFO] 2025-08-31 19:41:09,232 django.server: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[WARNING] 2025-08-31 19:41:14,860 django.request: Bad Request: /api/v1/monthly-reports/
+[WARNING] 2025-08-31 19:41:14,861 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 400 5281
+[INFO] 2025-08-31 19:41:18,316 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15679
+[ERROR] 2025-08-31 19:41:24,272 django.request: Internal Server Error: /api/v1/monthly-reports/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: commissions_monthlycommissionreport.total_sales_amount
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py", line 19, in perform_create
+    report = serializer.save()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 991, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: commissions_monthlycommissionreport.total_sales_amount
+[ERROR] 2025-08-31 19:41:24,280 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 500 229048
+[INFO] 2025-08-31 19:43:25,507 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:43:26,006 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:43:27,267 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:43:27,737 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:43:30,283 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15679
+[WARNING] 2025-08-31 19:43:30,343 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:43:57,153 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 201 12217
+[INFO] 2025-08-31 19:44:00,122 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16309
+[WARNING] 2025-08-31 19:44:49,626 django.request: Bad Request: /api/v1/monthly-reports/
+[WARNING] 2025-08-31 19:44:49,628 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 400 5281
+[WARNING] 2025-08-31 19:44:52,957 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:44:52,959 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[WARNING] 2025-08-31 19:44:53,030 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 19:45:00,226 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:45:00,227 django.server: "PUT /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[INFO] 2025-08-31 19:45:07,189 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16309
+[WARNING] 2025-08-31 19:45:14,339 django.request: Bad Request: /api/v1/monthly-reports/
+[WARNING] 2025-08-31 19:45:14,340 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 400 12159
+[INFO] 2025-08-31 19:45:20,235 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16309
+[INFO] 2025-08-31 19:45:29,994 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 201 12217
+[INFO] 2025-08-31 19:45:33,934 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16931
+[WARNING] 2025-08-31 19:45:33,992 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:46:07,780 django.server: "GET /api/v1/sales/?seller=4&is_active=True HTTP/1.1" 200 15222
+[INFO] 2025-08-31 19:46:16,817 django.server: "GET /api/v1/sales/?seller=2&is_active=True HTTP/1.1" 200 13746
+[WARNING] 2025-08-31 19:46:16,886 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:46:23,376 django.server: "GET /api/v1/sales/?seller=1&is_active=True HTTP/1.1" 200 14256
+[WARNING] 2025-08-31 19:47:01,695 django.request: Bad Request: /api/v1/monthly-reports/
+[WARNING] 2025-08-31 19:47:01,695 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 400 5315
+[WARNING] 2025-08-31 19:47:36,742 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 19:47:46,726 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:47:46,727 django.server: "PUT /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[WARNING] 2025-08-31 19:48:04,228 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:48:04,230 django.server: "PUT /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[WARNING] 2025-08-31 19:48:08,021 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:48:08,022 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[WARNING] 2025-08-31 19:48:08,797 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-08-31 19:48:08,797 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 404 13515
+[INFO] 2025-08-31 19:48:11,711 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16931
+[INFO] 2025-08-31 19:48:13,441 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16931
+[INFO] 2025-08-31 19:48:21,612 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 201 12217
+[INFO] 2025-08-31 19:48:23,686 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 17556
+[INFO] 2025-08-31 19:49:09,416 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:49:09,788 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:49:15,257 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:49:15,624 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:49:20,111 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:49:20,518 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:49:21,761 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:49:22,112 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:49:24,412 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:49:24,818 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:49:29,373 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 17556
+[INFO] 2025-08-31 19:49:34,229 django.server: "GET /api/v1/sales/?seller=1&is_active=True HTTP/1.1" 200 14256
+[INFO] 2025-08-31 19:50:59,546 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:51:00,089 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:55:24,613 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 19:55:26,375 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 19:55:26,375 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11494
+[WARNING] 2025-08-31 19:55:29,519 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 19:55:29,520 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11494
+[INFO] 2025-08-31 19:55:34,891 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12867
+[INFO] 2025-08-31 19:55:40,436 django.server: "OPTIONS /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 17181
+[WARNING] 2025-08-31 19:55:51,800 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:55:57,819 django.server: "GET /api/v1/ HTTP/1.1" 200 5316
+[WARNING] 2025-08-31 19:55:57,887 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 19:56:11,019 django.request: Not Found: /api/v1/monthly-report
+[WARNING] 2025-08-31 19:56:11,021 django.server: "GET /api/v1/monthly-report HTTP/1.1" 404 10884
+[WARNING] 2025-08-31 19:56:11,100 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 19:56:16,740 django.request: Not Found: /api/v1/monthly-report/
+[WARNING] 2025-08-31 19:56:16,743 django.server: "GET /api/v1/monthly-report/ HTTP/1.1" 404 10887
+[INFO] 2025-08-31 19:56:28,792 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 18773
+[WARNING] 2025-08-31 19:56:28,863 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:56:30,747 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 18773
+[INFO] 2025-08-31 19:56:38,190 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 18773
+[INFO] 2025-08-31 19:56:43,856 django.server: "GET /admin/ HTTP/1.1" 200 9851
+[INFO] 2025-08-31 19:56:45,314 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16338
+[INFO] 2025-08-31 19:56:45,357 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:56:58,350 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 10900
+[INFO] 2025-08-31 19:56:59,338 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 19:56:59,357 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 12417
+[INFO] 2025-08-31 19:56:59,419 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 19:57:15,360 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 19:57:15,362 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11494
+[INFO] 2025-08-31 19:57:18,846 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12867
+[INFO] 2025-08-31 19:57:21,357 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:57:21,402 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 19:57:21,441 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:57:28,005 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12867
+[INFO] 2025-08-31 19:57:33,323 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:57:33,354 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:57:34,171 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:57:34,203 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:58:46,696 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:58:47,186 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:58:49,361 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:58:49,710 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-31 19:59:17,416 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/views.py changed, reloading.
+[INFO] 2025-08-31 19:59:17,912 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-31 19:59:23,861 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 19:59:23,862 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11664
+[INFO] 2025-08-31 19:59:25,907 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13037
+[WARNING] 2025-08-31 19:59:28,786 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 19:59:28,787 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11664
+[INFO] 2025-08-31 19:59:31,475 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13037
+[INFO] 2025-08-31 19:59:36,225 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:59:36,252 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:59:37,112 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:59:37,147 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 19:59:37,261 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:59:37,465 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 19:59:37,506 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 19:59:43,382 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 10498
+[INFO] 2025-08-31 19:59:44,334 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 19:59:44,350 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 12417
+[INFO] 2025-08-31 19:59:44,416 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 19:59:44,449 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 19:59:52,050 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13037
+[INFO] 2025-08-31 20:00:00,014 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15303
+[INFO] 2025-08-31 20:00:00,056 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:00:00,126 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:00:12,603 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21994
+[INFO] 2025-08-31 20:01:05,459 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:01:05,498 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:01:05,574 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:01:09,037 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 29568
+[INFO] 2025-08-31 20:01:09,071 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:09,081 django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[INFO] 2025-08-31 20:01:09,081 django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[INFO] 2025-08-31 20:01:09,160 django.server: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[INFO] 2025-08-31 20:01:09,160 django.server: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[INFO] 2025-08-31 20:01:21,473 django.server: "POST /admin/accounts/account/5/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:01:21,490 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13740
+[INFO] 2025-08-31 20:01:21,562 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:23,628 django.server: "GET /admin/accounts/account/4/change/ HTTP/1.1" 200 29608
+[INFO] 2025-08-31 20:01:23,674 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:26,238 django.server: "POST /admin/accounts/account/4/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:01:26,261 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13738
+[INFO] 2025-08-31 20:01:26,333 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:27,868 django.server: "GET /admin/accounts/account/2/change/ HTTP/1.1" 200 29675
+[INFO] 2025-08-31 20:01:27,904 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:01:27,956 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:01:31,200 django.server: "POST /admin/accounts/account/2/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:01:31,216 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13754
+[INFO] 2025-08-31 20:01:31,291 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:32,578 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 29567
+[INFO] 2025-08-31 20:01:32,611 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:01:32,659 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:01:35,771 django.server: "POST /admin/accounts/account/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:01:35,790 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:01:35,863 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:40,872 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13724
+[INFO] 2025-08-31 20:01:43,330 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:01:43,358 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:01:43,420 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:01:44,976 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:01:45,064 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:01:55,297 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:01:55,336 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:01:55,404 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:00,183 django.server: "GET /admin/accounts/account/3/change/ HTTP/1.1" 200 29658
+[INFO] 2025-08-31 20:02:00,215 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:02:08,237 django.server: "POST /admin/accounts/account/3/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:02:08,256 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:02:08,327 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:02:08,399 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:11,423 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13035
+[WARNING] 2025-08-31 20:02:13,852 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 20:02:13,854 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11664
+[INFO] 2025-08-31 20:02:20,667 django.server: "GET /admin/accounts/account/5/change/ HTTP/1.1" 200 29584
+[INFO] 2025-08-31 20:02:20,694 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:02:20,769 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:25,510 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:02:25,550 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:02:25,623 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:27,284 django.server: "GET /admin/accounts/account/3/change/ HTTP/1.1" 200 29650
+[INFO] 2025-08-31 20:02:27,314 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:02:35,584 django.server: "POST /admin/accounts/account/3/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:02:35,599 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:02:35,666 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:02:37,378 django.server: "GET /admin/accounts/account/2/change/ HTTP/1.1" 200 29683
+[INFO] 2025-08-31 20:02:37,406 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:02:37,458 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:40,863 django.server: "POST /admin/accounts/account/2/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:02:40,883 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13754
+[INFO] 2025-08-31 20:02:40,967 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:02:43,193 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13724
+[INFO] 2025-08-31 20:02:46,858 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:02:46,886 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:02:46,958 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:02:48,810 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:02:48,841 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:02:49,776 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:02:49,807 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:13,788 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:03:13,816 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:14,841 django.server: "GET /admin/accounts/account/2/change/ HTTP/1.1" 200 29692
+[INFO] 2025-08-31 20:03:14,870 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:20,349 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:03:20,388 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:22,119 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:03:22,148 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:23,589 django.server: "GET /admin/accounts/account/3/change/ HTTP/1.1" 200 29667
+[INFO] 2025-08-31 20:03:23,621 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:26,884 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:03:26,919 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:31,339 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 29575
+[INFO] 2025-08-31 20:03:31,367 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:34,553 django.server: "POST /admin/accounts/account/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:03:34,569 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:03:34,634 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:03:34,680 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-31 20:03:39,501 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 20:03:39,501 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11664
+[INFO] 2025-08-31 20:03:41,903 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13724
+[WARNING] 2025-08-31 20:03:45,858 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-08-31 20:03:45,858 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 11664
+[WARNING] 2025-08-31 20:03:45,938 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:03:48,000 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 13724
+[INFO] 2025-08-31 20:03:51,961 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:03:51,992 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:03:54,269 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:03:54,304 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:04:06,630 django.server: "GET /api/v1/users/ HTTP/1.1" 200 21990
+[INFO] 2025-08-31 20:04:44,212 django.server: "GET /admin/ HTTP/1.1" 200 12731
+[INFO] 2025-08-31 20:04:46,131 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:04:46,177 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:04:50,996 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 29584
+[INFO] 2025-08-31 20:04:51,022 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:04:54,768 django.server: "POST /admin/accounts/account/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:04:54,785 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:04:54,851 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:04:54,897 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:04:56,595 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 29584
+[INFO] 2025-08-31 20:04:56,622 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[WARNING] 2025-08-31 20:04:56,771 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:04:59,945 django.server: "GET /admin/auth/group/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9065
+[INFO] 2025-08-31 20:05:00,035 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:00,120 django.server: "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[INFO] 2025-08-31 20:05:07,455 django.server: "POST /admin/accounts/account/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:05:07,471 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13744
+[INFO] 2025-08-31 20:05:07,547 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:15,153 django.server: "GET /admin/accounts/account/4/change/ HTTP/1.1" 200 29608
+[INFO] 2025-08-31 20:05:15,193 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:21,037 django.server: "POST /admin/accounts/account/4/change/ HTTP/1.1" 302 0
+[INFO] 2025-08-31 20:05:21,052 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13738
+[INFO] 2025-08-31 20:05:21,121 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:21,132 django.server: "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[WARNING] 2025-08-31 20:05:21,168 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-31 20:05:24,021 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:05:24,060 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:31,140 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:05:31,182 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:32,061 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 13536
+[INFO] 2025-08-31 20:05:32,107 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-08-31 20:05:35,164 django.server: "GET /admin/ HTTP/1.1" 200 12772
+[INFO] 2025-08-31 20:05:56,351 django.server: "OPTIONS /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 17513
+[INFO] 2025-08-31 20:05:57,432 django.server: "OPTIONS /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 17513
+[INFO] 2025-08-31 20:06:03,816 django.server: "GET /api/v1/monthly-reports HTTP/1.1" 301 0
+[INFO] 2025-08-31 20:06:03,856 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 18215
+[INFO] 2025-08-31 20:06:15,909 django.server: "GET /api/v1/monthly-reports/9 HTTP/1.1" 301 0
+[INFO] 2025-08-31 20:06:15,936 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 14367
+[INFO] 2025-08-31 20:06:23,277 django.server: "PUT /api/v1/monthly-reports/9/ HTTP/1.1" 200 14369
+[INFO] 2025-08-31 20:06:26,083 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15796
+[INFO] 2025-08-31 20:06:26,120 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
