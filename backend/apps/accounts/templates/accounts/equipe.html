@@ -1,0 +1,255 @@
+{% extends "base/base_dashboard.html" %}
+{% load static %}
+
+{% block title %}Equipe - Gestão de Usuários{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/equipe.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+        <div class="card-header border-0 d-flex justify-content-between align-items-center"
+             style="background: linear-gradient(135deg, #7FB6F0 0%, #BFD8FF 100%); color: #0F172A; border-radius: 16px 16px 0 0; padding: 1.5rem 2rem;">
+            <h5 class="card-title mb-0 fw-semibold" style="color:#0F172A;"><i class="ti ti-users me-2"></i>Gestão de Usuários</h5>
+            <button class="btn btn-light btn-sm px-3 py-2" onclick="window.modalActions.openUserModal(null)" style="border-radius: 8px; font-weight: 600; color:#0F172A; border:1px solid rgba(15,23,42,.08);"><i class="ti ti-plus me-1"></i>Novo Usuário</button>
+        </div>
+        
+        <div class="card-body">
+            <!-- Filtros e Busca -->
+            <div class="filter-section">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-8 col-md-12">
+                        <label class="form-label fw-medium mb-2">Filtrar por tipo:</label>
+                        <div class="btn-group w-100" role="group">
+                            <input type="radio" class="btn-check" name="filterType" id="filterAll" value="all" checked>
+                            <label class="btn btn-outline-primary btn-sm" for="filterAll">
+                                <i class="ti ti-users me-1"></i>Todos (<span id="countAll">0</span>)
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="filterType" id="filterVE" value="VE">
+                            <label class="btn btn-outline-primary btn-sm" for="filterVE">
+                                <i class="ti ti-briefcase me-1"></i>Vendedores (<span id="countVE">0</span>)
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="filterType" id="filterGE" value="GE">
+                            <label class="btn btn-outline-primary btn-sm" for="filterGE">
+                                <i class="ti ti-crown me-1"></i>Gestores (<span id="countGE">0</span>)
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="filterType" id="filterCX" value="CX">
+                            <label class="btn btn-outline-primary btn-sm" for="filterCX">
+                                <i class="ti ti-cash me-1"></i>Caixa (<span id="countCX">0</span>)
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="filterType" id="filterCT" value="CT">
+                            <label class="btn btn-outline-primary btn-sm" for="filterCT">
+                                <i class="ti ti-calculator me-1"></i>Contábil (<span id="countCT">0</span>)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <label class="form-label fw-medium mb-2">Buscar usuário:</label>
+                        <input type="text" class="form-control" id="searchUsers" placeholder="Digite nome ou email...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista Compacta de Usuários -->
+            <div id="usersCompactList">
+                <!-- Lista será inserida aqui via JavaScript -->
+            </div>
+
+            <!-- Estados de Loading e Empty -->
+            <div id="loadingState" class="text-center p-5">
+                <div class="spinner-border text-primary"></div>
+                <p class="mt-3 text-muted">Carregando usuários...</p>
+            </div>
+            
+            <div id="emptyState" class="text-center p-5 d-none">
+                <i class="ti ti-user-off display-4 mb-3" style="color: #D1D5DB;"></i>
+                <h6 style="color: #6B7280; font-weight: 600;">Nenhum usuário cadastrado</h6>
+                <p style="color: #9CA3AF; font-size: 0.875rem;">Clique em "Novo Usuário" para começar</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Melhorado -->
+<div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0">
+            <div class="modal-header" style="background: linear-gradient(135deg, #7FB6F0 0%, #BFD8FF 100%); color: #0F172A; border-radius: 16px 16px 0 0; padding: 1.5rem 2rem;">
+                <h5 class="modal-title fw-semibold d-flex align-items-center" id="userFormModalLabel">
+                    <i class="ti ti-user-plus me-2"></i>Novo Usuário
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <form id="userForm" novalidate>
+                <div class="modal-body" style="padding: 2rem;">
+                    <input type="hidden" id="userId" name="id">
+                    
+                    <!-- Seção: Dados Pessoais -->
+                    <div class="modal-section">
+                        <h6 class="modal-section-title">
+                            <i class="ti ti-id"></i>Dados Pessoais
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label fw-medium form-label-required">Nome Completo</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-user input-icon"></i>
+                                    <input type="text" id="first_name" name="first_name" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium form-label-required">Documento (CPF/CNPJ)</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-id-badge input-icon"></i>
+                                    <input type="text" id="document" name="document" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">Data de Nascimento</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-calendar input-icon"></i>
+                                    <input type="date" id="date_of_birth" name="date_of_birth" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Contato -->
+                    <div class="modal-section">
+                        <h6 class="modal-section-title">
+                            <i class="ti ti-address-book"></i>Informações de Contato
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium form-label-required">Email</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-mail input-icon"></i>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">Telefone</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-phone input-icon"></i>
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="(00) 00000-0000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Login e Acesso -->
+                    <div class="modal-section">
+                        <h6 class="modal-section-title">
+                            <i class="ti ti-key"></i>Login e Acesso
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium form-label-required">Nome de Usuário</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-at input-icon"></i>
+                                    <input type="text" id="username" name="username" class="form-control" required>
+                                </div>
+                                <small class="text-muted">Este será usado para fazer login</small>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium">Senha</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-lock input-icon"></i>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Deixe em branco para não alterar" autocomplete="new-password"> 
+                                </div>
+                                <div class="password-strength">
+                                    <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                                </div>
+                                <small class="text-muted" id="passwordHelp">Mínimo 8 caracteres</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seção: Permissões -->
+                    <div class="modal-section">
+                        <h6 class="modal-section-title">
+                            <i class="ti ti-settings"></i>Tipo e Permissões
+                        </h6>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-medium form-label-required">Tipo de Usuário</label>
+                                <div class="form-group-icon">
+                                    <i class="ti ti-user-cog input-icon"></i>
+                                    <select id="type_user" name="type_user" class="form-select" required>
+                                        <option value="">Selecione o tipo</option>
+                                        <option value="VE">👤 Vendedor</option>
+                                        <option value="CX">💰 Caixa</option>
+                                        <option value="CT">📊 Contábil</option>
+                                        <option value="GE">👑 Gestor</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 d-flex align-items-end">
+                                <div class="switch-container w-100">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="is_active" name="is_active" checked>
+                                        <label class="form-check-label fw-medium" for="is_active">
+                                            <i class="ti ti-toggle-right me-2"></i>Usuário Ativo
+                                        </label>
+                                        <small class="d-block text-muted">O usuário pode fazer login no sistema</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer" style="background-color: #F9FAFB; border-radius: 0 0 16px 16px; padding: 1.5rem 2rem;">
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="d-flex align-items-center text-muted">
+                            <i class="ti ti-info-circle me-2"></i>
+                            <small>Campos com * são obrigatórios</small>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn px-4 py-2" data-bs-dismiss="modal" style="background-color: #F3F4F6; color: #111827; border-radius: 10px;">
+                                <i class="ti ti-x me-2"></i>Cancelar
+                            </button>
+                            <button type="submit" class="btn px-4 py-2" style="background-color: #7FB6F0; color: #0F172A; border-radius: 10px; font-weight: 700;">
+                                <i class="ti ti-check me-2"></i>Salvar Usuário
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Confirmação de Exclusão -->
+<div class="modal fade" id="deleteUserModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center p-4">
+                <i class="ti ti-alert-circle text-danger display-4 mb-2"></i>
+                <h5 class="fw-bold">Confirmar Exclusão</h5>
+                <p class="text-muted">Tem certeza? Esta ação não pode ser desfeita.</p>
+                <div class="d-flex justify-content-center gap-2 mt-3">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="confirmDeleteBtn" type="button" class="btn btn-danger">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+    <script type="module" src="{% static 'js/equipe/main.js' %}"></script>
+{% endblock %}

@@ -1,7 +1,11 @@
 from django.urls import path
-from . import views  # se tiver views web
+from . import views
+
+app_name = 'accounts'
 
 urlpatterns = [
-    # Exemplo de rota web
-    # path('', views.dashboard, name='dashboard'),
+
+    path('', views.CustomLoginView.as_view(), name='login' ),
+    path('logout/', views.CustomLogoutView.as_view(), name='logout'),
+  
 ]

@@ -1,0 +1,518 @@
+{% extends 'base/base_dashboard.html' %}
+{% load static %}
+
+{% block title %}Equipe - Metrica{% endblock %}
+
+
+{% block extra_css %}
+<style>
+  /* Melhor ajuste dos floating labels */
+  .form-floating > .form-control:focus ~ label,
+  .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    opacity: .75;
+    transform: scale(.85) translateY(-0.6rem) translateX(0.15rem);
+  }
+
+  .preview-image {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f1f3f5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  .upload-area {
+    border: 2px dashed #dee2e6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #fafbfc;
+  }
+
+  .upload-area:hover {
+    border-color: #5d87ff;
+    background-color: #f1f4ff;
+  }
+
+  .upload-area.dragover {
+    border-color: #5d87ff;
+    background-color: #eaf0ff;
+  }
+
+  .card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+
+  .card-header {
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  table th {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+  }
+
+  table td {
+    vertical-align: middle;
+  }
+
+  .btn {
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+  }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <!-- Header Section -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h2 class="fw-bold mb-1" style="color: var(--primary);">Gerenciamento de Equipe</h2>
+          <p class="text-muted mb-0">Gerencie os membros da sua equipe de forma eficiente</p>
+        </div>
+        <button class="btn btn-primary btn-action" onclick="openAddModal()">
+          <i class="ti ti-plus me-2"></i>Adicionar Membro
+        </button>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="card mb-4" style="background-color: var(--card);">
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control search-input" id="searchInput" placeholder="Buscar por nome ou email...">
+            </div>
+            <div class="col-md-3">
+              <select class="form-control search-input" id="typeFilter">
+                <option value="">Todos os tipos</option>
+                <option value="VE">Vendedor</option>
+                <option value="CX">Caixa</option>
+                <option value="CT">Contábil</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-control search-input" id="statusFilter">
+                <option value="">Todos os status</option>
+                <option value="true">Ativo</option>
+                <option value="false">Inativo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members Grid -->
+      <div class="row" id="teamGrid">
+        <!-- Team members will be loaded here -->
+      </div>
+
+      <!-- Loading State -->
+      <div class="text-center py-5" id="loadingState">
+        <div class="spinner-border" style="color: var(--primary);" role="status">
+          <span class="visually-hidden">Carregando...</span>
+        </div>
+        <p class="mt-3 text-muted">Carregando membros da equipe...</p>
+      </div>
+
+      <!-- Empty State -->
+      <div class="text-center py-5 d-none" id="emptyState">
+        <i class="ti ti-users fs-1 text-muted mb-3"></i>
+        <h4 class="text-muted">Nenhum membro encontrado</h4>
+        <p class="text-muted">Adicione o primeiro membro da sua equipe</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add/Edit Member Modal -->
+<div id="memberModal" class="modal">
+  <div class="modal-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 class="mb-0" id="modalTitle">Adicionar Membro</h4>
+      <button type="button" class="btn-close" onclick="closeModal()"></button>
+    </div>
+    
+    <form id="memberForm">
+      <div class="form-group">
+        <label class="form-label">Nome Completo *</label>
+        <input type="text" class="form-control" id="firstName" name="first_name" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Sobrenome *</label>
+        <input type="text" class="form-control" id="lastName" name="last_name" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Email *</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Usuário *</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Tipo de Usuário *</label>
+        <select class="form-control" id="typeUser" name="type_user" required>
+          <option value="VE">Vendedor</option>
+          <option value="CX">Caixa</option>
+          <option value="CT">Contábil</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">CPF/CNPJ *</label>
+        <input type="text" class="form-control" id="document" name="document" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Telefone</label>
+        <input type="text" class="form-control" id="phone" name="phone">
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Data de Nascimento</label>
+        <input type="date" class="form-control" id="dateOfBirth" name="date_of_birth">
+      </div>
+      
+      <div class="form-group" id="passwordGroup">
+        <label class="form-label">Senha *</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      
+      <div class="d-flex justify-content-end gap-2 mt-4">
+        <button type="button" class="btn btn-secondary btn-action" onclick="closeModal()">Cancelar</button>
+        <button type="submit" class="btn btn-primary btn-action" id="submitBtn">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- View Member Modal -->
+<div id="viewModal" class="modal">
+  <div class="modal-content">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 class="mb-0">Detalhes do Membro</h4>
+      <button type="button" class="btn-close" onclick="closeViewModal()"></button>
+    </div>
+    
+    <div id="memberDetails">
+      <!-- Member details will be loaded here -->
+    </div>
+    
+    <div class="d-flex justify-content-end mt-4">
+      <button type="button" class="btn btn-secondary btn-action" onclick="closeViewModal()">Fechar</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+let currentEditId = null;
+let teamMembers = [];
+
+// Load team members on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadTeamMembers();
+    setupEventListeners();
+});
+
+function setupEventListeners() {
+    // Search functionality
+    document.getElementById('searchInput').addEventListener('input', filterMembers);
+    document.getElementById('typeFilter').addEventListener('change', filterMembers);
+    document.getElementById('statusFilter').addEventListener('change', filterMembers);
+    
+    // Form submission
+    document.getElementById('memberForm').addEventListener('submit', handleFormSubmit);
+}
+
+async function loadTeamMembers() {
+    try {
+        const response = await fetch('/api/accounts/users/');
+        if (response.ok) {
+            teamMembers = await response.json();
+            renderTeamMembers(teamMembers);
+        } else {
+            showError('Erro ao carregar membros da equipe');
+        }
+    } catch (error) {
+        console.error('[v0] Error loading team members:', error);
+        showError('Erro de conexão ao carregar membros');
+    } finally {
+        document.getElementById('loadingState').style.display = 'none';
+    }
+}
+
+function renderTeamMembers(members) {
+    const grid = document.getElementById('teamGrid');
+    const emptyState = document.getElementById('emptyState');
+    
+    if (members.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('d-none');
+        return;
+    }
+    
+    emptyState.classList.add('d-none');
+    
+    grid.innerHTML = members.map(member => `
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card team-card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                            <span class="text-white fw-bold">${getInitials(member.first_name, member.last_name)}</span>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="mb-1">${member.first_name} ${member.last_name}</h5>
+                            <p class="text-muted mb-0">${member.email}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <span class="badge ${getTypeClass(member.type_user)} me-2">${getTypeLabel(member.type_user)}</span>
+                        <span class="status-badge ${member.is_active ? 'status-active' : 'status-inactive'}">
+                            ${member.is_active ? 'Ativo' : 'Inativo'}
+                        </span>
+                    </div>
+                    
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-secondary btn-action flex-fill" onclick="viewMember(${member.id})">
+                            <i class="ti ti-eye me-1"></i>Ver
+                        </button>
+                        <button class="btn btn-primary btn-action flex-fill" onclick="editMember(${member.id})">
+                            <i class="ti ti-edit me-1"></i>Editar
+                        </button>
+                        <button class="btn btn-danger btn-action" onclick="deleteMember(${member.id})">
+                            <i class="ti ti-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function filterMembers() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const typeFilter = document.getElementById('typeFilter').value;
+    const statusFilter = document.getElementById('statusFilter').value;
+    
+    const filtered = teamMembers.filter(member => {
+        const matchesSearch = member.first_name.toLowerCase().includes(searchTerm) || 
+                            member.last_name.toLowerCase().includes(searchTerm) ||
+                            member.email.toLowerCase().includes(searchTerm);
+        const matchesType = !typeFilter || member.type_user === typeFilter;
+        const matchesStatus = !statusFilter || member.is_active.toString() === statusFilter;
+        
+        return matchesSearch && matchesType && matchesStatus;
+    });
+    
+    renderTeamMembers(filtered);
+}
+
+function getInitials(firstName, lastName) {
+    return (firstName.charAt(0) + lastName.charAt(0)).toUpperCase();
+}
+
+function getTypeLabel(type) {
+    const types = {
+        'VE': 'Vendedor',
+        'CX': 'Caixa',
+        'CT': 'Contábil',
+        'GE': 'Gestor'
+    };
+    return types[type] || type;
+}
+
+function getTypeClass(type) {
+    const classes = {
+        'VE': 'bg-success text-white',
+        'CX': 'bg-warning text-dark',
+        'CT': 'bg-info text-white',
+        'GE': 'bg-primary text-white'
+    };
+    return classes[type] || 'bg-secondary text-white';
+}
+
+function openAddModal() {
+    currentEditId = null;
+    document.getElementById('modalTitle').textContent = 'Adicionar Membro';
+    document.getElementById('memberForm').reset();
+    document.getElementById('passwordGroup').style.display = 'block';
+    document.getElementById('password').required = true;
+    document.getElementById('memberModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('memberModal').style.display = 'none';
+}
+
+function closeViewModal() {
+    document.getElementById('viewModal').style.display = 'none';
+}
+
+async function editMember(id) {
+    try {
+        const response = await fetch(`/api/accounts/users/${id}/`);
+        if (response.ok) {
+            const member = await response.json();
+            currentEditId = id;
+            
+            document.getElementById('modalTitle').textContent = 'Editar Membro';
+            document.getElementById('firstName').value = member.first_name;
+            document.getElementById('lastName').value = member.last_name;
+            document.getElementById('email').value = member.email;
+            document.getElementById('username').value = member.username;
+            document.getElementById('typeUser').value = member.type_user;
+            document.getElementById('document').value = member.document || '';
+            document.getElementById('phone').value = member.phone || '';
+            document.getElementById('dateOfBirth').value = member.date_of_birth || '';
+            
+            document.getElementById('passwordGroup').style.display = 'none';
+            document.getElementById('password').required = false;
+            document.getElementById('memberModal').style.display = 'block';
+        }
+    } catch (error) {
+        console.error('[v0] Error loading member for edit:', error);
+        showError('Erro ao carregar dados do membro');
+    }
+}
+
+async function viewMember(id) {
+    try {
+        const response = await fetch(`/api/accounts/users/${id}/`);
+        if (response.ok) {
+            const member = await response.json();
+            
+            document.getElementById('memberDetails').innerHTML = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>Nome:</strong> ${member.first_name} ${member.last_name}</p>
+                        <p><strong>Email:</strong> ${member.email}</p>
+                        <p><strong>Usuário:</strong> ${member.username}</p>
+                        <p><strong>Tipo:</strong> ${getTypeLabel(member.type_user)}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>CPF/CNPJ:</strong> ${member.document || 'Não informado'}</p>
+                        <p><strong>Telefone:</strong> ${member.phone || 'Não informado'}</p>
+                        <p><strong>Data de Nascimento:</strong> ${member.date_of_birth || 'Não informado'}</p>
+                        <p><strong>Status:</strong> <span class="status-badge ${member.is_active ? 'status-active' : 'status-inactive'}">${member.is_active ? 'Ativo' : 'Inativo'}</span></p>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('viewModal').style.display = 'block';
+        }
+    } catch (error) {
+        console.error('[v0] Error loading member details:', error);
+        showError('Erro ao carregar detalhes do membro');
+    }
+}
+
+async function handleFormSubmit(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Salvando...';
+    submitBtn.disabled = true;
+    
+    try {
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+        
+        const url = currentEditId ? `/api/accounts/users/${currentEditId}/` : '/api/accounts/users/';
+        const method = currentEditId ? 'PUT' : 'POST';
+        
+        const response = await fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+            closeModal();
+            loadTeamMembers();
+            showSuccess(currentEditId ? 'Membro atualizado com sucesso!' : 'Membro adicionado com sucesso!');
+        } else {
+            const errorData = await response.json();
+            showError('Erro ao salvar: ' + JSON.stringify(errorData));
+        }
+    } catch (error) {
+        console.error('[v0] Error saving member:', error);
+        showError('Erro de conexão ao salvar');
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+}
+
+async function deleteMember(id) {
+    if (!confirm('Tem certeza que deseja excluir este membro?')) return;
+    
+    try {
+        const response = await fetch(`/api/accounts/users/${id}/`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')
+            }
+        });
+        
+        if (response.ok) {
+            loadTeamMembers();
+            showSuccess('Membro excluído com sucesso!');
+        } else {
+            showError('Erro ao excluir membro');
+        }
+    } catch (error) {
+        console.error('[v0] Error deleting member:', error);
+        showError('Erro de conexão ao excluir');
+    }
+}
+
+function showSuccess(message) {
+    // You can implement a toast notification here
+    alert(message);
+}
+
+function showError(message) {
+    // You can implement a toast notification here
+    alert(message);
+}
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+</script>
+{% endblock %}

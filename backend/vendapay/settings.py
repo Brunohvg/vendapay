@@ -16,7 +16,11 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost').split(',')
+
 AUTH_USER_MODEL = 'accounts.Account'
+LOGIN_URL = "accounts:login"
+LOGIN_REDIRECT_URL = "dashboard:dashboard"
+
 
 # Application definition
 
@@ -25,7 +29,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'django_filters',
-
+    # ✅ necessário para usar {% load humanize %}
+    'django.contrib.humanize',
+    'widget_tweaks',
     # Default Django apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +45,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.sales',
     'apps.commissions',
+    'apps.dashboard'
 ]
 
 MIDDLEWARE = [
@@ -59,7 +66,8 @@ ROOT_URLCONF = 'vendapay.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Caminho absoluto para templates globais
+        'DIRS': [BASE_DIR / 'templates'],
+        #'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Caminho absoluto para templates globais
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

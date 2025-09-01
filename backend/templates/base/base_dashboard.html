@@ -1,0 +1,225 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Metrica{% endblock %}</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'assets/images/logos/favicon.png' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/styles.min.css' %}" />
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div class="scroll-sidebar" data-simplebar>
+        <div class="d-flex mb-4 align-items-center justify-content-between">
+            <a href="index.html" class="text-nowrap logo-img ms-0 ms-md-1">
+              <img src="{% static 'assets/images/logos/dark-logo.svg' %}" width="180" alt="">
+            </a>
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+              <i class="ti ti-x fs-8"></i>
+            </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+          {% if user.is_authenticated %}
+          <ul id="sidebarnav" class="mb-4 pb-2">
+
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Principal</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link primary-hover-bg" href="{% url 'dashboard:dashboard' %}" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-primary rounded-3">
+                  <i class="ti ti-layout-dashboard fs-7 text-primary"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Dashboard</span>
+              </a>
+            </li>
+
+            {% if user.user_type == 'SELLER' %}
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Minha Atividade</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link success-hover-bg" href="#" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-success rounded-3">
+                  <i class="ti ti-plus fs-7 text-success"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Registrar Nova Venda</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-history fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Meu Histórico de Vendas</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link warning-hover-bg" href="#" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-warning rounded-3">
+                  <i class="ti ti-cash fs-7 text-warning"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Minhas Comissões</span>
+              </a>
+            </li>
+            {% endif %}
+
+
+            {% if user.user_type == 'ADMIN' %}
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Gerenciamento</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link primary-hover-bg" href="{% url 'sales:daily-sale-list' %}" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-info rounded-3">
+                  <i class="ti ti-shopping-cart fs-7 text-info"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Consultar Vendas</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link danger-hover-bg" href="{% url 'accounts:equipe' %}" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-danger rounded-3">
+                  <i class="ti ti-users fs-7 text-danger"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Equipe</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link sidebar-link warning-hover-bg" href="{% url 'commissions:commission_report_list' %}" aria-expanded="false">
+                <span class="aside-icon p-2 bg-light-warning rounded-3">
+                  <i class="ti ti-file-invoice fs-7 text-warning"></i>
+                </span>
+                <span class="hide-menu ms-2 ps-1">Relatórios de Comissão</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link sidebar-link secondary-hover-bg" href="{% url "commissions:commission_rule_list" %}" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-secondary rounded-3">
+                    <i class="ti ti-gavel fs-7 text-secondary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Regras de Comissão</span>
+                </a>
+              </li>
+            {% endif %}
+
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-5"></i>
+              <span class="hide-menu">Conta</span>
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link sidebar-link primary-hover-bg" href="#" aria-expanded="false">
+                  <span class="aside-icon p-2 bg-light-primary rounded-3">
+                    <i class="ti ti-user-circle fs-7 text-primary"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Meu Perfil</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+              <form method="post" action="{% url 'accounts:logout' %}">
+                {% csrf_token %} <button type="submit" class="sidebar-link sidebar-link danger-hover-bg" style="border: none; background: none; width: 100%; text-align: left; padding: 7px 10px; cursor: pointer;">
+                  <span class="aside-icon p-2 bg-light-danger rounded-3">
+                    <i class="ti ti-logout fs-7 text-danger"></i>
+                  </span>
+                  <span class="hide-menu ms-2 ps-1">Sair</span>
+                </button>
+              </form>
+            </li>
+
+          </ul>
+          {% endif %}
+        
+        </nav>
+
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <div target="_blank" class="light">Olá, seja bem-vindo. {{user.username}}</div>
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="{% static 'assets/images/profile/user1.jpg' %}" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">My Profile</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">My Account</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">My Task</p>
+                    </a>
+                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block shadow-none">Logout</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      {% block message %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endblock message %}
+
+      {% block content %}
+      {% endblock content %}
+
+
+    </div>
+  </div>
+  <script src="{% static 'assets/libs/jquery/dist/jquery.min.js'%}"></script>
+  <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'assets/js/sidebarmenu.js'%}"></script>
+  <script src="{% static 'assets/js/app.min.js'%}"></script>
+  <script src="{% static 'assets/libs/simplebar/dist/simplebar.js'%}"></script>
+  {% block extra_js %} {% endblock extra_js %}
+</body>
+
+</html>
