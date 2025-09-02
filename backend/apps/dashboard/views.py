@@ -21,7 +21,7 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         user = self.request.user
 
         # ------------------------------
-        # 📌 FILTROS vindos da URL
+        # 📌 Filtros da URL
         # ------------------------------
         selected_year = int(self.request.GET.get("year", date.today().year))
         selected_month = int(self.request.GET.get("month", date.today().month))
@@ -53,20 +53,17 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         )
 
         # ------------------------------
-        # 📌 Regras de permissão
+        # 📌 Permissões
         # ------------------------------
         if is_vendedor(user):
             sales_qs = sales_qs.filter(seller=user)
             sales_prev_month_qs = sales_prev_month_qs.filter(seller=user)
             reports_qs = reports_qs.filter(seller=user)
-        else:
-            # Se for admin → pode filtrar por vendedor
-            if selected_seller and selected_seller.isdigit():
-                sales_qs = sales_qs.filter(seller_id=selected_seller)
-                sales_prev_month_qs = sales_prev_month_qs.filter(seller_id=selected_seller)
-                reports_qs = reports_qs.filter(seller_id=selected_seller)
+        elif selected_seller and selected_seller.isdigit():
+            sales_qs = sales_qs.filter(seller_id=selected_seller)
+            sales_prev_month_qs = sales_prev_month_qs.filter(seller_id=selected_seller)
+            reports_qs = reports_qs.filter(seller_id=selected_seller)
 
-        # Filtro por status de comissão
         if selected_status and selected_status != "ALL":
             reports_qs = reports_qs.filter(status=selected_status)
 
@@ -79,9 +76,7 @@ class DashboardView(LoginRequiredMixin, TemplateView):
             reports_qs.filter(status="PAID").aggregate(total=Sum("total_commission"))["total"]
             or Decimal("0.00")
         )
-        prev_total_sales = (
-            sales_prev_month_qs.aggregate(total=Sum("total_amount"))["total"] or Decimal("0.00")
-        )
+        prev_total_sales = sales_prev_month_qs.aggregate(total=Sum("total_amount"))["total"] or Decimal("0.00")
 
         sales_growth = (
             (total_sales - prev_total_sales) / prev_total_sales * 100
@@ -91,10 +86,10 @@ class DashboardView(LoginRequiredMixin, TemplateView):
 
         context.update(
             {
-                "total_sales": float(total_sales),
-                "total_commissions": float(total_commissions),
-                "paid_commissions": float(paid_commissions),
-                "pending_commissions": float(total_commissions - paid_commissions),
+                "total_sales": total_sales,
+                "total_commissions": total_commissions,
+                "paid_commissions": paid_commissions,
+                "pending_commissions": total_commissions - paid_commissions,
                 "sales_growth": round(sales_growth, 2),
                 "selected_year": selected_year,
                 "selected_month": selected_month,
@@ -127,22 +122,23 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         # ------------------------------
         # 📌 Ranking de vendedores
         # ------------------------------
-        top_sellers_qs = (
-            sales_qs.values("seller__first_name", "seller__last_name", "seller__username")
-            .annotate(total_sales_seller=Sum("total_amount"))
-            .order_by("-total_sales_seller")[:5]
-        )
+        if is_administrador(user):
+            top_sellers_qs = (
+                sales_qs.values("seller__first_name", "seller__last_name", "seller__username")
+                .annotate(total_sales_seller=Sum("total_amount"))
+                .order_by("-total_sales_seller")[:5]
+            )
 
-        top_sellers = []
-        if top_sellers_qs.exists():
-            max_sales = top_sellers_qs[0]["total_sales_seller"] or 0
-            for seller in top_sellers_qs:
-                progress = int(
-                    (seller["total_sales_seller"] / max_sales * 100) if max_sales > 0 else 0
-                )
-                seller["progress_percentage"] = progress
-                top_sellers.append(seller)
+            top_sellers = []
+            if top_sellers_qs.exists():
+                max_sales = top_sellers_qs[0]["total_sales_seller"] or 0
+                for seller in top_sellers_qs:
+                    progress = int(
+                        (seller["total_sales_seller"] / max_sales * 100) if max_sales > 0 else 0
+                    )
+                    seller["progress_percentage"] = progress
+                    top_sellers.append(seller)
 
-        context["top_sellers"] = top_sellers
+            context["top_sellers"] = top_sellers
 
         return context

@@ -34,7 +34,7 @@ class DailySales(BaseModel):
     commission_rate_applied = models.DecimalField(
         max_digits=5,
         decimal_places=2,
-        null=True,  # 🔹 pode ser preenchido automaticamente
+        null=True,
         blank=True,
         verbose_name="Taxa de Comissão Aplicada (%)",
         help_text="Taxa aplicada no momento do lançamento (mantém histórico)"
@@ -69,12 +69,12 @@ class DailySales(BaseModel):
         - Se não houver taxa manual, aplica a taxa do vendedor.
         - Calcula a comissão com base na taxa aplicada.
         """
-        if not self.commission_rate_applied:
+        # Garante que a taxa de comissão seja preenchida se estiver vazia
+        if self.commission_rate_applied is None:
             self.commission_rate_applied = self.seller.commission_rate
 
-        self.calculated_commission = (
-            self.total_amount * self.commission_rate_applied
-        ) / Decimal('100')
+        # Calcula a comissão com a lógica correta e refinada
+        self.calculated_commission = (self.total_amount * self.commission_rate_applied) / Decimal('100.0')
 
         super().save(*args, **kwargs)
 

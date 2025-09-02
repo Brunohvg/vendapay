@@ -29,7 +29,7 @@ class AccountViewSet(viewsets.ModelViewSet):
     /api/v1/accounts/users/change_password/
     """
 
-    queryset = Account.objects.all().select_related().prefetch_related()
+    queryset = Account.objects.all()
     serializer_class = AccountsSerializer
     pagination_class = StandardResultsSetPagination
 
@@ -68,10 +68,13 @@ class AccountViewSet(viewsets.ModelViewSet):
         PATCH → atualiza parcialmente os dados do usuário logado
         """
         user = request.user
+        if request.method == 'GET':
+            serializer = self.get_serializer(user)
+            return Response(serializer.data)
+
         serializer = self.get_serializer(user, data=request.data, partial=True)
         serializer.is_valid(raise_exception=True)
-        if request.method == 'PATCH':
-            serializer.save()
+        serializer.save()
         return Response(serializer.data)
 
     # 🔑 Endpoint: /api/v1/accounts/users/change_password/
@@ -91,11 +94,22 @@ class AccountViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
 
         user = request.user
-        if not user.check_password(serializer.validated_data['old_password']):
-            return Response({"old_password": "Senha atual incorreta."},
-                            status=status.HTTP_400_BAD_REQUEST)
+        old_password = serializer.validated_data['old_password']
+        new_password = serializer.validated_data['new_password']
 
-        user.set_password(serializer.validated_data['new_password'])
+        if not user.check_password(old_password):
+            return Response(
+                {"old_password": "Senha atual incorreta."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if old_password == new_password:
+            return Response(
+                {"new_password": "A nova senha não pode ser igual à antiga."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        user.set_password(new_password)
         user.save()
         return Response({"detail": "Senha alterada com sucesso!"},
                         status=status.HTTP_200_OK)

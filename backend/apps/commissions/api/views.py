@@ -1,14 +1,11 @@
-# apps/commissions/views.py
 from rest_framework import viewsets, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.utils import timezone
-
 from apps.accounts.models import Account
 from ..models import MonthlyCommissionReport
 from .serializers import MonthlyCommissionReportSerializer
-
 
 class MonthlyCommissionReportViewSet(viewsets.ModelViewSet):
     """
@@ -17,28 +14,31 @@ class MonthlyCommissionReportViewSet(viewsets.ModelViewSet):
     queryset = MonthlyCommissionReport.objects.all().order_by('-year', '-month')
     serializer_class = MonthlyCommissionReportSerializer
     permission_classes = [permissions.IsAuthenticated]
-
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     filterset_fields = ['seller', 'year', 'month', 'status']
     ordering_fields = ['year', 'month', 'total_sales_amount', 'total_commission']
     search_fields = ['seller__username', 'seller__first_name', 'seller__last_name']
 
     def perform_create(self, serializer):
-        """
-        Cria um relatório a partir dos dados do serializer e calcula os valores
-        a partir das vendas existentes.
-        """
         report = serializer.save()
         report.calculate_from_sales()
         report.save()
 
+    def perform_update(self, serializer):
+        instance = self.get_object()
+        new_status = serializer.validated_data.get('status', instance.status)
+        
+        update_fields = {}
+        
+        # Se o status mudou para "APPROVED" ou "PAID" (e ainda não foi aprovado)
+        # preenche quem aprovou.
+        if (new_status == MonthlyCommissionReport.Status.APPROVED or new_status == MonthlyCommissionReport.Status.PAID) and not instance.approved_by:
+             update_fields['approved_by'] = self.request.user
+
+        serializer.save(**update_fields)
+
     @action(detail=False, methods=['post'], url_path='generate_all', url_name='generate_all')
     def generate_all_reports(self, request):
-        """
-        Endpoint: POST /api/v1/monthly-reports/generate_all/
-        Gera relatórios para todos os vendedores ativos para o mês e ano especificado.
-        Se não houver vendas, o relatório ainda será criado com valores zerados.
-        """
         year = request.data.get('year')
         month = request.data.get('month')
 
@@ -46,7 +46,6 @@ class MonthlyCommissionReportViewSet(viewsets.ModelViewSet):
         year = int(year) if year else now.year
         month = int(month) if month else now.month
 
-        # Seleciona todos os vendedores ativos para comissão
         sellers = Account.objects.filter(
             user_type='SELLER',
             commission_active=True,
@@ -54,27 +53,15 @@ class MonthlyCommissionReportViewSet(viewsets.ModelViewSet):
         )
 
         created_reports = []
-
         for seller in sellers:
-            # Cria ou pega o relatório existente
             report, created = MonthlyCommissionReport.objects.get_or_create(
                 seller=seller,
                 year=year,
-                month=month,
-                defaults={
-                    'total_sales_amount': 0,
-                    'sales_days_count': 0,
-                    'total_commission': 0,
-                    'average_commission_rate': 0,
-                }
+                month=month
             )
-
-            # Calcula os valores a partir das vendas, mesmo que seja 0
             report.calculate_from_sales()
             report.save()
-
-            # Serializa o relatório para resposta
-            created_reports.append(MonthlyCommissionReportSerializer(report).data)
+            created_reports.append(self.get_serializer(report).data)
 
         return Response({
             "year": year,
