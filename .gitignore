@@ -10,3 +10,7 @@ wheels/
 .venv
 db.sqlite
 .env
+.logs
+logs
+core.log
+django.log
