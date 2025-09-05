@@ -10,6 +10,7 @@ wheels/
 .venv
 db.sqlite
 .env
+<<<<<<< HEAD
 db.sqlite3
 .envrc
 # IDEs and editors
@@ -38,3 +39,9 @@ celeryworker-stderr
 *.log
 .logs/
 django.log
+=======
+.logs
+logs
+core.log
+django.log
+>>>>>>> 009d22f31f94a32bd5749f27b210a08e37942dd8
