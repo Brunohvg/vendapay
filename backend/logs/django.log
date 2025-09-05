@@ -5341,3 +5341,301 @@ django.core.exceptions.ImproperlyConfigured: Field name `approved_by.first_name`
 [WARNING] 2025-09-04 22:41:37,329 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10585
 [INFO] 2025-09-04 22:41:40,803 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
 [INFO] 2025-09-04 22:41:54,293 django.server: "GET /?year=2025 HTTP/1.1" 200 18259
+[INFO] 2025-09-04 23:03:03,049 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:03:05,874 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 23:03:06,809 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 23:03:10,904 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 23:03:33,693 django.server: "GET /api/v1/monthly-reports/70 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 23:03:33,748 django.request: Not Found: /api/v1/monthly-reports/70/
+[WARNING] 2025-09-04 23:03:33,749 django.server: "GET /api/v1/monthly-reports/70/ HTTP/1.1" 404 12664
+[INFO] 2025-09-04 23:03:36,950 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 23:03:45,629 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:03:48,808 django.server: "GET /?year=2025 HTTP/1.1" 200 18256
+[INFO] 2025-09-04 23:03:53,582 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:03:57,191 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:04:01,030 django.server: "GET /api/v1/monthly-reports/1 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 23:04:01,052 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-09-04 23:04:01,053 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 404 12655
+[INFO] 2025-09-04 23:04:04,373 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 23:04:15,919 django.server: "GET /admin/ HTTP/1.1" 200 13928
+[INFO] 2025-09-04 23:04:17,380 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16052
+[INFO] 2025-09-04 23:04:17,419 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 23:04:25,810 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:04:33,909 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 16858
+[INFO] 2025-09-04 23:04:33,949 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 23:04:37,075 django.server: "GET /admin/sales/dailysales/add/ HTTP/1.1" 200 21457
+[INFO] 2025-09-04 23:04:37,119 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 23:04:58,842 django.server: "POST /admin/sales/dailysales/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 23:04:58,861 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 17675
+[INFO] 2025-09-04 23:04:58,940 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 23:05:05,165 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:05:09,269 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13702
+[INFO] 2025-09-04 23:05:17,150 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13710
+[INFO] 2025-09-04 23:05:19,842 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13710
+[WARNING] 2025-09-04 23:05:49,175 django.request: Bad Request: /api/v1/monthly-reports/10/
+[WARNING] 2025-09-04 23:05:49,176 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 400 12705
+[INFO] 2025-09-04 23:10:17,617 django.server: "GET / HTTP/1.1" 200 18285
+[ERROR] 2025-09-04 23:24:25,000 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+        "'%s' tag with name '%s' appears more than once" % (bits[0], block_name)
+    )
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+[ERROR] 2025-09-04 23:24:25,004 django.server: "GET / HTTP/1.1" 500 208243
+[WARNING] 2025-09-04 23:24:25,084 django.request: Not Found: /favicon.ico
+[ERROR] 2025-09-04 23:24:30,068 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        template_name,
+        ^^^^^^^^^^^^^^
+        skip=history,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+[ERROR] 2025-09-04 23:24:30,070 django.server: "GET / HTTP/1.1" 500 150743
+[INFO] 2025-09-04 23:24:48,831 django.server: "GET / HTTP/1.1" 200 34370
+[WARNING] 2025-09-04 23:24:48,930 django.request: Not Found: /api/accounts/users/
+[WARNING] 2025-09-04 23:24:48,931 django.server: "GET /api/accounts/users/ HTTP/1.1" 404 3351
+[ERROR] 2025-09-04 23:25:05,517 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+        "'%s' tag with name '%s' appears more than once" % (bits[0], block_name)
+    )
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'title' appears more than once
+[ERROR] 2025-09-04 23:25:05,521 django.server: "GET / HTTP/1.1" 500 208243
+[INFO] 2025-09-04 23:25:08,453 django.server: "GET / HTTP/1.1" 200 18285
+[INFO] 2025-09-04 23:26:19,204 django.server: "GET / HTTP/1.1" 200 22907
+[WARNING] 2025-09-04 23:26:19,253 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[WARNING] 2025-09-04 23:26:19,259 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[INFO] 2025-09-04 23:26:42,853 django.server: "GET / HTTP/1.1" 200 18285
+[INFO] 2025-09-04 23:28:03,391 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:04,007 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:13,500 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:13,850 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:15,173 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:15,555 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:16,781 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:17,204 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:19,442 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:19,995 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:35,691 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:36,019 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:37,307 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:37,683 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:48,284 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:48,650 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:50,944 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:51,568 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:53,818 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:54,230 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:28:59,525 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:28:59,932 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:02,205 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:02,545 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:04,753 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:05,079 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:44,853 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:45,208 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:47,418 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:47,767 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:51,012 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:51,358 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:53,563 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:53,932 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:29:56,084 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:29:56,543 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:30:43,159 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:30:43,544 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:30:45,801 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:30:46,322 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:30:50,679 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:30:51,226 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:00,700 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:01,130 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:05,427 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:05,835 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:20,546 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:20,979 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:25,250 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:25,676 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:49,980 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:50,364 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:52,605 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:53,040 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:31:59,531 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-04 23:31:59,947 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:32:10,397 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/urls.py changed, reloading.
+[INFO] 2025-09-04 23:32:10,857 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 23:32:12,142 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/urls.py changed, reloading.
+[INFO] 2025-09-04 23:32:12,585 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-09-04 23:32:19,996 django.request: Not Found: /equipe
+[WARNING] 2025-09-04 23:32:19,997 django.server: "GET /equipe HTTP/1.1" 404 3312
+[WARNING] 2025-09-04 23:32:20,030 django.request: Not Found: /favicon.ico
+[INFO] 2025-09-04 23:32:53,946 django.server: "GET /contas/equipe HTTP/1.1" 301 0
+[INFO] 2025-09-04 23:32:53,973 django.server: "GET /contas/equipe/ HTTP/1.1" 200 22907
+[WARNING] 2025-09-04 23:32:54,011 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-04 23:32:54,016 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-04 23:33:10,048 django.server: "GET /contas/equipe/ HTTP/1.1" 200 22907
+[WARNING] 2025-09-04 23:33:10,109 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-04 23:33:10,116 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856

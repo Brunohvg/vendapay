@@ -3,8 +3,10 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .forms import LoginForm
+from .forms import LoginForm, SellerForm
 from .utils import is_administrador
+from django.views.generic import CreateView
+from .models import Account
 
 
 # 🔐 Login personalizado
@@ -31,3 +33,14 @@ class CustomLogoutView(LogoutView):
         messages.success(request, 'Você saiu com sucesso.')
         return super().dispatch(request, *args, **kwargs)
 
+
+# 🛠️ Página de cadastro equipe
+class CreateTeamMemberView(CreateView):
+    model = Account
+    form_class = SellerForm
+    template_name = 'accounts/equipe.html'
+    success_url = reverse_lazy('accounts:equipe')
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Membro da equipe criado com sucesso.')
+        return super().form_valid(form)
