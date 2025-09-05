@@ -3574,3 +3574,1770 @@ django.db.utils.IntegrityError: NOT NULL constraint failed: commissions_monthlyc
 [INFO] 2025-09-02 00:35:56,989 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2025-09-02 00:36:11,920 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2025-09-02 00:36:12,837 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15994
+[INFO] 2025-09-02 23:16:18,042 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:16:18,395 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:16:35,909 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:16:36,356 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:16:37,191 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:16:41,980 django.server: "PUT /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:16:51,218 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:16:51,614 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:17:46,846 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:17:47,319 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:17:48,950 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[INFO] 2025-09-02 23:17:52,179 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[INFO] 2025-09-02 23:17:56,676 django.server: "PUT /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[INFO] 2025-09-02 23:17:58,901 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[WARNING] 2025-09-02 23:18:06,201 django.request: Not Found: /api/v1/monthly-reports/10/
+[WARNING] 2025-09-02 23:18:06,202 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 404 12668
+[WARNING] 2025-09-02 23:18:18,161 django.request: Not Found: /api/v1/monthly-reports/10/
+[WARNING] 2025-09-02 23:18:18,161 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 404 12668
+[WARNING] 2025-09-02 23:18:23,433 django.request: Not Found: /api/v1/monthly-reports/10/
+[WARNING] 2025-09-02 23:18:23,434 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 404 12668
+[WARNING] 2025-09-02 23:18:24,240 django.request: Not Found: /api/v1/monthly-reports/10/
+[WARNING] 2025-09-02 23:18:24,241 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 404 12668
+[INFO] 2025-09-02 23:18:28,431 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16030
+[INFO] 2025-09-02 23:18:31,205 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16030
+[INFO] 2025-09-02 23:18:38,275 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15522
+[INFO] 2025-09-02 23:18:38,325 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-02 23:18:40,821 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 15522
+[INFO] 2025-09-02 23:18:40,852 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-02 23:18:44,729 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 15681
+[INFO] 2025-09-02 23:18:44,776 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-02 23:18:51,048 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:18:51,513 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:18:52,758 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:18:53,309 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:18:55,250 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15994
+[INFO] 2025-09-02 23:18:59,167 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 15994
+[WARNING] 2025-09-02 23:19:01,256 django.request: Bad Request: /api/v1/monthly-reports/
+[WARNING] 2025-09-02 23:19:01,256 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 400 12173
+[WARNING] 2025-09-02 23:19:04,205 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-02 23:19:04,206 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10589
+[INFO] 2025-09-02 23:19:05,529 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12015
+[WARNING] 2025-09-02 23:19:12,892 django.request: Not Found: /api/v1/monthly-reports/generate_all/10
+[WARNING] 2025-09-02 23:19:12,894 django.server: "GET /api/v1/monthly-reports/generate_all/10 HTTP/1.1" 404 11450
+[INFO] 2025-09-02 23:19:17,395 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13520
+[INFO] 2025-09-02 23:20:42,320 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:20:42,768 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:20:44,016 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:20:44,441 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:20:46,191 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 12973
+[INFO] 2025-09-02 23:20:51,945 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:20:52,532 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:20:53,762 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13520
+[INFO] 2025-09-02 23:20:59,010 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:20:59,507 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:21:02,074 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13590
+[INFO] 2025-09-02 23:21:07,140 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13600
+[INFO] 2025-09-02 23:21:09,701 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13600
+[INFO] 2025-09-02 23:21:13,393 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:21:13,864 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:21:14,223 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13536
+[INFO] 2025-09-02 23:21:15,100 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13536
+[INFO] 2025-09-02 23:21:21,590 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:21:25,491 django.server: "PUT /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:21:28,244 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13607
+[INFO] 2025-09-02 23:21:32,049 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:21:32,518 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:21:37,042 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:21:37,521 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:21:42,963 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:21:43,538 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:21:44,207 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[INFO] 2025-09-02 23:21:47,662 django.server: "PUT /api/v1/monthly-reports/9/ HTTP/1.1" 200 13671
+[INFO] 2025-09-02 23:22:07,791 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:08,339 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:13,719 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:14,179 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:16,460 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:16,950 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:30,536 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:30,853 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:47,754 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:48,208 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:55,682 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:56,090 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:22:59,312 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:22:59,701 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:23:02,950 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:23:03,371 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:23:04,489 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:23:04,881 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:23:08,084 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:23:08,533 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-02 23:23:12,209 django.request: Internal Server Error: /api/v1/monthly-reports/9/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-02 23:23:12,212 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 500 144126
+[INFO] 2025-09-02 23:23:21,196 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:23:21,621 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-02 23:23:26,032 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-02 23:23:26,455 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-02 23:23:28,046 django.request: Internal Server Error: /api/v1/monthly-reports/9/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-02 23:23:28,049 django.server: "GET /api/v1/monthly-reports/9/ HTTP/1.1" 500 144126
+[ERROR] 2025-09-02 23:23:30,402 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-02 23:23:30,406 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 133851
+[ERROR] 2025-09-02 23:23:34,541 django.request: Internal Server Error: /api/v1/monthly-reports/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 497, in to_internal_value
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 380, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-02 23:23:34,544 django.server: "POST /api/v1/monthly-reports/ HTTP/1.1" 500 146685
+[INFO] 2025-09-04 22:14:02,011 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:14:03,454 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:14:03,457 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 133833
+[ERROR] 2025-09-04 22:14:05,092 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:14:05,095 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 133833
+[INFO] 2025-09-04 22:14:36,968 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-09-04 22:14:37,873 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:14:37,873 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10581
+[INFO] 2025-09-04 22:14:37,909 django.server: "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,913 django.server: "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,915 django.server: "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,917 django.server: "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,917 django.server: "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,918 django.server: "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,921 django.server: "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,925 django.server: "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,925 django.server: "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,926 django.server: "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,926 django.server: "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:14:37,969 django.server: "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[INFO] 2025-09-04 22:14:49,669 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:14:50,102 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:14:56,689 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:14:57,133 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:14:58,444 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:14:59,032 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:15:04,453 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:15:04,897 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:15:05,101 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'seller_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:15:05,107 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 135031
+[INFO] 2025-09-04 22:15:09,241 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:15:09,660 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:15:14,193 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:15:14,769 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:15:16,092 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:15:16,480 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:15:17,217 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:15:17,220 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 133977
+[ERROR] 2025-09-04 22:15:17,804 django.request: Internal Server Error: /api/v1/monthly-reports/generate_all/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 731, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 662, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/renderers.py", line 569, in get_raw_data_form
+    data = serializer.data.copy()
+           ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 255, in data
+    self._data = self.get_initial()
+                 ~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 423, in get_initial
+    for field in self.fields.values()
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:15:17,807 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 500 133977
+[INFO] 2025-09-04 22:15:28,131 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:15:28,603 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-09-04 22:15:30,244 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:15:30,245 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10589
+[WARNING] 2025-09-04 22:15:32,249 django.request: Not Found: /api/v1/monthly-reports/generate_all/10
+[WARNING] 2025-09-04 22:15:32,251 django.server: "GET /api/v1/monthly-reports/generate_all/10 HTTP/1.1" 404 11450
+[WARNING] 2025-09-04 22:15:37,399 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:15:37,400 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10589
+[INFO] 2025-09-04 22:17:24,495 django.server: "GET / HTTP/1.1" 200 18194
+[INFO] 2025-09-04 22:17:24,549 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,554 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,567 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,566 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,565 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,588 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-04 22:17:24,590 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:24,592 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-04 22:17:24,593 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-04 22:17:24,594 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-04 22:17:24,819 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:17:35,618 django.server: "GET / HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:17:35,636 django.server: "GET /contas/?next=/ HTTP/1.1" 200 2918
+[INFO] 2025-09-04 22:17:35,726 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-04 22:17:35,727 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-04 22:17:35,728 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-04 22:17:35,730 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-04 22:17:35,767 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-04 22:17:35,771 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-04 22:17:36,040 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-04 22:17:40,247 django.server: "POST /contas/ HTTP/1.1" 200 3150
+[INFO] 2025-09-04 22:17:45,994 django.server: "POST /contas/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:17:46,004 django.server: "GET / HTTP/1.1" 200 15923
+[INFO] 2025-09-04 22:17:46,066 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-04 22:17:46,067 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-04 22:17:46,069 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-04 22:17:46,109 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-04 22:17:46,192 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 200 653424
+[INFO] 2025-09-04 22:18:49,968 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 14469
+[INFO] 2025-09-04 22:18:50,022 django.server: "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[WARNING] 2025-09-04 22:19:02,516 django.request: Not Found: /api/v1/sales/1/
+[WARNING] 2025-09-04 22:19:02,517 django.server: "GET /api/v1/sales/1/ HTTP/1.1" 404 11748
+[INFO] 2025-09-04 22:19:22,243 django.server: "GET /api/v1/sales/2 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 22:19:22,270 django.request: Not Found: /api/v1/sales/2/
+[WARNING] 2025-09-04 22:19:22,270 django.server: "GET /api/v1/sales/2/ HTTP/1.1" 404 11748
+[INFO] 2025-09-04 22:19:44,262 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:19:44,733 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:19:45,998 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:19:46,406 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:19:48,751 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:19:49,140 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:19:50,419 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:19:50,769 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:19:52,072 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:19:52,681 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:19:55,198 django.server: "GET /api/v1/sales/ HTTP/1.1" 200 14871
+[INFO] 2025-09-04 22:20:01,509 django.server: "GET /api/v1/sales/3 HTTP/1.1" 301 0
+[INFO] 2025-09-04 22:20:01,549 django.server: "GET /api/v1/sales/3/ HTTP/1.1" 200 12672
+[INFO] 2025-09-04 22:20:16,937 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/sales/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:20:17,580 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:20:18,739 django.server: "GET /api/v1/sales/3/ HTTP/1.1" 200 12672
+[INFO] 2025-09-04 22:20:29,848 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13536
+[INFO] 2025-09-04 22:20:33,677 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13536
+[WARNING] 2025-09-04 22:20:38,078 django.request: Not Found: /api/v1/monthly-reports/1/
+[WARNING] 2025-09-04 22:20:38,078 django.server: "GET /api/v1/monthly-reports/1/ HTTP/1.1" 404 12659
+[INFO] 2025-09-04 22:20:54,653 django.server: "GET /api/v1/monthly-reports/3 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 22:20:54,683 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:20:54,683 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12659
+[INFO] 2025-09-04 22:20:58,216 django.server: "OPTIONS /api/v1/monthly-reports/3/ HTTP/1.1" 200 13014
+[WARNING] 2025-09-04 22:20:59,137 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:20:59,138 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12659
+[WARNING] 2025-09-04 22:20:59,871 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:20:59,872 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12659
+[INFO] 2025-09-04 22:21:02,362 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:21:15,875 django.server: "GET /admin/ HTTP/1.1" 200 13723
+[INFO] 2025-09-04 22:21:15,917 django.server: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:15,919 django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:15,922 django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:15,923 django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:15,924 django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:15,925 django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[INFO] 2025-09-04 22:21:15,925 django.server: "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[INFO] 2025-09-04 22:21:15,975 django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[INFO] 2025-09-04 22:21:15,976 django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[INFO] 2025-09-04 22:21:15,978 django.server: "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[INFO] 2025-09-04 22:21:18,363 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 15681
+[INFO] 2025-09-04 22:21:18,395 django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[INFO] 2025-09-04 22:21:18,397 django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,402 django.server: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,406 django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,406 django.server: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,407 django.server: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,410 django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,412 django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,416 django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,420 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:18,421 django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:18,436 django.server: "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[INFO] 2025-09-04 22:21:18,487 django.server: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[INFO] 2025-09-04 22:21:18,488 django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[INFO] 2025-09-04 22:21:21,059 django.server: "GET /admin/sales/dailysales/3/change/ HTTP/1.1" 200 21777
+[INFO] 2025-09-04 22:21:21,092 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:21,095 django.server: "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[INFO] 2025-09-04 22:21:21,101 django.server: "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:21,103 django.server: "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:21,107 django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:21,108 django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:21,117 django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+[INFO] 2025-09-04 22:21:21,198 django.server: "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[INFO] 2025-09-04 22:21:26,692 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 17328
+[INFO] 2025-09-04 22:21:26,738 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:26,744 django.server: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[INFO] 2025-09-04 22:21:26,746 django.server: "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[INFO] 2025-09-04 22:21:26,786 django.server: "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[INFO] 2025-09-04 22:21:29,621 django.server: "GET /admin/accounts/account/1/change/ HTTP/1.1" 200 32146
+[INFO] 2025-09-04 22:21:29,655 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:29,664 django.server: "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:29,666 django.server: "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+[INFO] 2025-09-04 22:21:29,742 django.server: "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[INFO] 2025-09-04 22:21:29,746 django.server: "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[INFO] 2025-09-04 22:21:35,995 django.server: "POST /admin/accounts/account/1/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:21:36,016 django.server: "GET /admin/accounts/account/ HTTP/1.1" 200 17530
+[INFO] 2025-09-04 22:21:36,085 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:39,337 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:21:40,263 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:21:42,038 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:21:49,453 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 15681
+[INFO] 2025-09-04 22:21:49,489 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:51,138 django.server: "GET /admin/sales/dailysales/3/change/ HTTP/1.1" 200 21777
+[INFO] 2025-09-04 22:21:51,169 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:56,179 django.server: "POST /admin/sales/dailysales/3/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:21:56,200 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 15911
+[INFO] 2025-09-04 22:21:56,271 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:21:59,375 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:22:10,300 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:22:11,133 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16632
+[INFO] 2025-09-04 22:22:12,324 django.server: "OPTIONS /api/v1/monthly-reports/ HTTP/1.1" 200 17407
+[WARNING] 2025-09-04 22:22:13,819 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:22:13,820 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10589
+[INFO] 2025-09-04 22:22:16,189 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12027
+[INFO] 2025-09-04 22:22:24,223 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:22:25,219 django.server: "GET / HTTP/1.1" 200 18200
+[WARNING] 2025-09-04 22:22:38,038 django.request: Not Found: /api/v1/monthly-reports/4/
+[WARNING] 2025-09-04 22:22:38,038 django.server: "GET /api/v1/monthly-reports/4/ HTTP/1.1" 404 12659
+[INFO] 2025-09-04 22:22:44,467 django.server: "GET /api/v1/monthly-reports/3 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 22:22:44,495 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:22:44,496 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12659
+[WARNING] 2025-09-04 22:22:47,750 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:22:47,751 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12659
+[INFO] 2025-09-04 22:22:50,083 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16636
+[INFO] 2025-09-04 22:22:55,218 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13544
+[INFO] 2025-09-04 22:23:07,463 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13665
+[INFO] 2025-09-04 22:23:26,303 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:23:26,805 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:23:33,898 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 225, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 444, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 497, in to_internal_value
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 380, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:23:33,901 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 500 154521
+[INFO] 2025-09-04 22:23:40,644 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:23:41,085 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:23:44,474 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:23:44,868 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:23:45,987 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:23:46,474 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:23:48,070 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13665
+[INFO] 2025-09-04 22:23:53,592 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13665
+[INFO] 2025-09-04 22:24:01,323 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:01,713 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:04,038 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:04,607 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:05,902 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:06,400 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:15,984 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:16,417 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:34,291 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:34,649 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:35,792 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:36,213 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:24:39,708 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:24:39,711 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144632
+[INFO] 2025-09-04 22:24:46,807 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:47,219 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:49,579 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:24:50,021 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:24:50,650 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13565
+[INFO] 2025-09-04 22:24:54,460 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13565
+[INFO] 2025-09-04 22:25:14,169 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:14,885 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:25:15,278 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13565
+[INFO] 2025-09-04 22:25:19,683 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13565
+[INFO] 2025-09-04 22:25:33,886 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:34,331 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:25:37,586 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:38,049 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:25:40,308 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:40,750 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:25:43,563 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:25:43,566 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151501
+[INFO] 2025-09-04 22:25:47,269 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:47,743 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:25:50,043 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:50,404 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:25:51,620 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:25:52,062 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:25:52,280 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:25:52,283 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144551
+[ERROR] 2025-09-04 22:25:52,995 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:25:52,998 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144551
+[INFO] 2025-09-04 22:25:59,665 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:26:00,112 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:26:00,811 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:26:00,814 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144551
+[ERROR] 2025-09-04 22:26:01,395 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'approved_by_name' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:26:01,401 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144551
+[INFO] 2025-09-04 22:26:05,682 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:26:06,195 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:26:06,726 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:26:06,729 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144305
+[ERROR] 2025-09-04 22:26:07,295 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'period_display' was declared on serializer MonthlyCommissionReportSerializer, but has not been included in the 'fields' option.
+[ERROR] 2025-09-04 22:26:07,297 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 144305
+[INFO] 2025-09-04 22:26:12,616 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:26:13,112 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:26:16,620 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13665
+[INFO] 2025-09-04 22:26:20,970 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:26:21,867 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:26:50,538 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:26:50,993 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:26:54,441 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13729
+[INFO] 2025-09-04 22:26:58,362 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13729
+[INFO] 2025-09-04 22:27:08,871 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:09,301 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:11,709 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:12,174 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:24,910 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:25,411 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:26,198 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13729
+[INFO] 2025-09-04 22:27:37,143 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:37,646 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:40,044 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:40,479 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:42,658 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:43,155 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:44,283 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:44,683 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:46,829 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:27:47,166 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:27:49,478 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13729
+[INFO] 2025-09-04 22:27:53,326 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13729
+[INFO] 2025-09-04 22:28:48,978 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:28:49,363 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:28:52,706 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:28:53,194 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:28:55,454 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:28:55,817 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:28:59,020 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:28:59,586 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:29:00,931 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13629
+[INFO] 2025-09-04 22:29:11,441 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:29:11,968 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:29:12,550 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13629
+[INFO] 2025-09-04 22:30:09,241 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:09,697 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:30:12,182 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.value` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:12,185 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151178
+[INFO] 2025-09-04 22:30:16,276 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:16,758 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:30:18,028 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:18,416 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:30:18,742 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.validated_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:18,746 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151367
+[ERROR] 2025-09-04 22:30:19,486 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.validated_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:19,488 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151367
+[INFO] 2025-09-04 22:30:23,740 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:24,110 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:30:24,464 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.validated_name()` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:24,468 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151409
+[ERROR] 2025-09-04 22:30:25,119 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.validated_name()` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:25,122 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151409
+[INFO] 2025-09-04 22:30:27,399 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:27,857 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:30:29,084 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:29,530 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-04 22:30:29,902 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.first_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:29,906 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151319
+[ERROR] 2025-09-04 22:30:30,494 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.first_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:30,498 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151319
+[ERROR] 2025-09-04 22:30:30,852 django.request: Internal Server Error: /api/v1/monthly-reports/10/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `approved_by.first_name` is not valid for model `MonthlyCommissionReport` in `apps.commissions.api.serializers.MonthlyCommissionReportSerializer`.
+[ERROR] 2025-09-04 22:30:30,856 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 500 151319
+[INFO] 2025-09-04 22:30:34,021 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/commissions/api/serializers.py changed, reloading.
+[INFO] 2025-09-04 22:30:34,462 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-04 22:30:35,680 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13629
+[INFO] 2025-09-04 22:30:55,161 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13631
+[INFO] 2025-09-04 22:30:58,242 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:30:59,341 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:30:59,665 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:00,082 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:00,586 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:07,568 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:31:09,158 django.server: "GET / HTTP/1.1" 200 18198
+[INFO] 2025-09-04 22:31:15,928 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13709
+[INFO] 2025-09-04 22:31:17,721 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:25,018 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13707
+[INFO] 2025-09-04 22:31:26,807 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:27,780 django.server: "GET / HTTP/1.1" 200 18200
+[INFO] 2025-09-04 22:31:36,850 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:31:38,936 django.server: "GET / HTTP/1.1" 200 18198
+[INFO] 2025-09-04 22:32:13,600 django.server: "GET /?year=2024 HTTP/1.1" 200 16322
+[INFO] 2025-09-04 22:32:18,327 django.server: "GET /?year=2025 HTTP/1.1" 200 18198
+[INFO] 2025-09-04 22:32:26,154 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 15683
+[INFO] 2025-09-04 22:32:26,199 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:32:27,453 django.server: "GET /admin/sales/dailysales/add/ HTTP/1.1" 200 21457
+[INFO] 2025-09-04 22:32:27,485 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:32:57,777 django.server: "POST /admin/sales/dailysales/add/ HTTP/1.1" 200 21733
+[INFO] 2025-09-04 22:32:57,807 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:33:07,032 django.server: "POST /admin/sales/dailysales/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:33:07,050 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 16500
+[INFO] 2025-09-04 22:33:07,122 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:33:14,950 django.server: "GET /admin/sales/dailysales/5/change/ HTTP/1.1" 200 21770
+[INFO] 2025-09-04 22:33:14,987 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:33:29,360 django.server: "GET /?year=2025 HTTP/1.1" 200 18228
+[INFO] 2025-09-04 22:33:57,475 django.server: "POST /admin/sales/dailysales/5/change/ HTTP/1.1" 200 22000
+[INFO] 2025-09-04 22:33:57,508 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:34:05,969 django.server: "POST /admin/sales/dailysales/5/change/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:34:05,988 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 16500
+[INFO] 2025-09-04 22:34:06,052 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:34:09,160 django.server: "GET /?year=2025 HTTP/1.1" 200 18229
+[INFO] 2025-09-04 22:34:16,013 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:34:18,471 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16004
+[INFO] 2025-09-04 22:34:18,503 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:34:33,760 django.server: "GET /api/v1/monthly-reports/3 HTTP/1.1" 301 0
+[WARNING] 2025-09-04 22:34:33,799 django.request: Not Found: /api/v1/monthly-reports/3/
+[WARNING] 2025-09-04 22:34:33,799 django.server: "GET /api/v1/monthly-reports/3/ HTTP/1.1" 404 12655
+[INFO] 2025-09-04 22:34:42,280 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16690
+[WARNING] 2025-09-04 22:34:44,384 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:34:44,386 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10585
+[INFO] 2025-09-04 22:34:45,911 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12082
+[INFO] 2025-09-04 22:34:52,020 django.server: "GET /?year=2025 HTTP/1.1" 200 18232
+[INFO] 2025-09-04 22:34:53,023 django.server: "GET /?year=2025 HTTP/1.1" 200 18232
+[INFO] 2025-09-04 22:35:01,793 django.server: "GET /api/v1/monthly-reports HTTP/1.1" 301 0
+[INFO] 2025-09-04 22:35:01,819 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 22:37:04,042 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:37:07,808 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:37:08,648 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:37:21,435 django.server: "GET /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 200 23023
+[INFO] 2025-09-04 22:37:21,472 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:38:02,539 django.server: "POST /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 200 23348
+[INFO] 2025-09-04 22:38:02,570 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:39:05,314 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16005
+[INFO] 2025-09-04 22:39:05,342 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:39:06,764 django.server: "GET /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 200 23023
+[INFO] 2025-09-04 22:39:06,802 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:39:38,289 django.server: "POST /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 200 23506
+[INFO] 2025-09-04 22:39:38,320 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:39:44,425 django.server: "POST /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 200 23349
+[INFO] 2025-09-04 22:39:44,453 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:39:59,816 django.server: "POST /admin/commissions/monthlycommissionreport/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:39:59,837 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16798
+[INFO] 2025-09-04 22:39:59,903 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:09,003 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 16271
+[INFO] 2025-09-04 22:40:09,033 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:18,547 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16547
+[INFO] 2025-09-04 22:40:18,574 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:22,843 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 11217
+[INFO] 2025-09-04 22:40:22,879 django.server: "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[INFO] 2025-09-04 22:40:23,782 django.server: "POST /admin/commissions/monthlycommissionreport/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:40:23,802 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16165
+[INFO] 2025-09-04 22:40:23,868 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:25,059 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 16271
+[INFO] 2025-09-04 22:40:25,087 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:31,640 django.server: "GET /admin/sales/dailysales/add/ HTTP/1.1" 200 21457
+[INFO] 2025-09-04 22:40:31,670 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:45,570 django.server: "POST /admin/sales/dailysales/add/ HTTP/1.1" 200 21730
+[INFO] 2025-09-04 22:40:45,600 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:40:55,194 django.server: "POST /admin/sales/dailysales/add/ HTTP/1.1" 302 0
+[INFO] 2025-09-04 22:40:55,212 django.server: "GET /admin/sales/dailysales/ HTTP/1.1" 200 17085
+[INFO] 2025-09-04 22:40:55,276 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:41:02,139 django.server: "GET /admin/commissions/monthlycommissionreport/ HTTP/1.1" 200 16005
+[INFO] 2025-09-04 22:41:02,169 django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 8158
+[INFO] 2025-09-04 22:41:10,892 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:41:11,621 django.server: "GET /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:41:19,811 django.server: "PUT /api/v1/monthly-reports/10/ HTTP/1.1" 200 13701
+[INFO] 2025-09-04 22:41:27,721 django.server: "OPTIONS /api/v1/monthly-reports/10/ HTTP/1.1" 200 17959
+[INFO] 2025-09-04 22:41:30,917 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[WARNING] 2025-09-04 22:41:32,742 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:41:32,744 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10585
+[INFO] 2025-09-04 22:41:34,962 django.server: "POST /api/v1/monthly-reports/generate_all/ HTTP/1.1" 200 12082
+[WARNING] 2025-09-04 22:41:37,328 django.request: Method Not Allowed: /api/v1/monthly-reports/generate_all/
+[WARNING] 2025-09-04 22:41:37,329 django.server: "GET /api/v1/monthly-reports/generate_all/ HTTP/1.1" 405 10585
+[INFO] 2025-09-04 22:41:40,803 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 200 16691
+[INFO] 2025-09-04 22:41:54,293 django.server: "GET /?year=2025 HTTP/1.1" 200 18259

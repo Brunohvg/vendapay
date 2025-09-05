@@ -19,6 +19,9 @@ class SalesSerializer(serializers.ModelSerializer):
             'calculated_commission',
             'notes',
             'registered_by',
+            'pk',
+            'created_at',
+            'updated_at'
         ]
         read_only_fields = ['registered_by', 'calculated_commission', 'commission_rate_display']
 

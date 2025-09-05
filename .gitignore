@@ -10,3 +10,31 @@ wheels/
 .venv
 db.sqlite
 .env
+db.sqlite3
+.envrc
+# IDEs and editors
+.vscode/
+.idea/
+
+# PyInstaller
+#
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# mypy
+.mypy_cache/
+nullable_annotated.pyi  
+# Pyre type checker
+.pyre/
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+celeryworker-stdout
+celeryworker-stderr
+*.log
+# Django stuff:
+*.log
+.logs/
+django.log
