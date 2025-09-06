@@ -1,3 +1,4 @@
+from re import A
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -39,6 +40,7 @@ class CreateTeamMemberView(CreateView):
     model = Account
     form_class = SellerForm
     template_name = 'accounts/equipe.html'
+    context_object_name = 'form'
     success_url = reverse_lazy('accounts:equipe')
 
     def form_valid(self, form):

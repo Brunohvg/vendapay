@@ -18,56 +18,8 @@
         </div>
         
         <div class="card-body">
-            <!-- Filtros e Busca -->
-            <div class="filter-section">
-                <div class="row align-items-center g-3">
-                    <div class="col-lg-8 col-md-12">
-                        <label class="form-label fw-medium mb-2">Filtrar por tipo:</label>
-                        <div class="btn-group w-100" role="group">
-                            <input type="radio" class="btn-check" name="filterType" id="filterAll" value="all" checked>
-                            <label class="btn btn-outline-primary btn-sm" for="filterAll">
-                                <i class="ti ti-users me-1"></i>Todos (<span id="countAll">0</span>)
-                            </label>
-                            
-                            <input type="radio" class="btn-check" name="filterType" id="filterVE" value="VE">
-                            <label class="btn btn-outline-primary btn-sm" for="filterVE">
-                                <i class="ti ti-briefcase me-1"></i>Vendedores (<span id="countVE">0</span>)
-                            </label>
-                            
-                            <input type="radio" class="btn-check" name="filterType" id="filterGE" value="GE">
-                            <label class="btn btn-outline-primary btn-sm" for="filterGE">
-                                <i class="ti ti-crown me-1"></i>Gestores (<span id="countGE">0</span>)
-                            </label>
-                            
-                            <input type="radio" class="btn-check" name="filterType" id="filterCX" value="CX">
-                            <label class="btn btn-outline-primary btn-sm" for="filterCX">
-                                <i class="ti ti-cash me-1"></i>Caixa (<span id="countCX">0</span>)
-                            </label>
-                            
-                            <input type="radio" class="btn-check" name="filterType" id="filterCT" value="CT">
-                            <label class="btn btn-outline-primary btn-sm" for="filterCT">
-                                <i class="ti ti-calculator me-1"></i>Contábil (<span id="countCT">0</span>)
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <label class="form-label fw-medium mb-2">Buscar usuário:</label>
-                        <input type="text" class="form-control" id="searchUsers" placeholder="Digite nome ou email...">
-                    </div>
-                </div>
-            </div>
 
-            <!-- Lista Compacta de Usuários -->
-            <div id="usersCompactList">
-                <!-- Lista será inserida aqui via JavaScript -->
-            </div>
 
-            <!-- Estados de Loading e Empty -->
-            <div id="loadingState" class="text-center p-5">
-                <div class="spinner-border text-primary"></div>
-                <p class="mt-3 text-muted">Carregando usuários...</p>
-            </div>
-            
             <div id="emptyState" class="text-center p-5 d-none">
                 <i class="ti ti-user-off display-4 mb-3" style="color: #D1D5DB;"></i>
                 <h6 style="color: #6B7280; font-weight: 600;">Nenhum usuário cadastrado</h6>
@@ -76,7 +28,9 @@
         </div>
     </div>
 </div>
-
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userFormModal">
+  Launch demo modal
+</button>
 <!-- Modal Melhorado -->
 <div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -232,7 +186,10 @@
         </div>
     </div>
 </div>
-
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+  Launch demo modal
+</button>
 <!-- Modal de Confirmação de Exclusão -->
 <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
