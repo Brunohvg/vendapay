@@ -1,47 +1,592 @@
-{% extends "base/base_dashboard.html" %}
+{% extends 'base/base_dashboard.html' %}
 {% load static %}
 
-{% block title %}Equipe - Gestão de Usuários{% endblock %}
+{% block title %}
+  Equipe - Gestão de Usuários
+{% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/equipe.css' %}">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="{% static 'css/equipe.css' %}" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+  .user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    background: #6c757d; /* cinza neutro */
+    color: white;
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+  .stats-card { background: #495057; color: white; }
+  .stats-card-2 { background: #6c757d; color: white; }
+  .stats-card-3 { background: #adb5bd; color: white; }
+  .stats-card-4 { background: #868e96; color: white; }
+
+  .filter-card {
+    background: rgba(248,249,250,0.8);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 16px;
+  }
+
+  .table-modern {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background: white;
+  }
+
+  .table-modern thead th {
+    background: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+  }
+
+  .table-modern tbody tr:hover {
+    background: rgba(0,0,0,0.03);
+    transform: translateX(2px);
+  }
+
+  .badge-modern {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  .badge-modern.bg-success { background: #198754; color: white; }
+  .badge-modern.bg-secondary { background: #6c757d; color: white; }
+  .badge-modern.bg-info { background: #0dcaf0; color: white; }
+  .badge-modern.bg-warning { background: #ffc107; color: #212529; }
+  .badge-modern.bg-danger { background: #dc3545; color: white; }
+
+  .btn-action {
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #f8f9fa;
+    color: #495057;
+  }
+
+  .btn-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #e9ecef;
+  }
+
+  .empty-state {
+    background: rgba(248,249,250,0.6);
+    border: 2px dashed #ced4da;
+    border-radius: 16px;
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .search-input {
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .search-input:focus {
+    box-shadow: 0 0 0 3px rgba(108,117,125,0.15);
+    border-color: #6c757d;
+  }
+
+  .page-header {
+    background: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+    padding: 2rem;
+    color: #495057;
+  }
+
+  .main-card {
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border: none;
+    overflow: hidden;
+  }
+
+  .pagination-modern .page-link {
+    border: none;
+    border-radius: 8px;
+    margin: 0 0.2rem;
+    color: #495057;
+    font-weight: 500;
+  }
+
+  .pagination-modern .page-link:hover {
+    background: #dee2e6;
+    color: #212529;
+    transform: translateY(-2px);
+  }
+
+  .pagination-modern .page-item.active .page-link {
+    background: #6c757d;
+    color: white;
+    border-color: transparent;
+  }
+</style>
+
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="card border-0 shadow-sm" style="border-radius: 16px;">
-        <div class="card-header border-0 d-flex justify-content-between align-items-center"
-             style="background: linear-gradient(135deg, #7FB6F0 0%, #BFD8FF 100%); color: #0F172A; border-radius: 16px 16px 0 0; padding: 1.5rem 2rem;">
-            <h5 class="card-title mb-0 fw-semibold" style="color:#0F172A;"><i class="ti ti-users me-2"></i>Gestão de Usuários</h5>
-            <button class="btn btn-light btn-sm px-3 py-2" data-bs-toggle="modal" data-bs-target="#userFormModal" style="border-radius: 8px; font-weight: 600; color:#0F172A; border:1px solid rgba(15,23,42,.08);"><i class="ti ti-plus me-1"></i>Novo Usuário</button>
-        </div>
-        
-   
-        <div class="card-body">
-            <div id="emptyState" class="text-center p-5 " style="border: 2px dashed #E5E7EB; border-radius: 12px; background-color: #F9FAFB;">
-                <i class="ti ti-user-off display-4 mb-3" style="color: #D1D5DB;"></i>
-                <h6 style="color: #6B7280; font-weight: 600;">Nenhum usuário cadastrado</h6>
-                <p style="color: #9CA3AF; font-size: 0.875rem;">Clique em "Novo Usuário" para começar</p>
-                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#userFormModal">Novo Usuário</button>
+  <div class="container-fluid">
+    <!-- Estatísticas rápidas -->
+    {% if user.user_type == 'ADMIN' and stats %}
+      <div class="row mb-4">
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card stats-card border-0 h-100">
+            <div class="card-body text-center">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <i class="ti ti-users display-6 me-2"></i>
+                <h2 class="mb-0 fw-bold">{{ stats.total_users }}</h2>
+              </div>
+              <p class="mb-0 opacity-90">Total de Usuários</p>
             </div>
-        </div>  
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card stats-card-2 border-0 h-100">
+            <div class="card-body text-center">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <i class="ti ti-user-check display-6 me-2"></i>
+                <h2 class="mb-0 fw-bold">{{ stats.active_users }}</h2>
+              </div>
+              <p class="mb-0 opacity-90">Usuários Ativos</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card stats-card-3 border-0 h-100">
+            <div class="card-body text-center">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <i class="ti ti-briefcase display-6 me-2"></i>
+                <h2 class="mb-0 fw-bold">{{ stats.sellers_count }}</h2>
+              </div>
+              <p class="mb-0 opacity-90">Vendedores</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-3">
+          <div class="card stats-card-4 border-0 h-100">
+            <div class="card-body text-center">
+              <div class="d-flex align-items-center justify-content-center mb-2">
+                <i class="ti ti-crown display-6 me-2"></i>
+                <h2 class="mb-0 fw-bold">{{ stats.admins_count }}</h2>
+              </div>
+              <p class="mb-0 opacity-90">Administradores</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
 
+    <!-- Card principal -->
+    <div class="card main-card border-0 shadow-lg">
+      <div class="page-header d-flex justify-content-between align-items-center">
+        <div>
+          <h4 class="mb-1 fw-bold">
+            <i class="ti ti-users me-2"></i>Gestão de Usuários
+          </h4>
+          <p class="mb-0 opacity-90">Gerencie todos os usuários do sistema</p>
+        </div>
+        {% if user.user_type == 'ADMIN' %}
+          <button class="btn btn-light btn-lg px-4 py-2 fw-semibold" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#userFormModal" 
+                  style="border-radius: 16px; border: none; box-shadow: 0 4px 15px rgba(255,255,255,0.3);">
+            <i class="ti ti-plus me-2"></i>Novo Usuário
+          </button>
+        {% endif %}
+      </div>
+
+      <div class="card-body p-0">
+        {% if user.user_type == 'ADMIN' %}
+          {% if membros %}
+            <!-- Filtros modernos -->
+            <div class="p-4">
+              <div class="card filter-card border-0 p-3 mb-4">
+                <div class="row g-3">
+                  <div class="col-lg-6">
+                    <div class="position-relative">
+                      <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                      <input type="text" 
+                             class="form-control search-input ps-5" 
+                             id="searchUsers" 
+                             placeholder="Buscar por nome, email ou usuário..."
+                             style="padding-left: 3rem !important;">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="form-select search-input" id="filterType">
+                      <option value="">🏷️ Todos os tipos</option>
+                      <option value="ADMIN">👑 Administrador</option>
+                      <option value="MANAGER">📊 Gerente</option>
+                      <option value="SELLER">💼 Vendedor</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3">
+                    <select class="form-select search-input" id="filterStatus">
+                      <option value="">📊 Todos os status</option>
+                      <option value="active">✅ Ativo</option>
+                      <option value="inactive">❌ Inativo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabela moderna -->
+            <div class="mx-4 mb-4">
+              <div class="table-modern">
+                <table class="table table-hover mb-0 align-middle">
+                  <thead>
+                    <tr>
+                      <th>👤 Usuário</th>
+                      <th>🏷️ Tipo</th>
+                      <th>📧 Email</th>
+                      <th>📱 Telefone</th>
+                      <th>📊 Status</th>
+                      <th>💰 Comissão</th>
+                      <th>⏰ Último Login</th>
+                      <th>⚙️ Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="usersTableBody">
+                    {% for membro in membros %}
+                      <tr data-user-type="{{ membro.user_type }}" 
+                          data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
+                        <td>
+                          <div class="d-flex align-items-center">
+                            <div class="user-avatar me-3">
+                              {{ membro.first_name|first|default:membro.username|first|upper }}
+                            </div>
+                            <div>
+                              <h6 class="mb-0 fw-semibold">{{ membro.get_full_name|default:membro.username }}</h6>
+                              <small class="text-muted">@{{ membro.username }}</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <span class="badge badge-modern
+                            {% if membro.user_type == 'ADMIN' %}bg-danger
+                            {% elif membro.user_type == 'MANAGER' %}bg-warning text-dark
+                            {% else %}bg-success
+                            {% endif %}">
+                            {% if membro.user_type == 'ADMIN' %}👑 
+                            {% elif membro.user_type == 'MANAGER' %}📊 
+                            {% else %}💼 {% endif %}{{ membro.get_user_type_display }}
+                          </span>
+                        </td>
+                        <td>
+                          <span class="text-muted">{{ membro.email }}</span>
+                        </td>
+                        <td>
+                          <span class="text-muted">{{ membro.phone|default:"—" }}</span>
+                        </td>
+                        <td>
+                          {% if membro.is_active %}
+                            <span class="badge badge-modern bg-success">✅ Ativo</span>
+                          {% else %}
+                            <span class="badge badge-modern bg-secondary">❌ Inativo</span>
+                          {% endif %}
+                        </td>
+                        <td>
+                          {% if membro.user_type == 'SELLER' %}
+                            <span class="badge badge-modern bg-info">{{ membro.commission_rate }}%</span>
+                          {% else %}
+                            <span class="text-muted">—</span>
+                          {% endif %}
+                        </td>
+                        <td>
+                          {% if membro.last_login %}
+                            <small class="text-muted">{{ membro.last_login|date:"d/m/Y H:i" }}</small>
+                          {% else %}
+                            <small class="text-muted">Nunca</small>
+                          {% endif %}
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn btn-action btn-outline-primary btn-sm dropdown-toggle" 
+                                    type="button" 
+                                    data-bs-toggle="dropdown">
+                              <i class="ti ti-dots-vertical"></i>
+                            </button>
+                            <ul class="dropdown-menu shadow-lg border-0" style="border-radius: 12px;">
+                              <li>
+                                <a class="dropdown-item py-2" 
+                                   href="#" 
+                                   onclick="editUser({{ membro.id }})">
+                                  <i class="ti ti-edit me-2 text-primary"></i>Editar
+                                </a>
+                              </li>
+                              {% if membro.id != user.id %}
+                                <li>
+                                  <a class="dropdown-item py-2" 
+                                     href="#" 
+                                     onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})">
+                                    <i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %} me-2 text-warning"></i>
+                                    {% if membro.is_active %}Desativar{% else %}Ativar{% endif %}
+                                  </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                  <a class="dropdown-item py-2 text-danger" 
+                                     href="#" 
+                                     onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')">
+                                    <i class="ti ti-trash me-2"></i>Excluir
+                                  </a>
+                                </li>
+                              {% endif %}
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Paginação moderna -->
+            {% if membros.has_other_pages %}
+              <div class="d-flex justify-content-center pb-4">
+                <nav aria-label="Navegação de páginas">
+                  <ul class="pagination pagination-modern mb-0">
+                    {% if membros.has_previous %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ membros.previous_page_number }}">
+                          <i class="ti ti-chevron-left"></i> Anterior
+                        </a>
+                      </li>
+                    {% endif %}
+                    
+                    {% for num in membros.paginator.page_range %}
+                      {% if num == membros.number %}
+                        <li class="page-item active">
+                          <span class="page-link">{{ num }}</span>
+                        </li>
+                      {% else %}
+                        <li class="page-item">
+                          <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                    
+                    {% if membros.has_next %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ membros.next_page_number }}">
+                          Próximo <i class="ti ti-chevron-right"></i>
+                        </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </nav>
+              </div>
+            {% endif %}
+
+          {% else %}
+            <!-- Estado vazio moderno -->
+            <div class="p-5">
+              <div class="empty-state">
+                <div class="mb-4">
+                  <i class="ti ti-users-off" style="font-size: 4rem; color: #667eea; opacity: 0.7;"></i>
+                </div>
+                <h5 class="fw-bold text-dark mb-3">Nenhum usuário cadastrado</h5>
+                <p class="text-muted mb-4">Comece criando o primeiro usuário da sua equipe!</p>
+                <button class="btn btn-lg px-5 py-3 fw-semibold" 
+                        data-bs-toggle="modal" 
+                        data-bs-target="#userFormModal"
+                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 16px; color: white; box-shadow: 0 8px 25px rgba(102,126,234,0.3);">
+                  <i class="ti ti-plus me-2"></i>Criar Primeiro Usuário
+                </button>
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          <!-- Acesso negado moderno -->
+          <div class="p-5">
+            <div class="text-center">
+              <div class="mb-4">
+                <i class="ti ti-shield-x" style="font-size: 4rem; color: #f093fb; opacity: 0.8;"></i>
+              </div>
+              <div class="alert alert-info border-0 shadow-sm" style="border-radius: 16px; background: linear-gradient(135deg, rgba(79,172,254,0.1) 0%, rgba(0,242,254,0.1) 100%); border-left: 4px solid #4facfe !important;">
+                <h6 class="fw-bold text-info mb-2">
+                  <i class="ti ti-info-circle me-2"></i>Acesso Restrito
+                </h6>
+                <p class="mb-0">Você não tem permissão para gerenciar usuários. Entre em contato com um administrador se precisar de alterações.</p>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
     </div>
-</div>
-{% include "accounts/includes/create_user.html" %}
+  </div>
+
+  <!-- Modal de Formulário -->
+  {% if user.user_type == 'ADMIN' %}
+    {% include 'accounts/includes/create_user.html' %}
+  {% endif %}
 {% endblock %}
 
 {% block extra_js %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<script src="{% static 'js/equipe.js' %}"></script>
-{% if form.errors %}
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const modal = new bootstrap.Modal(document.getElementById('userFormModal'));
-    modal.show();
-  });
-</script>
-{% endif %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/equipe.js' %}"></script>
+  
+  {% if form.errors %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const modal = new bootstrap.Modal(document.getElementById('userFormModal'))
+        modal.show()
+      })
+    </script>
+  {% endif %}
 
+  <script>
+    // Animações suaves ao carregar
+    document.addEventListener('DOMContentLoaded', function() {
+      const elements = document.querySelectorAll('.stats-card, .stats-card-2, .stats-card-3, .stats-card-4, .main-card');
+      elements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          el.style.transition = 'all 0.6s ease';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+
+    // Filtro de busca com debounce
+    let searchTimeout;
+    document.getElementById('searchUsers')?.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
+      const searchTerm = this.value.toLowerCase();
+      
+      searchTimeout = setTimeout(() => {
+        const rows = document.querySelectorAll('#usersTableBody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          const shouldShow = text.includes(searchTerm);
+          row.style.display = shouldShow ? '' : 'none';
+          
+          if (shouldShow) {
+            row.style.animation = 'fadeInUp 0.3s ease';
+          }
+        });
+      }, 300);
+    });
+
+    // Filtros com animação
+    function animateFilter(filterId, dataAttribute) {
+      document.getElementById(filterId)?.addEventListener('change', function() {
+        const filterValue = this.value;
+        const rows = document.querySelectorAll('#usersTableBody tr');
+        
+        rows.forEach(row => {
+          const shouldShow = !filterValue || row.dataset[dataAttribute] === filterValue;
+          
+          if (shouldShow) {
+            row.style.display = '';
+            row.style.animation = 'fadeInUp 0.3s ease';
+          } else {
+            row.style.animation = 'fadeOutDown 0.3s ease';
+            setTimeout(() => {
+              row.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    }
+
+    animateFilter('filterType', 'userType');
+    animateFilter('filterStatus', 'status');
+
+    // Funções para ações dos usuários com feedback visual
+    function editUser(userId) {
+      console.log('Editar usuário:', userId);
+      // TODO: Implementar modal de edição
+    }
+
+    function toggleUserStatus(userId, newStatus) {
+      Swal.fire({
+        title: 'Confirmar alteração',
+        text: 'Deseja alterar o status deste usuário?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#667eea',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Sim, alterar!',
+        cancelButtonText: 'Cancelar',
+        backdrop: 'rgba(102,126,234,0.1)',
+        customClass: {
+          popup: 'border-0 shadow-lg',
+          confirmButton: 'btn-lg px-4',
+          cancelButton: 'btn-lg px-4'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          console.log('Alterar status do usuário:', userId, 'para:', newStatus);
+          // TODO: Implementar via AJAX
+        }
+      });
+    }
+
+    function deleteUser(userId, userName) {
+      Swal.fire({
+        title: 'Tem certeza?',
+        html: `Deseja excluir o usuário "<strong>${userName}</strong>"?<br><small class="text-muted">Esta ação não pode ser desfeita.</small>`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#dc3545',
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: '🗑️ Sim, excluir!',
+        cancelButtonText: 'Cancelar',
+        backdrop: 'rgba(220,53,69,0.1)',
+        customClass: {
+          popup: 'border-0 shadow-lg',
+          confirmButton: 'btn-lg px-4',
+          cancelButton: 'btn-lg px-4'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          console.log('Excluir usuário:', userId);
+          // TODO: Implementar via AJAX
+          Swal.fire({
+            title: 'Excluído!',
+            text: `Usuário "${userName}" foi excluído com sucesso.`,
+            icon: 'success',
+            timer: 2000,
+            showConfirmButton: false
+          });
+        }
+      });
+    }
+
+    // CSS para animações
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeOutDown {
+        from { opacity: 1; transform: translateY(0); }
+        to { opacity: 0; transform: translateY(-10px); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
 {% endblock %}

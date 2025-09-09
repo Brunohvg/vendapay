@@ -3,12 +3,9 @@
 <div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
-      
       <!-- Cabeçalho -->
       <div class="modal-header text-white bg-gradient-primary px-4 py-3">
-        <h5 class="modal-title d-flex align-items-center" id="userFormModalLabel">
-          <i class="ti ti-user-plus me-2"></i>Novo Usuário
-        </h5>
+        <h5 class="modal-title d-flex align-items-center" id="userFormModalLabel"><i class="ti ti-user-plus me-2"></i>Novo Usuário</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
       </div>
 
@@ -16,28 +13,28 @@
       <div class="px-4 pt-4">
         <div class="step-progress">
           <div class="step-progress-bar" id="progressBar"></div>
-          
+
           <div class="step-item" data-step="1">
             <div class="step-circle active" id="step-circle-1">
               <i class="ti ti-user"></i>
             </div>
             <div class="step-label active">Dados Pessoais</div>
           </div>
-          
+
           <div class="step-item" data-step="2">
             <div class="step-circle" id="step-circle-2">
               <i class="ti ti-address-book"></i>
             </div>
             <div class="step-label">Contato</div>
           </div>
-          
+
           <div class="step-item" data-step="3">
             <div class="step-circle" id="step-circle-3">
               <i class="ti ti-key"></i>
             </div>
             <div class="step-label">Login</div>
           </div>
-          
+
           <div class="step-item" data-step="4">
             <div class="step-circle" id="step-circle-4">
               <i class="ti ti-settings"></i>
@@ -51,7 +48,6 @@
       <form id="userForm" action="{% url 'accounts:equipe' %}" method="POST" novalidate>
         {% csrf_token %}
         <div class="modal-body p-4 pt-2">
-
           <!-- Passo 1: Dados Pessoais -->
           <div class="step-content active" id="step-1">
             <section class="mb-4">
@@ -61,7 +57,7 @@
                   <label for="{{ form.first_name.id_for_label }}" class="form-label required">Nome Completo</label>
                   <div class="input-icon-group">
                     <i class="ti ti-user input-icon"></i>
-                    {{ form.first_name|add_class:"form-control" }}
+                    {{ form.first_name|add_class:'form-control' }}
                   </div>
                   {% for error in form.first_name.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -72,7 +68,7 @@
                   <label for="{{ form.document.id_for_label }}" class="form-label required">Documento (CPF/CNPJ)</label>
                   <div class="input-icon-group">
                     <i class="ti ti-id-badge input-icon"></i>
-                    {{ form.document|add_class:"form-control" }}
+                    {{ form.document|add_class:'form-control' }}
                   </div>
                   {% for error in form.document.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -83,7 +79,7 @@
                   <label for="{{ form.birth_date.id_for_label }}" class="form-label">Data de Nascimento</label>
                   <div class="input-icon-group">
                     <i class="ti ti-calendar input-icon"></i>
-                    {{ form.birth_date|add_class:"form-control" }}
+                    {{ form.birth_date|add_class:'form-control' }}
                   </div>
                   {% for error in form.birth_date.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -102,7 +98,7 @@
                   <label for="{{ form.email.id_for_label }}" class="form-label required">Email</label>
                   <div class="input-icon-group">
                     <i class="ti ti-mail input-icon"></i>
-                    {{ form.email|add_class:"form-control" }}
+                    {{ form.email|add_class:'form-control' }}
                   </div>
                   {% for error in form.email.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -112,7 +108,7 @@
                   <label for="{{ form.phone.id_for_label }}" class="form-label">Telefone</label>
                   <div class="input-icon-group">
                     <i class="ti ti-phone input-icon"></i>
-                    {{ form.phone|add_class:"form-control" }}
+                    {{ form.phone|add_class:'form-control' }}
                   </div>
                   {% for error in form.phone.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -131,7 +127,7 @@
                   <label for="{{ form.username.id_for_label }}" class="form-label required">Nome de Usuário</label>
                   <div class="input-icon-group">
                     <i class="ti ti-at input-icon"></i>
-                    {{ form.username|add_class:"form-control" }}
+                    {{ form.username|add_class:'form-control' }}
                   </div>
                   <small class="text-muted">Este será usado para fazer login</small>
                   {% for error in form.username.errors %}
@@ -143,7 +139,7 @@
                   <label for="{{ form.password1.id_for_label }}" class="form-label">Senha</label>
                   <div class="input-icon-group">
                     <i class="ti ti-lock input-icon"></i>
-                    {{ form.password1|add_class:"form-control" }}
+                    {{ form.password1|add_class:'form-control' }}
                   </div>
                   <div class="password-strength mt-1">
                     <div class="password-strength-bar" id="passwordStrengthBar"></div>
@@ -158,7 +154,7 @@
                   <label for="{{ form.password2.id_for_label }}" class="form-label">Confirme a Senha</label>
                   <div class="input-icon-group">
                     <i class="ti ti-lock-check input-icon"></i>
-                    {{ form.password2|add_class:"form-control" }}
+                    {{ form.password2|add_class:'form-control' }}
                   </div>
                   {% for error in form.password2.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -177,7 +173,7 @@
                   <label for="{{ form.user_type.id_for_label }}" class="form-label required">Tipo de Usuário</label>
                   <div class="input-icon-group">
                     <i class="ti ti-user-cog input-icon"></i>
-                    {{ form.user_type|add_class:"form-select" }}
+                    {{ form.user_type|add_class:'form-select' }}
                   </div>
                   {% for error in form.user_type.errors %}
                     <div class="text-danger small">{{ error }}</div>
@@ -188,14 +184,7 @@
                   <label for="commission_rate" class="form-label">Taxa de Comissão (%)</label>
                   <div class="input-icon-group">
                     <i class="ti ti-percentage input-icon"></i>
-                    <input type="number" 
-                           class="form-control" 
-                           id="commission_rate" 
-                           name="commission_rate" 
-                           step="0.01" 
-                           min="0" 
-                           max="100" 
-                           placeholder="0.00">
+                    <input type="number" class="form-control" id="commission_rate" name="commission_rate" step="0.01" min="0" max="100" placeholder="0.00" />
                   </div>
                   <small class="text-muted">Digite o percentual (ex: 5.50 para 5,50%)</small>
                   {% if form.commission_rate.errors %}
@@ -208,16 +197,13 @@
                 <div class="col-12">
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="is_active" name="is_active" checked />
-                    <label class="form-check-label" for="is_active">
-                      <i class="ti ti-toggle-right me-1"></i>Usuário Ativo
-                    </label>
+                    <label class="form-check-label" for="is_active"><i class="ti ti-toggle-right me-1"></i>Usuário Ativo</label>
                     <small class="text-muted d-block">O usuário pode fazer login no sistema</small>
                   </div>
                 </div>
               </div>
             </section>
           </div>
-
         </div>
 
         <!-- Rodapé com botões de navegação -->
@@ -228,18 +214,10 @@
               <span id="step-info">Passo 1 de 4</span>
             </div>
             <div class="d-flex gap-2">
-              <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-                <i class="ti ti-x me-1"></i>Cancelar
-              </button>
-              <button type="button" class="btn btn-outline-primary btn-step" id="prevBtn" style="display: none;" onclick="changeStep(-1)">
-                <i class="ti ti-chevron-left me-1"></i>Anterior
-              </button>
-              <button type="button" class="btn btn-primary btn-step" id="nextBtn" onclick="changeStep(1)">
-                Próximo<i class="ti ti-chevron-right ms-1"></i>
-              </button>
-              <button type="submit" class="btn btn-success btn-step" id="submitBtn" style="display: none;">
-                <i class="ti ti-check me-1"></i>Salvar Usuário
-              </button>
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="ti ti-x me-1"></i>Cancelar</button>
+              <button type="button" class="btn btn-outline-primary btn-step" id="prevBtn" style="display: none;" onclick="changeStep(-1)"><i class="ti ti-chevron-left me-1"></i>Anterior</button>
+              <button type="button" class="btn btn-primary btn-step" id="nextBtn" onclick="changeStep(1)">Próximo<i class="ti ti-chevron-right ms-1"></i></button>
+              <button type="submit" class="btn btn-success btn-step" id="submitBtn" style="display: none;"><i class="ti ti-check me-1"></i>Salvar Usuário</button>
             </div>
           </div>
         </div>
