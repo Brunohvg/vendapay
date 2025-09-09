@@ -35,4 +35,13 @@
 {% block extra_js %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="{% static 'js/equipe.js' %}"></script>
+{% if form.errors %}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const modal = new bootstrap.Modal(document.getElementById('userFormModal'));
+    modal.show();
+  });
+</script>
+{% endif %}
+
 {% endblock %}

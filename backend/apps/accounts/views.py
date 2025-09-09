@@ -41,9 +41,12 @@ class CreateTeamMemberView(CreateView):
     form_class = SellerForm
     template_name = 'accounts/equipe.html'
     context_object_name = 'form'
-    
     success_url = reverse_lazy('accounts:equipe')
 
     def form_valid(self, form):
         messages.success(self.request, 'Membro da equipe criado com sucesso.')
         return super().form_valid(form)
+    
+    def form_invalid(self, form):
+        messages.error(self.request, 'Erro ao criar membro da equipe. Verifique os dados e tente novamente.', extra_tags='danger')
+        return super().form_invalid(form)

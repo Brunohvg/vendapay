@@ -7087,3 +7087,20 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 214: '
 [INFO] 2025-09-08 23:46:09,196 django.server: "POST /contas/equipe/ HTTP/1.1" 200 20640
 [INFO] 2025-09-08 23:46:29,247 django.server: "POST /contas/equipe/ HTTP/1.1" 302 0
 [INFO] 2025-09-08 23:46:29,259 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20583
+[INFO] 2025-09-08 23:50:57,192 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:50:57,875 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:51:02,295 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:51:02,913 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:51:04,058 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20423
+[INFO] 2025-09-08 23:51:28,079 django.server: "POST /contas/equipe/ HTTP/1.1" 200 20827
+[INFO] 2025-09-08 23:52:10,306 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:52:10,713 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:52:15,105 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:52:15,582 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:52:18,770 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:52:19,201 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:52:34,131 django.server: "POST /contas/equipe/ HTTP/1.1" 200 21176
+[INFO] 2025-09-08 23:57:04,700 django.server: "POST /contas/equipe/ HTTP/1.1" 200 21364
+[INFO] 2025-09-08 23:57:18,789 django.server: "POST /contas/equipe/ HTTP/1.1" 200 21216
+[INFO] 2025-09-08 23:57:38,886 django.server: "POST /contas/equipe/ HTTP/1.1" 302 0
+[INFO] 2025-09-08 23:57:38,897 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20585
