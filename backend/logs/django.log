@@ -7837,3 +7837,75 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 157: '
 [INFO] 2025-09-09 13:27:45,497 django.server: "GET /contas/equipe/ HTTP/1.1" 200 61717
 [INFO] 2025-09-09 13:28:29,146 django.server: "GET /contas/equipe/ HTTP/1.1" 200 58798
 [INFO] 2025-09-09 13:28:39,020 django.server: "GET /contas/equipe/ HTTP/1.1" 200 61717
+[INFO] 2025-09-09 13:44:44,847 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 13:44:46,757 django.server: "GET /contas/ HTTP/1.1" 302 0
+[INFO] 2025-09-09 13:44:46,810 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 13:44:48,616 django.server: "GET /contas/equipe/ HTTP/1.1" 200 62187
+[INFO] 2025-09-09 13:44:48,670 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-09 13:44:48,694 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-09 14:06:13,865 django.server: "GET /contas/equipe/ HTTP/1.1" 200 63531
+[INFO] 2025-09-09 14:06:13,916 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-09 14:06:13,919 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-09 14:06:25,428 django.server: "GET /contas/equipe/ HTTP/1.1" 200 62187
+[INFO] 2025-09-09 14:06:30,074 django.server: "GET /contas/equipe/ HTTP/1.1" 200 63531
+[INFO] 2025-09-09 14:06:40,615 django.server: "GET /contas/equipe/ HTTP/1.1" 200 63531
+[INFO] 2025-09-09 14:06:41,499 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 14:06:43,778 django.server: "GET /contas/equipe/ HTTP/1.1" 200 63531
+[INFO] 2025-09-09 14:25:15,684 django.server: "GET /contas/equipe/ HTTP/1.1" 200 67262
+[INFO] 2025-09-09 14:25:15,733 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-09 14:25:15,734 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-09 14:25:37,342 django.server: "POST /contas/equipe/ HTTP/1.1" 200 68129
+[INFO] 2025-09-09 14:25:53,948 django.server: "POST /contas/equipe/ HTTP/1.1" 200 68004
+[INFO] 2025-09-09 14:26:12,615 django.server: "POST /contas/equipe/ HTTP/1.1" 200 71067
+[INFO] 2025-09-09 14:26:39,044 django.server: "POST /contas/equipe/ HTTP/1.1" 200 68044
+[INFO] 2025-09-09 16:38:23,973 django.server: "GET /contas HTTP/1.1" 301 0
+[INFO] 2025-09-09 16:38:24,070 django.server: "GET /contas/ HTTP/1.1" 200 2918
+[INFO] 2025-09-09 16:38:24,196 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-09 16:38:24,258 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-09 16:38:24,272 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-09 16:38:24,273 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-09 16:38:24,359 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-09 16:38:24,390 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-09 16:38:24,712 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-09 16:38:26,647 django.server: "POST /contas/ HTTP/1.1" 302 0
+[INFO] 2025-09-09 16:38:26,693 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 16:38:26,749 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-09 16:38:26,749 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-09 16:38:26,753 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-09 16:38:26,770 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-09 16:38:27,007 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 200 653424
+[INFO] 2025-09-09 16:38:28,037 django.server: "GET /contas/equipe/ HTTP/1.1" 200 67176
+[INFO] 2025-09-09 16:38:28,106 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-09 16:38:28,106 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-09 16:39:17,565 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:18,702 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:39:20,878 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:21,296 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:39:25,469 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:26,311 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:39:53,797 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:54,163 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:39:56,314 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:56,780 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:39:59,010 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:39:59,425 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:40:00,513 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:40:00,891 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 16:40:06,079 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 16:40:06,532 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 17:00:00,969 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 17:00:28,143 django.utils.autoreload: /home/vidal/projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-09 17:00:30,044 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-09 17:00:32,994 django.server: "GET /contas/ HTTP/1.1" 302 0
+[INFO] 2025-09-09 17:00:33,056 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 17:00:35,092 django.server: "GET /contas/equipe/ HTTP/1.1" 200 67176
+[INFO] 2025-09-09 17:00:55,532 django.server: "GET /contas/equipe/ HTTP/1.1" 200 67176
+[INFO] 2025-09-09 17:00:55,675 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-09 17:00:55,837 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-09 17:02:47,793 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 17:02:49,601 django.server: "GET /contas/equipe/ HTTP/1.1" 200 67176
+[INFO] 2025-09-09 17:03:17,511 django.server: "GET /contas/equipe/ HTTP/1.1" 200 103039
+[INFO] 2025-09-09 17:05:00,030 django.server: "GET /contas/equipe/ HTTP/1.1" 200 103039
+[INFO] 2025-09-09 17:07:19,277 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-09 17:07:35,956 django.server: "GET /contas/equipe/ HTTP/1.1" 200 103874
+[INFO] 2025-09-09 17:07:55,691 django.server: "GET /contas/equipe/ HTTP/1.1" 200 103039

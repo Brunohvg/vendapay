@@ -10,6 +10,7 @@ from django.views.generic import CreateView, View
 from .models import Account
 
 
+
 # 🔐 Login personalizado
 class CustomLoginView(LoginView):
     template_name = 'accounts/login.html'          # Template do login
