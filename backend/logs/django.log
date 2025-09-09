@@ -6211,3 +6211,879 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'user_detail' not found. 'use
 [INFO] 2025-09-06 00:11:42,258 django.server: "GET /contas/equipe/?id=&first_name=Bruno+Henrique+Vidal+Gomes&document=&date_of_birth=&email=&phone=&username=&password=&type_user=&is_active=on HTTP/1.1" 200 20197
 [WARNING] 2025-09-06 00:11:42,311 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
 [WARNING] 2025-09-06 00:11:42,312 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[INFO] 2025-09-07 11:40:46,092 django.server: "GET /contas/equipe/?id=&first_name=Bruno+Henrique+Vidal+Gomes&document=&date_of_birth=&email=&phone=&username=&password=&type_user=&is_active=on HTTP/1.1" 200 19337
+[INFO] 2025-09-07 11:40:46,142 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,147 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 304 0
+[WARNING] 2025-09-07 11:40:46,159 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[INFO] 2025-09-07 11:40:46,161 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,164 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,178 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,178 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,179 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 304 0
+[WARNING] 2025-09-07 11:40:46,179 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 11:40:46,180 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,308 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 304 0
+[INFO] 2025-09-07 11:40:46,308 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-07 11:45:22,268 django.server: "GET /contas/equipe/?id=&first_name=Bruno+Henrique+Vidal+Gomes&document=&date_of_birth=&email=&phone=&username=&password=&type_user=&is_active=on HTTP/1.1" 200 16809
+[WARNING] 2025-09-07 11:45:22,311 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-07 11:45:22,312 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 11:46:48,328 django.server: "GET /contas/equipe/?id=&first_name=Bruno+Henrique+Vidal+Gomes&document=&date_of_birth=&email=&phone=&username=&password=&type_user=&is_active=on HTTP/1.1" 200 17458
+[WARNING] 2025-09-07 11:46:48,382 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-07 11:46:48,383 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 11:47:21,913 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 17458
+[WARNING] 2025-09-07 11:47:22,023 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-07 11:47:22,024 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 11:47:58,095 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 16831
+[WARNING] 2025-09-07 11:47:58,140 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-07 11:47:58,141 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 11:48:04,512 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 17458
+[WARNING] 2025-09-07 11:48:04,561 django.server: "GET /static/js/equipe/main.js HTTP/1.1" 404 1865
+[WARNING] 2025-09-07 11:48:04,561 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:03:13,000 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 28037
+[WARNING] 2025-09-07 12:03:13,043 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:03:48,105 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 28020
+[WARNING] 2025-09-07 12:03:48,176 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:26:25,626 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 28146
+[WARNING] 2025-09-07 12:26:25,689 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:26:58,688 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 28026
+[WARNING] 2025-09-07 12:26:58,749 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:28:23,913 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 27605
+[WARNING] 2025-09-07 12:28:23,950 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:28:24,536 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 27605
+[WARNING] 2025-09-07 12:28:24,593 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:28:28,045 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 28025
+[WARNING] 2025-09-07 12:28:28,076 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:28:45,003 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 27730
+[WARNING] 2025-09-07 12:28:45,087 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:30:02,751 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 18614
+[WARNING] 2025-09-07 12:30:02,799 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:31:12,011 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 18614
+[WARNING] 2025-09-07 12:31:12,054 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:31:29,338 django.server: "GET /contas/equipe/?id=&first_name=asdsad&document=&date_of_birth=&email=&phone=&username=&password=145456465465464654&type_user=GE&is_active=on HTTP/1.1" 200 27730
+[WARNING] 2025-09-07 12:31:29,384 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:31:38,287 django.server: "GET /contas/equipe/ HTTP/1.1" 200 27730
+[WARNING] 2025-09-07 12:31:38,381 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:35:56,888 django.server: "GET /contas/equipe/ HTTP/1.1" 200 23929
+[WARNING] 2025-09-07 12:35:56,917 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:36:14,497 django.server: "GET /contas/equipe/ HTTP/1.1" 200 23936
+[WARNING] 2025-09-07 12:36:14,540 django.server: "GET /static/static/css/equipe.css HTTP/1.1" 404 1877
+[INFO] 2025-09-07 12:36:46,377 django.server: "GET /contas/equipe/ HTTP/1.1" 200 23929
+[WARNING] 2025-09-07 12:36:46,452 django.server: "GET /static/css/equipe.css HTTP/1.1" 404 1856
+[INFO] 2025-09-07 12:54:51,328 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/vendapay/settings.py changed, reloading.
+[INFO] 2025-09-07 12:54:52,467 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 12:55:13,463 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/vendapay/settings.py changed, reloading.
+[INFO] 2025-09-07 12:55:13,878 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 12:57:56,461 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 12:57:57,667 django.server: "GET /contas/equipe/ HTTP/1.1" 200 23929
+[INFO] 2025-09-07 12:57:57,713 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-07 12:57:57,815 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-07 13:00:03,393 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18814
+[INFO] 2025-09-07 13:00:03,425 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-07 13:00:03,429 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:00:06,673 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 13:00:10,438 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18814
+[INFO] 2025-09-07 13:00:10,458 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:01:41,467 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18815
+[INFO] 2025-09-07 13:01:41,510 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:01:41,513 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:02:13,999 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18808
+[INFO] 2025-09-07 13:02:14,032 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:02:14,034 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:02:21,552 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18815
+[INFO] 2025-09-07 13:02:47,809 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18821
+[INFO] 2025-09-07 13:02:47,845 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:02:47,846 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:03:05,445 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18891
+[INFO] 2025-09-07 13:03:05,482 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:03:05,894 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18891
+[INFO] 2025-09-07 13:03:16,042 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18809
+[INFO] 2025-09-07 13:03:16,609 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18809
+[INFO] 2025-09-07 13:03:21,029 django.server: "GET /contas/equipe/ HTTP/1.1" 200 18891
+[INFO] 2025-09-07 13:03:56,074 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19171
+[INFO] 2025-09-07 13:03:56,129 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:03:56,132 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:04:03,200 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19175
+[INFO] 2025-09-07 13:04:16,214 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19101
+[INFO] 2025-09-07 13:04:26,378 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19024
+[INFO] 2025-09-07 13:04:26,432 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:04:28,413 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19024
+[ERROR] 2025-09-07 13:05:56,240 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/smartif.py", line 180, in translate_token
+    op = OPERATORS[token]
+         ~~~~~~~~~^^^^^^^
+KeyError: '==='
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 894, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/smartif.py", line 171, in __init__
+    mapped_tokens.append(self.translate_token(token))
+                         ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/smartif.py", line 182, in translate_token
+    return self.create_var(token)
+           ~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 897, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '===' from '==='
+[ERROR] 2025-09-07 13:05:56,246 django.server: "GET /contas/equipe/ HTTP/1.1" 500 244711
+[INFO] 2025-09-07 13:06:20,772 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19986
+[INFO] 2025-09-07 13:06:20,810 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:06:20,814 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:06:44,595 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19034
+[INFO] 2025-09-07 13:06:51,248 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19147
+[INFO] 2025-09-07 13:06:59,662 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19986
+[INFO] 2025-09-07 13:06:59,699 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[ERROR] 2025-09-07 13:08:19,281 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[ERROR] 2025-09-07 13:08:19,298 django.server: "GET /contas/equipe/ HTTP/1.1" 500 199223
+[ERROR] 2025-09-07 13:08:24,145 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 567, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 33: 'endblock', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+[ERROR] 2025-09-07 13:08:24,150 django.server: "GET /contas/equipe/ HTTP/1.1" 500 199228
+[INFO] 2025-09-07 13:08:45,661 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19021
+[INFO] 2025-09-07 13:08:45,719 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:08:45,720 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-07 13:08:59,327 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19021
+[INFO] 2025-09-07 13:09:07,060 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19034
+[INFO] 2025-09-07 13:09:07,986 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19034
+[INFO] 2025-09-07 13:12:28,033 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:12:28,071 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:12:28,072 django.server: "GET /static/css/equipe.css HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:13:36,138 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 13:13:37,468 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:13:55,260 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-07 13:13:56,376 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:13:56,397 django.server: "GET /static/js/equipe.js HTTP/1.1" 304 0
+[INFO] 2025-09-07 13:14:01,634 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:14:03,334 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:14:03,356 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-07 13:14:03,357 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-07 13:14:03,367 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-07 13:14:03,372 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-07 13:14:03,374 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-07 13:14:03,377 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-07 13:14:03,377 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-07 13:14:03,378 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-07 13:14:03,399 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-07 13:14:03,401 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-07 13:14:03,407 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-07 13:14:03,413 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-07 13:14:03,474 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:14:03,498 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-07 13:14:03,508 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-07 13:14:03,508 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-07 13:14:03,509 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-07 13:14:03,511 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-07 13:14:03,512 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-07 13:14:03,515 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-07 13:14:03,516 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-07 13:14:03,555 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-07 13:14:03,556 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-07 13:14:03,559 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-07 13:14:03,560 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-07 13:14:03,658 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 200 653424
+[INFO] 2025-09-07 13:14:03,759 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-07 13:14:18,835 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:14:18,877 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-07 13:14:38,434 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-07 13:14:38,472 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-08 22:41:43,194 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:41:45,743 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-08 22:41:45,912 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 304 0
+[INFO] 2025-09-08 22:41:45,983 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-08 22:41:46,009 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-08 22:41:46,013 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-08 22:41:46,017 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-08 22:41:46,029 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-08 22:41:46,030 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-08 22:41:46,040 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-08 22:41:46,043 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-08 22:41:46,095 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-08 22:41:46,298 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 304 0
+[INFO] 2025-09-08 22:41:51,132 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19019
+[INFO] 2025-09-08 22:41:51,184 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-08 22:41:51,192 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-08 22:52:34,104 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/forms.py changed, reloading.
+[INFO] 2025-09-08 22:52:34,532 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:52:37,817 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/forms.py changed, reloading.
+[INFO] 2025-09-08 22:52:38,228 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:52:52,847 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-09-08 22:52:53,365 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:52:54,590 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/models.py changed, reloading.
+[INFO] 2025-09-08 22:52:54,980 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:53:11,182 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 22:58:39,461 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-08 22:58:40,862 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create_user' not found. 'create_user' is not a valid view function or pattern name.
+[ERROR] 2025-09-08 22:58:40,868 django.server: "GET /contas/equipe/ HTTP/1.1" 500 181314
+[WARNING] 2025-09-08 22:58:40,959 django.request: Not Found: /favicon.ico
+[INFO] 2025-09-08 22:58:59,283 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19058
+[INFO] 2025-09-08 23:00:46,067 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19036
+[INFO] 2025-09-08 23:04:41,975 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19058
+[INFO] 2025-09-08 23:05:35,747 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19075
+[INFO] 2025-09-08 23:05:37,276 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19075
+[INFO] 2025-09-08 23:05:47,346 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19075
+[INFO] 2025-09-08 23:08:06,922 django.server: "GET /contas/equipe/ HTTP/1.1" 200 9949
+[INFO] 2025-09-08 23:09:18,361 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:09:18,841 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-09-08 23:09:21,660 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
+[ERROR] 2025-09-08 23:09:21,665 django.server: "GET /contas/equipe/ HTTP/1.1" 500 205120
+[INFO] 2025-09-08 23:09:30,942 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:09:36,956 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:09:37,510 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:09:38,669 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:09:39,464 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:10:14,880 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:10:15,280 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:10:19,649 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:10:20,051 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:10:24,449 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:10:24,865 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:10:27,169 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/views.py changed, reloading.
+[INFO] 2025-09-08 23:10:27,532 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:10:39,663 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:10:40,308 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:11:04,634 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-08 23:11:05,611 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:11:14,723 django.server: "GET /contas/equipe/ HTTP/1.1" 200 11090
+[INFO] 2025-09-08 23:11:40,062 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8492
+[INFO] 2025-09-08 23:11:47,530 django.server: "GET /contas/equipe/ HTTP/1.1" 200 11227
+[INFO] 2025-09-08 23:12:52,246 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8490
+[INFO] 2025-09-08 23:13:34,317 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8490
+[INFO] 2025-09-08 23:13:35,111 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8490
+[ERROR] 2025-09-08 23:13:41,459 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 222, in render
+    bounded_field = set_attr(bounded_field, f"{k}:{v.resolve(context)}")
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 13, in wrapped
+    return fn(field, attr)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 50, in set_attr
+    return _process_field_attributes(field, attr, process)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 28, in _process_field_attributes
+    old_as_widget = field.as_widget
+                    ^^^^^^^^^^^^^^^
+AttributeError: 'SellerForm' object has no attribute 'as_widget'
+[ERROR] 2025-09-08 23:13:41,464 django.server: "GET /contas/equipe/ HTTP/1.1" 500 157694
+[WARNING] 2025-09-08 23:13:41,528 django.request: Not Found: /favicon.ico
+[INFO] 2025-09-08 23:13:56,808 django.server: "GET /contas/equipe/ HTTP/1.1" 200 11088
+[INFO] 2025-09-08 23:14:10,417 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8703
+[INFO] 2025-09-08 23:14:20,447 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8658
+[INFO] 2025-09-08 23:14:21,162 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8658
+[INFO] 2025-09-08 23:15:04,555 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:15:05,288 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:15:05,561 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:15:06,462 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:15:06,494 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-08 23:15:06,495 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-08 23:15:06,499 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-08 23:15:06,503 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-08 23:15:06,500 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-08 23:15:06,508 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-08 23:15:06,510 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-08 23:15:06,511 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-08 23:15:06,535 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-08 23:15:06,536 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-08 23:15:06,543 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-08 23:15:06,544 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-08 23:15:06,730 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 200 653424
+[INFO] 2025-09-08 23:15:06,799 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-08 23:15:10,557 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:15:11,309 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-08 23:15:12,117 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8608
+[INFO] 2025-09-08 23:17:06,631 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8490
+[INFO] 2025-09-08 23:17:07,354 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8490
+[INFO] 2025-09-08 23:17:16,669 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8641
+[INFO] 2025-09-08 23:17:17,188 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8641
+[INFO] 2025-09-08 23:17:30,953 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8653
+[INFO] 2025-09-08 23:17:31,539 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8653
+[INFO] 2025-09-08 23:17:31,825 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8653
+[INFO] 2025-09-08 23:17:40,919 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8629
+[INFO] 2025-09-08 23:17:45,170 django.server: "GET /contas/equipe/ HTTP/1.1" 200 11100
+[WARNING] 2025-09-08 23:17:59,867 django.request: Forbidden: /api/v1/monthly-reports/
+[WARNING] 2025-09-08 23:17:59,868 django.server: "GET /api/v1/monthly-reports/ HTTP/1.1" 403 5226
+[INFO] 2025-09-08 23:19:13,114 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8629
+[INFO] 2025-09-08 23:19:13,758 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8629
+[INFO] 2025-09-08 23:19:14,182 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8629
+[INFO] 2025-09-08 23:19:14,366 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8629
+[INFO] 2025-09-08 23:20:22,731 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[INFO] 2025-09-08 23:20:23,706 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[INFO] 2025-09-08 23:21:27,300 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[INFO] 2025-09-08 23:21:28,162 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[INFO] 2025-09-08 23:21:29,224 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[INFO] 2025-09-08 23:21:29,271 django.server: "GET /static/css/equipe.css HTTP/1.1" 200 2664
+[INFO] 2025-09-08 23:21:29,277 django.server: "GET /static/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 80605
+[INFO] 2025-09-08 23:21:29,283 django.server: "GET /static/js/equipe.js HTTP/1.1" 200 5159
+[INFO] 2025-09-08 23:21:29,283 django.server: "GET /static/assets/js/sidebarmenu.js HTTP/1.1" 200 1897
+[INFO] 2025-09-08 23:21:29,281 django.server: "GET /static/assets/libs/jquery/dist/jquery.min.js HTTP/1.1" 200 88153
+[INFO] 2025-09-08 23:21:29,316 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.css HTTP/1.1" 200 4101
+[INFO] 2025-09-08 23:21:29,286 django.server: "GET /static/assets/css/styles.min.css HTTP/1.1" 200 352821
+[INFO] 2025-09-08 23:21:29,309 django.server: "GET /static/assets/js/app.min.js HTTP/1.1" 200 1299
+[INFO] 2025-09-08 23:21:29,311 django.server: "GET /static/assets/css/icons/tabler-icons/tabler-icons.min.css HTTP/1.1" 200 164404
+[INFO] 2025-09-08 23:21:29,308 django.server: "GET /static/assets/libs/simplebar/dist/simplebar.js HTTP/1.1" 200 177022
+[INFO] 2025-09-08 23:21:29,469 django.server: "GET /static/assets/images/logos/dark-logo.svg HTTP/1.1" 200 9083
+[INFO] 2025-09-08 23:21:29,470 django.server: "GET /static/assets/images/profile/user1.jpg HTTP/1.1" 200 7293
+[INFO] 2025-09-08 23:21:29,503 django.server: "GET /static/assets/css/icons/tabler-icons/fonts/tabler-icons.woff2?v2.11.0 HTTP/1.1" 200 653424
+[INFO] 2025-09-08 23:21:29,590 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-08 23:21:30,969 django.server: "GET / HTTP/1.1" 200 18299
+[INFO] 2025-09-08 23:21:31,764 django.server: "GET /contas/equipe/ HTTP/1.1" 200 8785
+[ERROR] 2025-09-08 23:23:59,256 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/widget_tweaks/templatetags/widget_tweaks.py", line 174, in render_field
+    form_field = bits[1]
+                 ~~~~^^^
+IndexError: list index out of range
+[ERROR] 2025-09-08 23:23:59,260 django.server: "GET /contas/equipe/ HTTP/1.1" 500 177134
+[INFO] 2025-09-08 23:25:16,632 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19067
+[INFO] 2025-09-08 23:27:11,034 django.server: "GET /contas/equipe/ HTTP/1.1" 200 15208
+[INFO] 2025-09-08 23:27:31,948 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19067
+[INFO] 2025-09-08 23:30:37,031 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19693
+[INFO] 2025-09-08 23:31:18,897 django.server: "POST /contas/equipe/ HTTP/1.1" 200 20163
+[INFO] 2025-09-08 23:32:00,763 django.server: "POST /contas/equipe/ HTTP/1.1" 302 0
+[INFO] 2025-09-08 23:32:00,776 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19853
+[INFO] 2025-09-08 23:34:32,986 django.server: "GET /contas/equipe/ HTTP/1.1" 200 14840
+[INFO] 2025-09-08 23:35:00,623 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19693
+[INFO] 2025-09-08 23:35:57,099 django.server: "POST /contas/equipe/ HTTP/1.1" 200 19979
+[INFO] 2025-09-08 23:35:57,185 django.server: "GET /static/assets/images/logos/favicon.png HTTP/1.1" 200 2159
+[INFO] 2025-09-08 23:36:12,040 django.server: "POST /contas/equipe/ HTTP/1.1" 302 0
+[INFO] 2025-09-08 23:36:12,051 django.server: "GET /contas/equipe/ HTTP/1.1" 200 19853
+[INFO] 2025-09-08 23:38:32,734 django.utils.autoreload: /home/vidal/Documentos/Projetos/vendapay/backend/apps/accounts/forms.py changed, reloading.
+[INFO] 2025-09-08 23:38:33,406 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-09-08 23:39:09,397 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20251
+[INFO] 2025-09-08 23:39:49,064 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20564
+[ERROR] 2025-09-08 23:41:15,612 django.request: Internal Server Error: /contas/equipe/
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vidal/Documentos/Projetos/vendapay/.venv/lib/python3.13/site-packages/django/template/base.py", line 577, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 214: 'endfor'. Did you forget to register or load this tag?
+[ERROR] 2025-09-08 23:41:15,617 django.server: "GET /contas/equipe/ HTTP/1.1" 500 227711
+[INFO] 2025-09-08 23:41:39,703 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20047
+[INFO] 2025-09-08 23:42:14,278 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20069
+[INFO] 2025-09-08 23:44:14,269 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20075
+[INFO] 2025-09-08 23:44:56,165 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20423
+[INFO] 2025-09-08 23:45:51,134 django.server: "POST /contas/equipe/ HTTP/1.1" 200 20793
+[INFO] 2025-09-08 23:46:09,196 django.server: "POST /contas/equipe/ HTTP/1.1" 200 20640
+[INFO] 2025-09-08 23:46:29,247 django.server: "POST /contas/equipe/ HTTP/1.1" 302 0
+[INFO] 2025-09-08 23:46:29,259 django.server: "GET /contas/equipe/ HTTP/1.1" 200 20583

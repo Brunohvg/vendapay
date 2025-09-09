@@ -22,8 +22,8 @@ class SellerForm(UserCreationForm):
             "last_name",
             "document",
             "phone",
-  
-     
+            "birth_date",
+            "commission_rate",
         ]
 
         
