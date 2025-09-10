@@ -1,0 +1,23 @@
+{% extends "base/base_dashboard.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+<h1>aqui {{request.user.username}}</h1>
+    
+
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesData = {{ monthly_sales|safe }};
+    </script>
+{% endblock %}

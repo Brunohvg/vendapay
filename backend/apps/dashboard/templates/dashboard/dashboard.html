@@ -5,16 +5,22 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block extra_css %}
+<!-- 📌 Estilos do Dashboard -->
 <style>
     body { background-color: #F8F9FA; }
+
     .card { border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: none; }
     .card-header-styled {
         background: linear-gradient(135deg, #7FB6F0 0%, #BFD8FF 100%);
-        color: #0F172A; border-radius: 16px 16px 0 0; padding: 1.2rem 1.5rem;
+        color: #0F172A;
+        border-radius: 16px 16px 0 0;
+        padding: 1.2rem 1.5rem;
     }
+
     .summary-card-inner { padding: 1.5rem; border-radius: 16px; text-align: center; }
     .summary-icon { font-size: 2rem; margin-bottom: .5rem; }
     .summary-value { font-size: 1.5rem; font-weight: 700; }
+
     .summary-card-1 { background: linear-gradient(135deg, #E0F2FE 0%, #BFD8FF 100%); color: #075985; }
     .summary-card-2 { background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%); color: #047857; }
     .summary-card-3 { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); color: #92400E; }
@@ -22,59 +28,97 @@
 
     /* Ranking */
     .ranking-card { background: #F9FAFB; border-radius: 16px; padding: 1rem; }
-    .ranking-item { background: white; border-radius: 12px; padding: 0.8rem 1rem; margin-bottom: .7rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .ranking-item .seller-avatar { width: 40px; height: 40px; border-radius: 50%; background: #4e73df; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: .75rem; }
+    .ranking-item {
+        background: white;
+        border-radius: 12px;
+        padding: 0.8rem 1rem;
+        margin-bottom: .7rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .ranking-item .seller-avatar {
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background: #4e73df;
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-weight: bold;
+        margin-right: .75rem;
+    }
+
     .ranking-progress { height: 6px; border-radius: 6px; background: #E5E7EB; }
-    .ranking-progress-bar { height: 6px; border-radius: 6px; background: linear-gradient(90deg, #4e73df, #2563eb); }
+    .ranking-progress-bar {
+        height: 6px;
+        border-radius: 6px;
+        background: linear-gradient(90deg, #4e73df, #2563eb);
+    }
 </style>
+
+<!-- 📌 Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 {% endblock %}
 
+
 {% block content %}
 <div class="container-fluid">
+
+    <!-- 📌 Header do Card -->
     <div class="card border-0 shadow-sm mb-4">
         <div class="card-header border-0 d-flex justify-content-between align-items-center card-header-styled">
             <h5 class="mb-0 fw-semibold"><i class="ti ti-dashboard me-2"></i>Dashboard de Desempenho</h5>
         </div>
         <div class="card-body">
 
-            <!-- Filtros -->
-            <div class="mb-4">
-                <form method="get" class="row g-3 align-items-end">
-                    <div class="col-md-5">
-                        <label class="form-label">Ano</label>
-                        <select name="year" class="form-select">
-                            {% for year in years %}
-                                <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>{{ year }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div class="col-md-5">
-                        <label class="form-label">Mês</label>
-                        <select name="month" class="form-select">
-                
-                        </select>
-                    </div>
-                    <div class="col-md-2 d-grid">
-                        <button type="submit" class="btn btn-primary fw-semibold"><i class="ti ti-filter me-1"></i>Filtrar</button>
-                    </div>
-                </form>
-            </div>
+            <!-- 📌 Filtros -->
+            <form method="get" class="row g-3 align-items-end mb-4">
+                <div class="col-md-5">
+                    <label class="form-label">Ano</label>
+                    <select name="year" class="form-select">
+                        {% for year in years %}
+                            <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label">Mês</label>
+                    <select name="month" class="form-select">
+                        {% for month in months %}
+                            <option value="{{ month.num }}" {% if month.num == selected_month %}selected{% endif %}>
+                                {{ month.name|capfirst }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button type="submit" class="btn btn-primary fw-semibold">
+                        <i class="ti ti-filter me-1"></i>Filtrar
+                    </button>
+                </div>
+            </form>
 
-            <!-- Cards de Resumo -->
+            <!-- 📌 Cards de Resumo -->
             <div class="row">
+                <!-- Total de Vendas -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="summary-card-inner summary-card-1">
                         <i class="ti ti-chart-line summary-icon"></i>
                         <h6>Total de Vendas</h6>
                         <h4 class="summary-value">R$ {{ total_sales|floatformat:2|intcomma }}</h4>
                         <span class="badge 
-                            {% if sales_growth > 0 %}bg-success{% elif sales_growth < 0 %}bg-danger{% else %}bg-secondary{% endif %}">
-                            {% if sales_growth > 0 %}<i class="ti ti-arrow-up"></i>{% elif sales_growth < 0 %}<i class="ti ti-arrow-down"></i>{% else %}<i class="ti ti-minus"></i>{% endif %}
+                            {% if sales_growth > 0 %}bg-success
+                            {% elif sales_growth < 0 %}bg-danger
+                            {% else %}bg-secondary{% endif %}">
+                            {% if sales_growth > 0 %}
+                                <i class="ti ti-arrow-up"></i>
+                            {% elif sales_growth < 0 %}
+                                <i class="ti ti-arrow-down"></i>
+                            {% else %}
+                                <i class="ti ti-minus"></i>
+                            {% endif %}
                             {{ sales_growth|floatformat:2 }}%
                         </span>
                     </div>
                 </div>
+
+                <!-- Comissão Pendente -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="summary-card-inner summary-card-2">
                         <i class="ti ti-cash summary-icon"></i>
@@ -82,6 +126,8 @@
                         <h4 class="summary-value">R$ {{ pending_commissions|floatformat:2|intcomma }}</h4>
                     </div>
                 </div>
+
+                <!-- Comissão Paga -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="summary-card-inner summary-card-3">
                         <i class="ti ti-credit-card summary-icon"></i>
@@ -89,6 +135,8 @@
                         <h4 class="summary-value">R$ {{ paid_commissions|floatformat:2|intcomma }}</h4>
                     </div>
                 </div>
+
+                <!-- Comissão Total -->
                 <div class="col-md-3 col-sm-6 mb-4">
                     <div class="summary-card-inner summary-card-4">
                         <i class="ti ti-users summary-icon"></i>
@@ -98,8 +146,9 @@
                 </div>
             </div>
 
-            <!-- Gráfico + Ranking -->
+            <!-- 📊 Gráfico de Vendas + Ranking -->
             <div class="row">
+                <!-- Gráfico de Vendas -->
                 <div class="col-md-8 mb-4">
                     <div class="card p-4 h-100">
                         <h6 class="fw-semibold mb-3">📈 Vendas por Dia</h6>
@@ -107,6 +156,7 @@
                     </div>
                 </div>
 
+                <!-- Ranking de Vendedores -->
                 <div class="col-md-4 mb-4">
                     <div class="ranking-card h-100">
                         <h6 class="fw-semibold mb-3">🏆 Top 5 Vendedores</h6>
@@ -117,7 +167,9 @@
                                         <div class="seller-avatar">
                                             {{ seller.seller__first_name.0|default:seller.seller__username.0|upper }}
                                         </div>
-                                        <span class="fw-semibold">{{ seller.seller__first_name|default:seller.seller__username }}</span>
+                                        <span class="fw-semibold">
+                                            {{ seller.seller__first_name|default:seller.seller__username }}
+                                        </span>
                                     </div>
                                     <span class="fw-bold text-success">
                                         R$ {{ seller.total_sales_seller|floatformat:2|intcomma }}
@@ -128,20 +180,25 @@
                                 </div>
                             </div>
                         {% empty %}
-                            <p class="text-muted text-center"><i class="ti ti-inbox me-2"></i>Nenhum dado disponível</p>
+                            <p class="text-muted text-center">
+                                <i class="ti ti-inbox me-2"></i>Nenhum dado disponível
+                            </p>
                         {% endfor %}
                     </div>
                 </div>
             </div>
 
-            <!-- Outros gráficos -->
+            <!-- 📈 Gráficos Complementares -->
             <div class="row">
+                <!-- Gráfico Comissão -->
                 <div class="col-md-6 mb-4">
                     <div class="card p-4 h-100">
                         <h6 class="fw-semibold mb-3">💰 Comissão Paga x Pendente</h6>
                         <canvas id="commissionChart" height="200"></canvas>
                     </div>
                 </div>
+
+                <!-- Gráfico Vendas por Vendedor -->
                 <div class="col-md-6 mb-4">
                     <div class="card p-4 h-100">
                         <h6 class="fw-semibold mb-3">📊 Vendas por Vendedor</h6>
@@ -154,11 +211,13 @@
     </div>
 </div>
 
+<!-- 📌 Scripts de gráficos -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const labels = JSON.parse('{{ chart_labels|safe|escapejs }}');
     const data = JSON.parse('{{ chart_data|safe|escapejs }}');
 
+    // Gráfico de Vendas por Dia
     new Chart(document.getElementById('salesChart'), {
         type: 'line',
         data: {
@@ -177,23 +236,45 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         options: {
             plugins: { legend: { display: false } },
-            scales: { x: { title: { display: true, text: 'Dia do Mês' } }, y: { beginAtZero: true, title: { display: true, text: 'Vendas (R$)' } } }
+            scales: {
+                x: { title: { display: true, text: 'Dia do Mês' }},
+                y: { beginAtZero: true, title: { display: true, text: 'Vendas (R$)' }}
+            }
         }
     });
 
+    // Gráfico Comissão Paga vs Pendente
     new Chart(document.getElementById('commissionChart'), {
         type: 'doughnut',
-        data: { labels: ['Paga', 'Pendente'], datasets: [{ data: [{{ paid_commissions }}, {{ pending_commissions }}], backgroundColor: ['#10B981', '#F59E0B'] }] },
-        options: { plugins: { legend: { position: 'bottom' } } }
+        data: {
+            labels: ['Paga', 'Pendente'],
+            datasets: [{
+                data: [{{ paid_commissions }}, {{ pending_commissions }}],
+                backgroundColor: ['#10B981', '#F59E0B']
+            }]
+        },
+        options: {
+            plugins: { legend: { position: 'bottom' } }
+        }
     });
 
+    // Gráfico Vendas por Vendedor
     const sellersLabels = [{% for s in top_sellers %}'{{ s.seller__first_name|default:s.seller__username }}',{% endfor %}];
     const sellersData = [{% for s in top_sellers %}{{ s.total_sales_seller }},{% endfor %}];
 
     new Chart(document.getElementById('sellersChart'), {
         type: 'bar',
-        data: { labels: sellersLabels, datasets: [{ label: 'Vendas', data: sellersData, backgroundColor: '#3B82F6' }] },
-        options: { plugins: { legend: { display: false } } }
+        data: {
+            labels: sellersLabels,
+            datasets: [{
+                label: 'Vendas',
+                data: sellersData,
+                backgroundColor: '#3B82F6'
+            }]
+        },
+        options: {
+            plugins: { legend: { display: false } }
+        }
     });
 });
 </script>
