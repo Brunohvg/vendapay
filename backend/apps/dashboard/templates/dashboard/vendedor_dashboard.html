@@ -9,8 +9,27 @@
 {% endblock %}
 
 {% block content %}
-<h1>aqui {{request.user.username}}</h1>
-    
+<div class="container-fluid">
+    <h1>Dashboard Vendedor</h1>
+<h1>Vendas do {{ request.user.username }}</h1>
+
+<h2>Minhas Vendas</h2>
+<ul>
+  {% for sale in request.user.daily_sales.all %}
+    <li>{{ sale.sale_date }} → R$ {{ sale.total_amount }} (Comissão: R$ {{ sale.calculated_commission }})</li>
+  {% empty %}
+    <li>Nenhuma venda registrada</li>
+  {% endfor %}
+</ul>
+
+<h1>{{ request.user.get_full_name }}</h1>
+<p>Total vendido: R$ {{ request.user.total_sold }}</p>
+<p>Total de comissão: R$ {{ request.user.total_commission_paid }}</p>
+
+
+
+
+</div>
 
 {% endblock %}
 

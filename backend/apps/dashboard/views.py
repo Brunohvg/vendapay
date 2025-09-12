@@ -156,6 +156,3 @@ class VendedorDashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'dashboard/vendedor_dashboard.html'
     # Esta view pode ser expandida com funcionalidades específicas para vendedores
     # Por enquanto, redireciona para a view principal do dashboard
-    def get(self, request, *args, **kwargs):
-        return DashboardView.as_view()(request, *args, **kwargs)
-    

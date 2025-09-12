@@ -8,563 +8,236 @@
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/equipe.css' %}" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 {% endblock %}
 
 {% block content %}
-  <div class="container-fluid">
-    <!-- Estatísticas rápidas -->
-    {% if user.user_type == 'ADMIN' and stats %}
-      <div class="row mb-4">
-        <!-- Melhorando responsividade dos cards de estatísticas -->
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
-          <div class="card stats-card border-0 h-100">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center mb-2">
-                <i class="ti ti-users display-6 icon-spacing"></i>
-                <h2 class="mb-0 fw-bold">{{ stats.total_users }}</h2>
-              </div>
-              <p class="mb-0 opacity-90">Total de Usuários</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
-          <div class="card stats-card-2 border-0 h-100">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center mb-2">
-                <i class="ti ti-user-check display-6 icon-spacing"></i>
-                <h2 class="mb-0 fw-bold">{{ stats.active_users }}</h2>
-              </div>
-              <p class="mb-0 opacity-90">Usuários Ativos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
-          <div class="card stats-card-3 border-0 h-100">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center mb-2">
-                <i class="ti ti-briefcase display-6 icon-spacing"></i>
-                <h2 class="mb-0 fw-bold">{{ stats.sellers_count }}</h2>
-              </div>
-              <p class="mb-0 opacity-90">Vendedores</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-3">
-          <div class="card stats-card-4 border-0 h-100">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center mb-2">
-                <i class="ti ti-crown display-6 icon-spacing"></i>
-                <h2 class="mb-0 fw-bold">{{ stats.admins_count }}</h2>
-              </div>
-              <p class="mb-0 opacity-90">Administradores</p>
-            </div>
-          </div>
+<div class="container-fluid">
+
+  <!-- Estatísticas -->
+  {% if user.user_type == 'ADMIN' and stats %}
+  <div class="row mb-4">
+    <div class="col-6 col-md-3 mb-3">
+      <div class="card stats-card h-100">
+        <div class="card-body text-center">
+          <i class="ti ti-users display-6"></i>
+          <h2 class="fw-bold mb-0">{{ stats.total_users }}</h2>
+          <small>Total Usuários</small>
         </div>
       </div>
-    {% endif %}
-
-    <!-- Card principal -->
-    <div class="card main-card">
-      <!-- Melhorando responsividade do header -->
-      <div class="page-header d-flex justify-content-between align-items-center">
-        <div>
-          <h4 class="mb-1 fw-bold">
-            <i class="ti ti-users icon-spacing"></i>Gestão de Usuários
-          </h4>
-          <p class="mb-0 opacity-75 d-none d-md-block">Gerencie todos os usuários do sistema</p>
+    </div>
+    <div class="col-6 col-md-3 mb-3">
+      <div class="card stats-card-2 h-100">
+        <div class="card-body text-center">
+          <i class="ti ti-user-check display-6"></i>
+          <h2 class="fw-bold mb-0">{{ stats.active_users }}</h2>
+          <small>Ativos</small>
         </div>
-        {% if user.user_type == 'ADMIN' %}
-          <button class="btn btn-primary-custom" 
-                  data-bs-toggle="modal" 
-                  data-bs-target="#userFormModal">
-            <i class="ti ti-plus icon-spacing"></i><span class="d-none d-sm-inline">Novo </span>Usuário
-          </button>
-        {% endif %}
       </div>
-
-      <div class="card-body p-0">
-        {% if user.user_type == 'ADMIN' %}
-          {% if membros %}
-            <!-- Filtros modernos -->
-            <div class="p-4">
-              <div class="card filter-card p-3 mb-4">
-                <!-- Melhorando layout dos filtros para mobile -->
-                <div class="row g-3">
-                  <div class="col-12 col-md-6">
-                    <div class="position-relative">
-                      <i class="ti ti-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                      <input type="text" 
-                             class="form-control search-input ps-5" 
-                             id="searchUsers" 
-                             placeholder="Buscar usuários..."
-                             style="padding-left: 3rem !important;">
-                    </div>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <select class="form-select search-input" id="filterType">
-                      <option value="">Todos os tipos</option>
-                      <option value="ADMIN">Administrador</option>
-                      <option value="MANAGER">Gerente</option>
-                      <option value="SELLER">Vendedor</option>
-                    </select>
-                  </div>
-                  <div class="col-6 col-md-3">
-                    <select class="form-select search-input" id="filterStatus">
-                      <option value="">Todos os status</option>
-                      <option value="active">Ativo</option>
-                      <option value="inactive">Inativo</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Adicionando versão responsiva da tabela -->
-            <!-- Tabela para desktop -->
-            <div class="table-responsive-mobile mx-4 mb-4">
-              <div class="table-modern">
-                <table class="table table-hover mb-0 align-middle">
-                  <thead>
-                    <tr>
-                      <th>Usuário</th>
-                      <th class="d-none d-lg-table-cell">Tipo</th>
-                      <th class="d-none d-xl-table-cell">Email</th>
-                      <th class="d-none d-lg-table-cell">Telefone</th>
-                      <th>Status</th>
-                      <th class="d-none d-xl-table-cell">Comissão</th>
-                      <th class="d-none d-lg-table-cell">Último Login</th>
-                      <th>Ações</th>
-                    </tr>
-                  </thead>
-                  <tbody id="usersTableBody">
-                    {% for membro in membros %}
-                      <tr data-user-type="{{ membro.user_type }}" 
-                          data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
-                        <td>
-                          <div class="d-flex align-items-center">
-                            <div class="user-avatar me-3">
-                              {{ membro.first_name|first|default:membro.username|first|upper }}
-                            </div>
-                            <div>
-                              <h6 class="mb-0 fw-semibold text-truncate-mobile">{{ membro.get_full_name|default:membro.username }}</h6>
-                              <small class="text-muted d-block d-lg-none">@{{ membro.username }}</small>
-                              <small class="text-muted d-none d-lg-block">@{{ membro.username }}</small>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="d-none d-lg-table-cell">
-                          <span class="badge badge-modern
-                            {% if membro.user_type == 'ADMIN' %}bg-danger
-                            {% elif membro.user_type == 'MANAGER' %}bg-warning
-                            {% else %}bg-success
-                            {% endif %}">
-                            {{ membro.get_user_type_display }}
-                          </span>
-                        </td>
-                        <td class="d-none d-xl-table-cell">
-                          <span class="text-muted">{{ membro.email }}</span>
-                        </td>
-                        <td class="d-none d-lg-table-cell">
-                          <span class="text-muted">{{ membro.phone|default:"—" }}</span>
-                        </td>
-                        <td>
-                          {% if membro.is_active %}
-                            <span class="badge badge-modern bg-success">Ativo</span>
-                          {% else %}
-                            <span class="badge badge-modern bg-secondary">Inativo</span>
-                          {% endif %}
-                        </td>
-                        <td class="d-none d-xl-table-cell">
-                          {% if membro.user_type == 'SELLER' %}
-                            <span class="badge badge-modern bg-info">{{ membro.commission_rate }}%</span>
-                          {% else %}
-                            <span class="text-muted">—</span>
-                          {% endif %}
-                        </td>
-                        <td class="d-none d-lg-table-cell">
-                          {% if membro.last_login %}
-                            <small class="text-muted">{{ membro.last_login|date:"d/m/Y H:i" }}</small>
-                          {% else %}
-                            <small class="text-muted">Nunca</small>
-                          {% endif %}
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button class="btn btn-action btn-sm dropdown-toggle" 
-                                    type="button" 
-                                    data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item py-2" 
-                                   href="#" 
-                                   onclick="editUser({{ membro.id }})">
-                                  <i class="ti ti-edit icon-spacing text-primary"></i>Editar
-                                </a>
-                              </li>
-                              {% if membro.id != user.id %}
-                                <li>
-                                  <a class="dropdown-item py-2" 
-                                     href="#" 
-                                     onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})">
-                                    <i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %} icon-spacing text-warning"></i>
-                                    {% if membro.is_active %}Desativar{% else %}Ativar{% endif %}
-                                  </a>
-                                </li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li>
-                                  <a class="dropdown-item py-2 text-danger" 
-                                     href="#" 
-                                     onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')">
-                                    <i class="ti ti-trash icon-spacing"></i>Excluir
-                                  </a>
-                                </li>
-                              {% endif %}
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <!-- Cards para mobile -->
-            <div class="mobile-user-cards mx-3 mb-4" id="mobileUsersCards">
-              {% for membro in membros %}
-                <div class="mobile-user-card" 
-                     data-user-type="{{ membro.user_type }}" 
-                     data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
-                  <div class="user-info">
-                    <div class="d-flex align-items-center mb-2">
-                      <div class="user-avatar me-3">
-                        {{ membro.first_name|first|default:membro.username|first|upper }}
-                      </div>
-                      <div class="flex-grow-1">
-                        <h6 class="mb-0 fw-semibold">{{ membro.get_full_name|default:membro.username }}</h6>
-                        <small class="text-muted">@{{ membro.username }}</small>
-                      </div>
-                      <div>
-                        {% if membro.is_active %}
-                          <span class="badge badge-modern bg-success">Ativo</span>
-                        {% else %}
-                          <span class="badge badge-modern bg-secondary">Inativo</span>
-                        {% endif %}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="user-details">
-                    <div>
-                      <small class="text-muted d-block">Tipo</small>
-                      <span class="badge badge-modern
-                        {% if membro.user_type == 'ADMIN' %}bg-danger
-                        {% elif membro.user_type == 'MANAGER' %}bg-warning
-                        {% else %}bg-success
-                        {% endif %}">
-                        {{ membro.get_user_type_display }}
-                      </span>
-                    </div>
-                    <div>
-                      <small class="text-muted d-block">Email</small>
-                      <small class="text-truncate d-block" style="max-width: 150px;">{{ membro.email }}</small>
-                    </div>
-                    <div>
-                      <small class="text-muted d-block">Telefone</small>
-                      <small>{{ membro.phone|default:"—" }}</small>
-                    </div>
-                    <div>
-                      <small class="text-muted d-block">Comissão</small>
-                      {% if membro.user_type == 'SELLER' %}
-                        <span class="badge badge-modern bg-info">{{ membro.commission_rate }}%</span>
-                      {% else %}
-                        <small class="text-muted">—</small>
-                      {% endif %}
-                    </div>
-                  </div>
-                  
-                  <div class="user-actions">
-                    <div class="d-flex gap-2 flex-wrap">
-                      <button class="btn btn-outline-primary btn-sm flex-fill" 
-                              onclick="editUser({{ membro.id }})">
-                        <i class="ti ti-edit"></i> Editar
-                      </button>
-                      {% if membro.id != user.id %}
-                        <button class="btn btn-outline-warning btn-sm flex-fill" 
-                                onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})">
-                          <i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %}"></i>
-                          {% if membro.is_active %}Desativar{% else %}Ativar{% endif %}
-                        </button>
-                        <button class="btn btn-outline-danger btn-sm" 
-                                onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')">
-                          <i class="ti ti-trash"></i>
-                        </button>
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-
-            <!-- Paginação moderna -->
-            {% if membros.has_other_pages %}
-              <div class="d-flex justify-content-center pb-4">
-                <nav aria-label="Navegação de páginas">
-                  <ul class="pagination pagination-modern mb-0">
-                    {% if membros.has_previous %}
-                      <li class="page-item">
-                        <a class="page-link" href="?page={{ membros.previous_page_number }}">
-                          <i class="ti ti-chevron-left"></i><span class="d-none d-sm-inline"> Anterior</span>
-                        </a>
-                      </li>
-                    {% endif %}
-                    
-                    {% for num in membros.paginator.page_range %}
-                      {% if num == membros.number %}
-                        <li class="page-item active">
-                          <span class="page-link">{{ num }}</span>
-                        </li>
-                      {% else %}
-                        <li class="page-item">
-                          <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                        </li>
-                      {% endif %}
-                    {% endfor %}
-                    
-                    {% if membros.has_next %}
-                      <li class="page-item">
-                        <a class="page-link" href="?page={{ membros.next_page_number }}">
-                          <span class="d-none d-sm-inline">Próximo </span><i class="ti ti-chevron-right"></i>
-                        </a>
-                      </li>
-                    {% endif %}
-                  </ul>
-                </nav>
-              </div>
-            {% endif %}
-
-          {% else %}
-            <!-- Estado vazio moderno -->
-            <div class="p-5">
-              <div class="empty-state">
-                <div class="mb-4">
-                  <i class="ti ti-users-off" style="font-size: 4rem; color: #64748b; opacity: 0.7;"></i>
-                </div>
-                <h5 class="fw-bold mb-3" style="color: #475569;">Nenhum usuário cadastrado</h5>
-                <p class="text-muted mb-4">Comece criando o primeiro usuário da sua equipe!</p>
-                <button class="btn btn-primary-custom btn-lg" 
-                        data-bs-toggle="modal" 
-                        data-bs-target="#userFormModal">
-                  <i class="ti ti-plus icon-spacing"></i>Criar Primeiro Usuário
-                </button>
-              </div>
-            </div>
-          {% endif %}
-        {% else %}
-          <!-- Acesso negado moderno -->
-          <div class="p-5">
-            <div class="text-center">
-              <div class="mb-4">
-                <i class="ti ti-shield-x" style="font-size: 4rem; color: #64748b; opacity: 0.8;"></i>
-              </div>
-              <div class="alert alert-modern">
-                <h6 class="fw-bold mb-2">
-                  <i class="ti ti-info-circle icon-spacing"></i>Acesso Restrito
-                </h6>
-                <p class="mb-0">Você não tem permissão para gerenciar usuários. Entre em contato com um administrador se precisar de alterações.</p>
-              </div>
-            </div>
-          </div>
-        {% endif %}
+    </div>
+    <div class="col-6 col-md-3 mb-3">
+      <div class="card stats-card-3 h-100">
+        <div class="card-body text-center">
+          <i class="ti ti-briefcase display-6"></i>
+          <h2 class="fw-bold mb-0">{{ stats.sellers_count }}</h2>
+          <small>Vendedores</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3 mb-3">
+      <div class="card stats-card-4 h-100">
+        <div class="card-body text-center">
+          <i class="ti ti-crown display-6"></i>
+          <h2 class="fw-bold mb-0">{{ stats.admins_count }}</h2>
+          <small>Administradores</small>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Modal de Formulário -->
-  {% if user.user_type == 'ADMIN' %}
-    {% include 'accounts/includes/create_user.html' %}
   {% endif %}
+
+  <!-- Card principal -->
+  <div class="card main-card">
+    <div class="page-header d-flex justify-content-between align-items-center p-3 border-bottom">
+      <div>
+        <h4 class="fw-bold mb-1"><i class="ti ti-users"></i> Gestão de Usuários</h4>
+        <small class="text-muted">Gerencie todos os usuários</small>
+      </div>
+      {% if user.user_type == 'ADMIN' %}
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userFormModal">
+        <i class="ti ti-plus"></i> Novo Usuário
+      </button>
+      {% endif %}
+    </div>
+
+    <div class="card-body">
+
+      {% if user.user_type == 'ADMIN' %}
+
+        {% if membros %}
+          <!-- Filtros -->
+          <div class="row g-2 mb-3">
+            <div class="col-md-6">
+              <input id="searchUsers" type="text" class="form-control" placeholder="Buscar usuário...">
+            </div>
+            <div class="col-6 col-md-3">
+              <select id="filterType" class="form-select">
+                <option value="">Todos os tipos</option>
+                <option value="ADMIN">Administrador</option>
+                <option value="MANAGER">Gerente</option>
+                <option value="SELLER">Vendedor</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-3">
+              <select id="filterStatus" class="form-select">
+                <option value="">Todos os status</option>
+                <option value="active">Ativo</option>
+                <option value="inactive">Inativo</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tabela desktop -->
+          <div class="table-responsive d-none d-md-block">
+            <table class="table table-hover align-middle">
+              <thead>
+                <tr>
+                  <th>Usuário</th>
+                  <th>Tipo</th>
+                  <th>Email</th>
+                  <th>Telefone</th>
+                  <th>Status</th>
+                  <th>Comissão</th>
+                  <th>Último Login</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="usersTableBody">
+                {% for membro in membros %}
+                <tr data-user_type="{{ membro.user_type }}" data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
+                  <td>{{ membro.get_full_name|default:membro.username }}</td>
+                  <td>
+                    <span class="badge {% if membro.user_type == 'ADMIN' %}bg-danger{% elif membro.user_type == 'MANAGER' %}bg-warning{% else %}bg-success{% endif %}">
+                      {{ membro.get_user_type_display }}
+                    </span>
+                  </td>
+                  <td>{{ membro.email }}</td>
+                  <td>{{ membro.phone|default:"—" }}</td>
+                  <td>
+                    {% if membro.is_active %}
+                    <span class="badge bg-success">Ativo</span>
+                    {% else %}
+                    <span class="badge bg-secondary">Inativo</span>
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if membro.user_type == 'SELLER' %}
+                    {{ membro.commission_rate }}%
+                    {% else %}
+                    —
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if membro.last_login %}{{ membro.last_login|date:"d/m/Y H:i" }}{% else %}Nunca{% endif %}
+                  </td>
+                  <td>
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="ti ti-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item" onclick="editUser({{ membro.id }})"><i class="ti ti-edit"></i> Editar</a></li>
+                        {% if membro.id != user.id %}
+                        <li><a href="#" class="dropdown-item" onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})">
+                          <i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %}"></i>
+                          {% if membro.is_active %}Desativar{% else %}Ativar{% endif %}
+                        </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item text-danger" onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')">
+                          <i class="ti ti-trash"></i> Excluir</a></li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Cards mobile -->
+          <div class="d-md-none" id="mobileUsersCards">
+            {% for membro in membros %}
+            <div class="card mb-2 p-2" data-user_type="{{ membro.user_type }}" data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <strong>{{ membro.get_full_name|default:membro.username }}</strong><br>
+                  <small class="text-muted">{{ membro.email }}</small>
+                </div>
+                <div>
+                  {% if membro.is_active %}
+                  <span class="badge bg-success">Ativo</span>
+                  {% else %}
+                  <span class="badge bg-secondary">Inativo</span>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="mt-2 d-flex gap-1">
+                <button class="btn btn-sm btn-outline-primary flex-fill" onclick="editUser({{ membro.id }})"><i class="ti ti-edit"></i></button>
+                {% if membro.id != user.id %}
+                <button class="btn btn-sm btn-outline-warning flex-fill" onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})"><i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %}"></i></button>
+                <button class="btn btn-sm btn-outline-danger flex-fill" onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')"><i class="ti ti-trash"></i></button>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        {% else %}
+          <div class="text-center p-5">
+            <i class="ti ti-users-off display-4 text-muted"></i>
+            <p class="mt-3">Nenhum usuário cadastrado</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userFormModal">
+              <i class="ti ti-plus"></i> Criar Usuário
+            </button>
+          </div>
+        {% endif %}
+
+      {% else %}
+        <div class="text-center p-5">
+          <i class="ti ti-shield-x display-4 text-muted"></i>
+          <p class="mt-2">Você não tem permissão para gerenciar usuários.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if user.user_type == 'ADMIN' %}
+  {% include 'accounts/includes/create_user.html' %}
+{% endif %}
 {% endblock %}
 
 {% block extra_js %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script src="{% static 'js/equipe.js' %}"></script>
-  
-  {% if form.errors %}
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const modal = new bootstrap.Modal(document.getElementById('userFormModal'))
-        modal.show()
-      })
-    </script>
-  {% endif %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/equipe.js' %}"></script>
 
-  <script>
-    
-    // Animações suaves ao carregar
-    document.addEventListener('DOMContentLoaded', function() {
-      const elements = document.querySelectorAll('.stats-card, .stats-card-2, .stats-card-3, .stats-card-4, .main-card');
-      elements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          el.style.transition = 'all 0.6s ease';
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, index * 100);
-      });
-    });
+<script>
+document.getElementById('searchUsers')?.addEventListener('input', function(){
+  const term = this.value.toLowerCase()
+  document.querySelectorAll('#usersTableBody tr, #mobileUsersCards .card').forEach(el=>{
+    el.style.display = el.textContent.toLowerCase().includes(term) ? '' : 'none'
+  })
+})
 
-    let searchTimeout;
-    document.getElementById('searchUsers')?.addEventListener('input', function() {
-      clearTimeout(searchTimeout);
-      const searchTerm = this.value.toLowerCase();
-      
-      searchTimeout = setTimeout(() => {
-        // Filtrar tabela desktop
-        const desktopRows = document.querySelectorAll('#usersTableBody tr');
-        desktopRows.forEach(row => {
-          const text = row.textContent.toLowerCase();
-          const shouldShow = text.includes(searchTerm);
-          row.style.display = shouldShow ? '' : 'none';
-          
-          if (shouldShow) {
-            row.style.animation = 'fadeInUp 0.3s ease';
-          }
-        });
-
-        // Filtrar cards mobile
-        const mobileCards = document.querySelectorAll('.mobile-user-card');
-        mobileCards.forEach(card => {
-          const text = card.textContent.toLowerCase();
-          const shouldShow = text.includes(searchTerm);
-          card.style.display = shouldShow ? '' : 'none';
-          
-          if (shouldShow) {
-            card.style.animation = 'fadeInUp 0.3s ease';
-          }
-        });
-      }, 300);
-    });
-
-    function animateFilter(filterId, dataAttribute) {
-      document.getElementById(filterId)?.addEventListener('change', function() {
-        const filterValue = this.value;
-        
-        // Filtrar tabela desktop
-        const desktopRows = document.querySelectorAll('#usersTableBody tr');
-        desktopRows.forEach(row => {
-          const shouldShow = !filterValue || row.dataset[dataAttribute] === filterValue;
-          
-          if (shouldShow) {
-            row.style.display = '';
-            row.style.animation = 'fadeInUp 0.3s ease';
-          } else {
-            row.style.animation = 'fadeOutDown 0.3s ease';
-            setTimeout(() => {
-              row.style.display = 'none';
-            }, 300);
-          }
-        });
-
-        // Filtrar cards mobile
-        const mobileCards = document.querySelectorAll('.mobile-user-card');
-        mobileCards.forEach(card => {
-          const shouldShow = !filterValue || card.dataset[dataAttribute] === filterValue;
-          
-          if (shouldShow) {
-            card.style.display = '';
-            card.style.animation = 'fadeInUp 0.3s ease';
-          } else {
-            card.style.animation = 'fadeOutDown 0.3s ease';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300);
-          }
-        });
-      });
-    }
-
-    animateFilter('filterType', 'userType');
-    animateFilter('filterStatus', 'status');
-
-    // Funções para ações dos usuários com feedback visual melhorado
-    function editUser(userId) {
-      console.log('Editar usuário:', userId);
-      // TODO: Implementar modal de edição
-    }
-
-    function toggleUserStatus(userId, newStatus) {
-      Swal.fire({
-        title: 'Confirmar alteração',
-        text: 'Deseja alterar o status deste usuário?',
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#10b981',
-        cancelButtonColor: '#64748b',
-        confirmButtonText: 'Sim, alterar!',
-        cancelButtonText: 'Cancelar',
-        backdrop: 'rgba(16, 185, 129, 0.1)',
-        customClass: {
-          popup: 'border-0 shadow-lg',
-          confirmButton: 'btn-lg px-4',
-          cancelButton: 'btn-lg px-4'
-        }
-      }).then((result) => {
-        if (result.isConfirmed) {
-          console.log('Alterar status do usuário:', userId, 'para:', newStatus);
-          // TODO: Implementar via AJAX
-        }
-      });
-    }
-
-    function deleteUser(userId, userName) {
-      Swal.fire({
-        title: 'Tem certeza?',
-        html: `Deseja excluir o usuário "<strong>${userName}</strong>"?<br><small class="text-muted">Esta ação não pode ser desfeita.</small>`,
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#ef4444',
-        cancelButtonColor: '#64748b',
-        confirmButtonText: 'Sim, excluir!',
-        cancelButtonText: 'Cancelar',
-        backdrop: 'rgba(239, 68, 68, 0.1)',
-        customClass: {
-          popup: 'border-0 shadow-lg',
-          confirmButton: 'btn-lg px-4',
-          cancelButton: 'btn-lg px-4'
-        }
-      }).then((result) => {
-        if (result.isConfirmed) {
-          console.log('Excluir usuário:', userId);
-          // TODO: Implementar via AJAX
-          Swal.fire({
-            title: 'Excluído!',
-            text: `Usuário "${userName}" foi excluído com sucesso.`,
-            icon: 'success',
-            timer: 2000,
-            showConfirmButton: false,
-            confirmButtonColor: '#10b981'
-          });
-        }
-      });
-    }
-
-    // CSS para animações melhoradas
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes fadeOutDown {
-        from { opacity: 1; transform: translateY(0); }
-        to { opacity: 0; transform: translateY(-10px); }
-      }
-    `;
-    document.head.appendChild(style);
-  </script>
+function addFilter(id, attr){
+  document.getElementById(id)?.addEventListener('change', function(){
+    const val = this.value
+    document.querySelectorAll('#usersTableBody tr, #mobileUsersCards .card').forEach(el=>{
+      el.style.display = !val || el.dataset[attr] === val ? '' : 'none'
+    })
+  })
+}
+addFilter('filterType','user_type')
+addFilter('filterStatus','status')
+</script>
 {% endblock %}
