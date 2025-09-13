@@ -8,63 +8,74 @@
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/equipe.css' %}" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
   <!-- Estatísticas Dashboard -->
-  <div class="row mb-5">
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
-      <div class="card gradient-card-primary h-100">
-        <div class="card-body text-center text-white">
-          <div class="icon-wrapper mb-3">
-            <i class="ti ti-users fs-1"></i>
+  {% if user.user_type == 'ADMIN' %}
+    <div class="row mb-5">
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
+        <div class="card gradient-card-primary h-100 animate-in">
+          <div class="card-body text-center text-white">
+            <div class="icon-wrapper mb-3">
+              <i class="ti ti-users fs-1"></i>
+            </div>
+            <h2 class="fw-bold mb-1">{{ membros|length|default:0 }}</h2>
+            <p class="mb-0 opacity-75">Total de Membros</p>
           </div>
-          <h2 class="fw-bold mb-1">156</h2>
-          <p class="mb-0 opacity-75">Total de Membros</p>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
+        <div class="card gradient-card-success h-100 animate-in" style="animation-delay: 0.1s;">
+          <div class="card-body text-center text-white">
+            <div class="icon-wrapper mb-3">
+              <i class="ti ti-user-check fs-1"></i>
+            </div>
+            <h2 class="fw-bold mb-1">{{ membros|length|default:0 }}</h2>
+            <p class="mb-0 opacity-75">Membros Ativos</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
+        <div class="card gradient-card-warning h-100 animate-in" style="animation-delay: 0.2s;">
+          <div class="card-body text-center text-white">
+            <div class="icon-wrapper mb-3">
+              <i class="ti ti-briefcase fs-1"></i>
+            </div>
+            <h2 class="fw-bold mb-1">
+              {% for membro in membros %}
+                {% if membro.user_type == 'SELLER' %}{{ forloop.counter }}{% endif %}
+              {% empty %}0{% endfor %}
+            </h2>
+            <p class="mb-0 opacity-75">Vendedores</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
+        <div class="card gradient-card-info h-100 animate-in" style="animation-delay: 0.3s;">
+          <div class="card-body text-center text-white">
+            <div class="icon-wrapper mb-3">
+              <i class="ti ti-shield-star fs-1"></i>
+            </div>
+            <h2 class="fw-bold mb-1">
+              {% for membro in membros %}
+                {% if membro.user_type == 'ADMIN' %}{{ forloop.counter }}{% endif %}
+              {% empty %}0{% endfor %}
+            </h2>
+            <p class="mb-0 opacity-75">Administradores</p>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
-      <div class="card gradient-card-success h-100">
-        <div class="card-body text-center text-white">
-          <div class="icon-wrapper mb-3">
-            <i class="ti ti-user-check fs-1"></i>
-          </div>
-          <h2 class="fw-bold mb-1">142</h2>
-          <p class="mb-0 opacity-75">Membros Ativos</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
-      <div class="card gradient-card-warning h-100">
-        <div class="card-body text-center text-white">
-          <div class="icon-wrapper mb-3">
-            <i class="ti ti-briefcase fs-1"></i>
-          </div>
-          <h2 class="fw-bold mb-1">89</h2>
-          <p class="mb-0 opacity-75">Vendedores</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-4">
-      <div class="card gradient-card-info h-100">
-        <div class="card-body text-center text-white">
-          <div class="icon-wrapper mb-3">
-            <i class="ti ti-shield-star fs-1"></i>
-          </div>
-          <h2 class="fw-bold mb-1">12</h2>
-          <p class="mb-0 opacity-75">Administradores</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% endif %}
 
   <!-- Card Principal de Gestão -->
-  <div class="card modern-card">
+  <div class="card modern-card animate-in" style="animation-delay: 0.4s;">
     <div class="card-header bg-gradient-light d-flex justify-content-between align-items-center py-4">
       <div>
         <h4 class="mb-1 fw-bold text-dark">
@@ -72,222 +83,259 @@
         </h4>
         <p class="text-muted mb-0">Gerencie membros e permissões da equipe</p>
       </div>
-      <button class="btn btn-primary-modern" data-bs-toggle="modal" data-bs-target="#teamMemberModal">
-        <i class="ti ti-user-plus me-2"></i>Adicionar Membro
-      </button>
+      {% if user.user_type == 'ADMIN' %}
+        <button class="btn btn-primary-modern" data-bs-toggle="modal" data-bs-target="#userFormModal">
+          <i class="ti ti-user-plus me-2"></i>
+          <span class="d-none d-sm-inline">Adicionar </span>Membro
+        </button>
+      {% endif %}
     </div>
 
     <div class="card-body p-4">
-      <!-- Filtros Avançados -->
-      <div class="row g-3 mb-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="form-floating">
-            <input type="text" class="form-control modern-input" id="searchMember" placeholder="Buscar membro...">
-            <label for="searchMember"><i class="ti ti-search me-2"></i>Buscar membro</label>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="form-floating">
-            <select class="form-select modern-select" id="filterRole">
-              <option value="">Todos os cargos</option>
-              <option value="admin">Administrador</option>
-              <option value="manager">Gerente</option>
-              <option value="seller">Vendedor</option>
-              <option value="support">Suporte</option>
-            </select>
-            <label for="filterRole"><i class="ti ti-user-cog me-2"></i>Filtrar por cargo</label>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="form-floating">
-            <select class="form-select modern-select" id="filterStatus">
-              <option value="">Todos os status</option>
-              <option value="active">Ativo</option>
-              <option value="inactive">Inativo</option>
-              <option value="pending">Pendente</option>
-            </select>
-            <label for="filterStatus"><i class="ti ti-activity me-2"></i>Filtrar por status</label>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-6">
-          <button class="btn btn-outline-secondary w-100 h-100" onclick="clearFilters()">
-            <i class="ti ti-filter-off me-2"></i>Limpar
-          </button>
-        </div>
-      </div>
-
-      <!-- Tabela Desktop -->
-      <div class="table-responsive d-none d-lg-block">
-        <table class="table table-hover align-middle modern-table">
-          <thead>
-            <tr>
-              <th scope="col">Membro</th>
-              <th scope="col">Cargo</th>
-              <th scope="col">Contato</th>
-              <th scope="col">Status</th>
-              <th scope="col">Último Acesso</th>
-              <th scope="col">Performance</th>
-              <th scope="col" class="text-center">Ações</th>
-            </tr>
-          </thead>
-          <tbody id="membersTable">
-            <tr data-role="admin" data-status="active">
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar-modern me-3">
-                    <img src="https://ui-avatars.com/api/?name=João+Silva&background=667eea&color=fff" alt="JS" class="rounded-circle">
-                  </div>
-                  <div>
-                    <h6 class="mb-0 fw-semibold">João Silva</h6>
-                    <small class="text-muted">@joao.silva</small>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span class="badge bg-danger-soft text-danger">
-                  <i class="ti ti-crown me-1"></i>Administrador
-                </span>
-              </td>
-              <td>
-                <div>
-                  <div class="mb-1"><i class="ti ti-mail me-1"></i>joao@empresa.com</div>
-                  <small class="text-muted"><i class="ti ti-phone me-1"></i>(11) 99999-9999</small>
-                </div>
-              </td>
-              <td>
-                <span class="status-badge status-active">
-                  <i class="ti ti-circle-check-filled me-1"></i>Ativo
-                </span>
-              </td>
-              <td>
-                <div>
-                  <div class="fw-medium">Hoje, 14:30</div>
-                  <small class="text-muted">há 2 horas</small>
-                </div>
-              </td>
-              <td>
-                <div class="progress-modern">
-                  <div class="progress-bar bg-success" style="width: 95%"></div>
-                </div>
-                <small class="text-muted">95% performance</small>
-              </td>
-              <td class="text-center">
-                <div class="dropdown">
-                  <button class="btn btn-light btn-sm rounded-pill" data-bs-toggle="dropdown">
-                    <i class="ti ti-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><i class="ti ti-eye me-2"></i>Visualizar</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="ti ti-edit me-2"></i>Editar</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="#"><i class="ti ti-trash me-2"></i>Remover</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-            
-            <tr data-role="seller" data-status="active">
-              <td>
-                <div class="d-flex align-items-center">
-                  <div class="avatar-modern me-3">
-                    <img src="https://ui-avatars.com/api/?name=Maria+Santos&background=10b981&color=fff" alt="MS" class="rounded-circle">
-                  </div>
-                  <div>
-                    <h6 class="mb-0 fw-semibold">Maria Santos</h6>
-                    <small class="text-muted">@maria.santos</small>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <span class="badge bg-success-soft text-success">
-                  <i class="ti ti-briefcase me-1"></i>Vendedor
-                </span>
-              </td>
-              <td>
-                <div>
-                  <div class="mb-1"><i class="ti ti-mail me-1"></i>maria@empresa.com</div>
-                  <small class="text-muted"><i class="ti ti-phone me-1"></i>(11) 88888-8888</small>
-                </div>
-              </td>
-              <td>
-                <span class="status-badge status-active">
-                  <i class="ti ti-circle-check-filled me-1"></i>Ativo
-                </span>
-              </td>
-              <td>
-                <div>
-                  <div class="fw-medium">Ontem, 18:45</div>
-                  <small class="text-muted">há 20 horas</small>
-                </div>
-              </td>
-              <td>
-                <div class="progress-modern">
-                  <div class="progress-bar bg-warning" style="width: 78%"></div>
-                </div>
-                <small class="text-muted">78% performance</small>
-              </td>
-              <td class="text-center">
-                <div class="dropdown">
-                  <button class="btn btn-light btn-sm rounded-pill" data-bs-toggle="dropdown">
-                    <i class="ti ti-dots-vertical"></i>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#"><i class="ti ti-eye me-2"></i>Visualizar</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="ti ti-edit me-2"></i>Editar</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item text-danger" href="#"><i class="ti ti-trash me-2"></i>Remover</a></li>
-                  </ul>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Cards Mobile -->
-      <div class="d-lg-none" id="mobileMemberCards">
-        <div class="member-card mb-3" data-role="admin" data-status="active">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <div class="d-flex align-items-center">
-                  <div class="avatar-modern me-3">
-                    <img src="https://ui-avatars.com/api/?name=João+Silva&background=667eea&color=fff" alt="JS" class="rounded-circle">
-                  </div>
-                  <div>
-                    <h6 class="mb-0 fw-semibold">João Silva</h6>
-                    <small class="text-muted">@joao.silva</small>
-                  </div>
-                </div>
-                <span class="badge bg-danger-soft text-danger">Admin</span>
-              </div>
-              <div class="row g-2 mb-3">
-                <div class="col-6">
-                  <small class="text-muted d-block">Status</small>
-                  <span class="status-badge status-active">Ativo</span>
-                </div>
-                <div class="col-6">
-                  <small class="text-muted d-block">Performance</small>
-                  <div class="progress-modern">
-                    <div class="progress-bar bg-success" style="width: 95%"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary btn-sm flex-fill">
-                  <i class="ti ti-eye me-1"></i>Ver
-                </button>
-                <button class="btn btn-outline-secondary btn-sm flex-fill">
-                  <i class="ti ti-edit me-1"></i>Editar
-                </button>
+      {% if user.user_type == 'ADMIN' %}
+        {% if membros %}
+          <!-- Filtros Avançados -->
+          <div class="row g-3 mb-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control modern-input" id="searchMember" placeholder="Buscar membro...">
+                <label for="searchMember"><i class="ti ti-search me-2"></i>Buscar membro</label>
               </div>
             </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="form-floating">
+                <select class="form-select modern-select" id="filterRole">
+                  <option value="">Todos os cargos</option>
+                  <option value="ADMIN">Administrador</option>
+                  <option value="MANAGER">Gerente</option>
+                  <option value="SELLER">Vendedor</option>
+                </select>
+                <label for="filterRole"><i class="ti ti-user-cog me-2"></i>Filtrar por cargo</label>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="form-floating">
+                <select class="form-select modern-select" id="filterStatus">
+                  <option value="">Todos os status</option>
+                  <option value="active">Ativo</option>
+                  <option value="inactive">Inativo</option>
+                </select>
+                <label for="filterStatus"><i class="ti ti-activity me-2"></i>Filtrar por status</label>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6">
+              <button class="btn btn-outline-secondary w-100 h-100" onclick="clearFilters()" style="border-radius: 12px;">
+                <i class="ti ti-filter-off me-2"></i>Limpar
+              </button>
+            </div>
+          </div>
+
+          <!-- Tabela Desktop -->
+          <div class="table-responsive d-none d-lg-block">
+            <table class="table table-hover align-middle modern-table">
+              <thead>
+                <tr>
+                  <th scope="col">Membro</th>
+                  <th scope="col">Cargo</th>
+                  <th scope="col">Contato</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Último Acesso</th>
+                  <th scope="col">Comissão</th>
+                  <th scope="col" class="text-center">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="membersTable">
+                {% for membro in membros %}
+                  <tr data-role="{{ membro.user_type }}" data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div class="avatar-modern me-3">
+                          <img src="https://ui-avatars.com/api/?name={{ membro.get_full_name|default:membro.username }}&background=667eea&color=fff" alt="{{ membro.get_full_name|first|default:membro.username|first }}" class="rounded">
+                        </div>
+                        <div>
+                          <h6 class="mb-0 fw-semibold">{{ membro.get_full_name|default:membro.username }}</h6>
+                          <small class="text-muted">@{{ membro.username }}</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="badge 
+                        {% if membro.user_type == 'ADMIN' %}bg-danger-soft text-danger
+                        {% elif membro.user_type == 'MANAGER' %}bg-warning-soft text-warning
+                        {% else %}bg-success-soft text-success
+                        {% endif %}">
+                        <i class="ti ti-{% if membro.user_type == 'ADMIN' %}crown{% elif membro.user_type == 'MANAGER' %}user-cog{% else %}briefcase{% endif %} me-1"></i>
+                        {{ membro.get_user_type_display }}
+                      </span>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="mb-1"><i class="ti ti-mail me-1"></i>{{ membro.email }}</div>
+                        {% if membro.phone %}
+                          <small class="text-muted"><i class="ti ti-phone me-1"></i>{{ membro.phone }}</small>
+                        {% endif %}
+                      </div>
+                    </td>
+                    <td>
+                      {% if membro.is_active %}
+                        <span class="status-badge status-active">
+                          <i class="ti ti-circle-check-filled me-1"></i>Ativo
+                        </span>
+                      {% else %}
+                        <span class="status-badge status-inactive">
+                          <i class="ti ti-circle-x-filled me-1"></i>Inativo
+                        </span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      <div>
+                        {% if membro.last_login %}
+                          <div class="fw-medium">{{ membro.last_login|date:"d/m/Y" }}</div>
+                          <small class="text-muted">{{ membro.last_login|date:"H:i" }}</small>
+                        {% else %}
+                          <div class="text-muted">Nunca acessou</div>
+                        {% endif %}
+                      </div>
+                    </td>
+                    <td>
+                      {% if membro.user_type == 'SELLER' %}
+                        <div class="progress-modern mb-1">
+                          <div class="progress-bar bg-success" style="width: {{ membro.commission_rate|floatformat:0 }}%"></div>
+                        </div>
+                        <small class="text-muted">{{ membro.commission_rate }}% comissão</small>
+                      {% else %}
+                        <small class="text-muted">—</small>
+                      {% endif %}
+                    </td>
+                    <td class="text-center">
+                      <div class="dropdown">
+                        <button class="btn btn-light btn-sm rounded-pill" data-bs-toggle="dropdown">
+                          <i class="ti ti-dots-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#" onclick="viewUser({{ membro.id }})"><i class="ti ti-eye me-2"></i>Visualizar</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="editUser({{ membro.id }})"><i class="ti ti-edit me-2"></i>Editar</a></li>
+                          {% if membro.id != user.id %}
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="toggleUserStatus({{ membro.id }}, {{ membro.is_active|yesno:'false,true' }})">
+                              <i class="ti ti-{% if membro.is_active %}ban{% else %}check{% endif %} me-2"></i>
+                              {% if membro.is_active %}Desativar{% else %}Ativar{% endif %}
+                            </a></li>
+                            <li><a class="dropdown-item text-danger" href="#" onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')"><i class="ti ti-trash me-2"></i>Remover</a></li>
+                          {% endif %}
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Cards Mobile -->
+          <div class="d-lg-none" id="mobileMemberCards">
+            {% for membro in membros %}
+              <div class="member-card mb-3" data-role="{{ membro.user_type }}" data-status="{% if membro.is_active %}active{% else %}inactive{% endif %}">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar-modern me-3">
+                          <img src="https://ui-avatars.com/api/?name={{ membro.get_full_name|default:membro.username }}&background=667eea&color=fff" alt="{{ membro.get_full_name|first|default:membro.username|first }}" class="rounded">
+                        </div>
+                        <div>
+                          <h6 class="mb-0 fw-semibold">{{ membro.get_full_name|default:membro.username }}</h6>
+                          <small class="text-muted">@{{ membro.username }}</small>
+                        </div>
+                      </div>
+                      <span class="badge 
+                        {% if membro.user_type == 'ADMIN' %}bg-danger-soft text-danger
+                        {% elif membro.user_type == 'MANAGER' %}bg-warning-soft text-warning
+                        {% else %}bg-success-soft text-success
+                        {% endif %}">
+                        {{ membro.get_user_type_display|truncatechars:5 }}
+                      </span>
+                    </div>
+                    
+                    <div class="row g-2 mb-3">
+                      <div class="col-6">
+                        <small class="text-muted d-block">Status</small>
+                        {% if membro.is_active %}
+                          <span class="status-badge status-active">Ativo</span>
+                        {% else %}
+                          <span class="status-badge status-inactive">Inativo</span>
+                        {% endif %}
+                      </div>
+                      <div class="col-6">
+                        <small class="text-muted d-block">
+                          {% if membro.user_type == 'SELLER' %}Comissão{% else %}Cargo{% endif %}
+                        </small>
+                        {% if membro.user_type == 'SELLER' %}
+                          <div class="progress-modern">
+                            <div class="progress-bar bg-success" style="width: {{ membro.commission_rate|floatformat:0 }}%"></div>
+                          </div>
+                          <small class="text-muted">{{ membro.commission_rate }}%</small>
+                        {% else %}
+                          <small class="fw-medium">{{ membro.get_user_type_display }}</small>
+                        {% endif %}
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <small class="text-muted d-block">Contato</small>
+                      <div class="small">{{ membro.email }}</div>
+                      {% if membro.phone %}
+                        <div class="small text-muted">{{ membro.phone }}</div>
+                      {% endif %}
+                    </div>
+                    
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button class="btn btn-outline-primary btn-sm flex-fill" onclick="viewUser({{ membro.id }})">
+                        <i class="ti ti-eye me-1"></i>Ver
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm flex-fill" onclick="editUser({{ membro.id }})">
+                        <i class="ti ti-edit me-1"></i>Editar
+                      </button>
+                      {% if membro.id != user.id %}
+                        <button class="btn btn-outline-danger btn-sm" onclick="deleteUser({{ membro.id }}, '{{ membro.get_full_name|default:membro.username }}')" title="Remover">
+                          <i class="ti ti-trash"></i>
+                        </button>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+        {% else %}
+          <!-- Estado Vazio -->
+          <div class="empty-state">
+            <i class="ti ti-users-off"></i>
+            <h5 class="fw-bold">Nenhum membro cadastrado</h5>
+            <p>Comece adicionando o primeiro membro da sua equipe para gerenciar usuários e permissões.</p>
+            <button class="btn btn-primary-modern btn-lg" data-bs-toggle="modal" data-bs-target="#userFormModal">
+              <i class="ti ti-user-plus me-2"></i>Adicionar Primeiro Membro
+            </button>
+          </div>
+        {% endif %}
+      {% else %}
+        <!-- Acesso Negado -->
+        <div class="empty-state">
+          <i class="ti ti-shield-x"></i>
+          <div class="alert alert-warning border-0 d-inline-block" style="background: rgba(245, 158, 11, 0.1); color: #d97706;">
+            <h6 class="fw-bold mb-2">
+              <i class="ti ti-info-circle me-2"></i>Acesso Restrito
+            </h6>
+            <p class="mb-0">Você não tem permissão para gerenciar a equipe. Entre em contato com um administrador.</p>
           </div>
         </div>
-      </div>
+      {% endif %}
     </div>
   </div>
-</div>  
+</div>
+
+<!-- Modal de Formulário -->
 {% if user.user_type == 'ADMIN' %}
   {% include 'accounts/includes/create_user.html' %}
 {% endif %}
@@ -297,23 +345,412 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="{% static 'js/equipe.js' %}"></script>
 
-<script>
-document.getElementById('searchUsers')?.addEventListener('input', function(){
-  const term = this.value.toLowerCase()
-  document.querySelectorAll('#usersTableBody tr, #mobileUsersCards .card').forEach(el=>{
-    el.style.display = el.textContent.toLowerCase().includes(term) ? '' : 'none'
-  })
-})
-
-function addFilter(id, attr){
-  document.getElementById(id)?.addEventListener('change', function(){
-    const val = this.value
-    document.querySelectorAll('#usersTableBody tr, #mobileUsersCards .card').forEach(el=>{
-      el.style.display = !val || el.dataset[attr] === val ? '' : 'none'
+{% if form.errors %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = new bootstrap.Modal(document.getElementById('userFormModal'))
+      modal.show()
     })
-  })
+  </script>
+{% endif %}
+
+<script>
+// Animações de entrada
+document.addEventListener('DOMContentLoaded', function() {
+  // Aplicar animações em sequência
+  const elements = document.querySelectorAll('.animate-in');
+  elements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.1}s`;
+  });
+});
+
+// Sistema de busca e filtros
+let searchTimeout;
+
+function performSearch() {
+  const searchTerm = document.getElementById('searchMember')?.value.toLowerCase() || '';
+  const roleFilter = document.getElementById('filterRole')?.value || '';
+  const statusFilter = document.getElementById('filterStatus')?.value || '';
+
+  // Filtrar tabela desktop
+  const desktopRows = document.querySelectorAll('#membersTable tr[data-role]');
+  desktopRows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const role = row.dataset.role;
+    const status = row.dataset.status;
+    
+    const matchesSearch = !searchTerm || text.includes(searchTerm);
+    const matchesRole = !roleFilter || role === roleFilter;
+    const matchesStatus = !statusFilter || status === statusFilter;
+    
+    const shouldShow = matchesSearch && matchesRole && matchesStatus;
+    row.style.display = shouldShow ? '' : 'none';
+    
+    if (shouldShow) {
+      row.classList.add('animate-in');
+    }
+  });
+
+  // Filtrar cards mobile
+  const mobileCards = document.querySelectorAll('#mobileMemberCards .member-card[data-role]');
+  mobileCards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    const role = card.dataset.role;
+    const status = card.dataset.status;
+    
+    const matchesSearch = !searchTerm || text.includes(searchTerm);
+    const matchesRole = !roleFilter || role === roleFilter;
+    const matchesStatus = !statusFilter || status === statusFilter;
+    
+    const shouldShow = matchesSearch && matchesRole && matchesStatus;
+    card.style.display = shouldShow ? '' : 'none';
+    
+    if (shouldShow) {
+      card.classList.add('animate-in');
+    }
+  });
 }
-addFilter('filterType','user_type')
-addFilter('filterStatus','status')
+
+// Event listeners para filtros
+document.getElementById('searchMember')?.addEventListener('input', function() {
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(performSearch, 300);
+});
+
+document.getElementById('filterRole')?.addEventListener('change', performSearch);
+document.getElementById('filterStatus')?.addEventListener('change', performSearch);
+
+// Função para limpar filtros
+function clearFilters() {
+  const searchInput = document.getElementById('searchMember');
+  const roleFilter = document.getElementById('filterRole');
+  const statusFilter = document.getElementById('filterStatus');
+  
+  if (searchInput) searchInput.value = '';
+  if (roleFilter) roleFilter.value = '';
+  if (statusFilter) statusFilter.value = '';
+  
+  performSearch();
+  
+  // Feedback visual
+  const clearBtn = event.target;
+  const originalText = clearBtn.innerHTML;
+  clearBtn.innerHTML = '<i class="ti ti-check me-2"></i>Limpo!';
+  clearBtn.classList.add('btn-success');
+  
+  setTimeout(() => {
+    clearBtn.innerHTML = originalText;
+    clearBtn.classList.remove('btn-success');
+  }, 1000);
+}
+
+// Funções para ações dos usuários
+function viewUser(userId) {
+  Swal.fire({
+    title: 'Visualizar Usuário',
+    text: `Carregando informações do usuário ${userId}...`,
+    icon: 'info',
+    timer: 2000,
+    showConfirmButton: false,
+    confirmButtonColor: '#667eea'
+  });
+  console.log('Visualizar usuário:', userId);
+  // TODO: Implementar modal de visualização ou redirecionamento
+}
+
+function editUser(userId) {
+  Swal.fire({
+    title: 'Editar Usuário',
+    text: 'Funcionalidade de edição será implementada em breve.',
+    icon: 'info',
+    confirmButtonColor: '#667eea',
+    confirmButtonText: 'Entendido'
+  });
+  console.log('Editar usuário:', userId);
+  // TODO: Implementar modal de edição
+}
+
+function toggleUserStatus(userId, newStatus) {
+  const statusText = newStatus ? 'ativar' : 'desativar';
+  
+  Swal.fire({
+    title: 'Confirmar alteração',
+    text: `Deseja ${statusText} este usuário?`,
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: newStatus ? '#10b981' : '#f59e0b',
+    cancelButtonColor: '#6b7280',
+    confirmButtonText: `Sim, ${statusText}!`,
+    cancelButtonText: 'Cancelar',
+    backdrop: `rgba(${newStatus ? '16, 185, 129' : '245, 158, 11'}, 0.1)`,
+    customClass: {
+      popup: 'border-0 shadow-lg',
+      confirmButton: 'px-4',
+      cancelButton: 'px-4'
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Mostrar loading
+      Swal.fire({
+        title: 'Processando...',
+        text: `${newStatus ? 'Ativando' : 'Desativando'} usuário`,
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+          Swal.showLoading();
+        }
+      });
+
+      // Simular requisição (substituir por AJAX real)
+      setTimeout(() => {
+        Swal.fire({
+          title: 'Sucesso!',
+          text: `Usuário ${newStatus ? 'ativado' : 'desativado'} com sucesso.`,
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
+          confirmButtonColor: '#10b981'
+        });
+        
+        // Atualizar interface
+        updateUserStatusInDOM(userId, newStatus);
+      }, 1500);
+      
+      console.log('Alterar status do usuário:', userId, 'para:', newStatus);
+      // TODO: Implementar via AJAX
+    }
+  });
+}
+
+function deleteUser(userId, userName) {
+  Swal.fire({
+    title: 'Tem certeza?',
+    html: `Deseja remover o usuário "<strong>${userName}</strong>"?<br><small class="text-muted">Esta ação não pode ser desfeita.</small>`,
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#ef4444',
+    cancelButtonColor: '#6b7280',
+    confirmButtonText: 'Sim, remover!',
+    cancelButtonText: 'Cancelar',
+    backdrop: 'rgba(239, 68, 68, 0.1)',
+    customClass: {
+      popup: 'border-0 shadow-lg',
+      confirmButton: 'px-4',
+      cancelButton: 'px-4'
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Mostrar loading
+      Swal.fire({
+        title: 'Processando...',
+        text: 'Removendo usuário do sistema',
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        willOpen: () => {
+          Swal.showLoading();
+        }
+      });
+
+      // Simular requisição (substituir por AJAX real)
+      setTimeout(() => {
+        Swal.fire({
+          title: 'Removido!',
+          text: `Usuário "${userName}" foi removido com sucesso.`,
+          icon: 'success',
+          timer: 2000,
+          showConfirmButton: false,
+          confirmButtonColor: '#10b981'
+        });
+        
+        // Remover elemento da interface com animação
+        removeUserFromDOM(userId);
+      }, 1500);
+      
+      console.log('Remover usuário:', userId);
+      // TODO: Implementar via AJAX
+    }
+  });
+}
+
+// Funções auxiliares para atualizar DOM
+function updateUserStatusInDOM(userId, isActive) {
+  // Atualizar na tabela
+  const tableRow = document.querySelector(`#membersTable tr[data-user-id="${userId}"]`);
+  if (tableRow) {
+    const statusCell = tableRow.querySelector('.status-badge');
+    if (statusCell) {
+      statusCell.className = `status-badge ${isActive ? 'status-active' : 'status-inactive'}`;
+      statusCell.innerHTML = `<i class="ti ti-circle-${isActive ? 'check' : 'x'}-filled me-1"></i>${isActive ? 'Ativo' : 'Inativo'}`;
+    }
+    tableRow.dataset.status = isActive ? 'active' : 'inactive';
+  }
+  
+  // Atualizar no card mobile
+  const mobileCard = document.querySelector(`#mobileMemberCards .member-card[data-user-id="${userId}"]`);
+  if (mobileCard) {
+    const statusBadge = mobileCard.querySelector('.status-badge');
+    if (statusBadge) {
+      statusBadge.className = `status-badge ${isActive ? 'status-active' : 'status-inactive'}`;
+      statusBadge.innerHTML = isActive ? 'Ativo' : 'Inativo';
+    }
+    mobileCard.dataset.status = isActive ? 'active' : 'inactive';
+  }
+}
+
+function removeUserFromDOM(userId) {
+  // Remover da tabela com animação
+  const tableRow = document.querySelector(`#membersTable tr[data-user-id="${userId}"]`);
+  if (tableRow) {
+    tableRow.style.animation = 'fadeOutDown 0.4s ease';
+    setTimeout(() => tableRow.remove(), 400);
+  }
+  
+  // Remover do card mobile com animação
+  const mobileCard = document.querySelector(`#mobileMemberCards .member-card[data-user-id="${userId}"]`);
+  if (mobileCard) {
+    mobileCard.style.animation = 'fadeOutDown 0.4s ease';
+    setTimeout(() => mobileCard.remove(), 400);
+  }
+}
+
+// Melhorar UX dos dropdowns em mobile
+document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
+  dropdown.addEventListener('click', function(e) {
+    // Fechar outros dropdowns
+    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+      if (menu !== this.nextElementSibling) {
+        menu.classList.remove('show');
+      }
+    });
+  });
+});
+
+// Fechar dropdowns ao clicar fora
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  }
+});
+
+// Melhorar feedback visual nos inputs
+document.querySelectorAll('.modern-input, .modern-select').forEach(element => {
+  element.addEventListener('focus', function() {
+    this.closest('.form-floating').style.transform = 'scale(1.02)';
+    this.closest('.form-floating').style.transition = 'transform 0.2s ease';
+  });
+  
+  element.addEventListener('blur', function() {
+    this.closest('.form-floating').style.transform = 'scale(1)';
+  });
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  // Ctrl/Cmd + F para focar na busca
+  if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+    e.preventDefault();
+    document.getElementById('searchMember')?.focus();
+  }
+  
+  // ESC para limpar filtros
+  if (e.key === 'Escape') {
+    clearFilters();
+  }
+});
+
+// Tooltip para ações em mobile
+if (window.innerWidth <= 768) {
+  // Inicializar tooltips do Bootstrap se disponível
+  if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+      new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }
+}
+
+// Contador de resultados visíveis
+function updateResultsCounter() {
+  const visibleDesktopRows = document.querySelectorAll('#membersTable tr[data-role][style=""], #membersTable tr[data-role]:not([style])').length;
+  const visibleMobileCards = document.querySelectorAll('#mobileMemberCards .member-card[style=""], #mobileMemberCards .member-card:not([style])').length;
+  
+  const visibleCount = window.innerWidth > 992 ? visibleDesktopRows : visibleMobileCards;
+  
+  // Atualizar contador se existir elemento para isso
+  const counterElement = document.getElementById('resultsCounter');
+  if (counterElement) {
+    counterElement.textContent = `${visibleCount} membro${visibleCount !== 1 ? 's' : ''} encontrado${visibleCount !== 1 ? 's' : ''}`;
+  }
+}
+
+// Observar mudanças de tela para otimizar performance
+let resizeTimeout;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    updateResultsCounter();
+  }, 250);
+});
+
+// Inicialização final
+document.addEventListener('DOMContentLoaded', function() {
+  // Contar resultados iniciais
+  setTimeout(updateResultsCounter, 500);
+  
+  // Adicionar classes de animação escalonadas
+  document.querySelectorAll('#membersTable tr, #mobileMemberCards .member-card').forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.05}s`;
+    el.classList.add('animate-in');
+  });
+});
+
+// CSS adicional para animações
+const additionalStyles = document.createElement('style');
+additionalStyles.textContent = `
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  .swal2-popup {
+    border-radius: 16px !important;
+  }
+  
+  .swal2-styled.swal2-confirm {
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+  }
+  
+  .swal2-styled.swal2-cancel {
+    border-radius: 10px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+  }
+  
+  /* Melhorar responsividade da tabela */
+  @media (max-width: 1200px) {
+    .modern-table th:nth-child(6),
+    .modern-table td:nth-child(6) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .modern-table th:nth-child(5),
+    .modern-table td:nth-child(5) {
+      display: none;
+    }
+  }
+`;
+document.head.appendChild(additionalStyles);
 </script>
 {% endblock %}
