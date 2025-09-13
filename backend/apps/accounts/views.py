@@ -85,3 +85,19 @@ class EquipeView(View):
                 extra_tags='danger'
             )
         return render(request, self.template_name, {'form': form, 'membros': membros})
+
+
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+
+class MeuPerfilView(View):
+    template_name = 'accounts/meu_perfil.html'
+
+    @method_decorator(login_required)
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {
+            'user': request.user
+        })  
+    
+    
+    

@@ -1,223 +1,427 @@
-{% load widget_tweaks %}
-<!-- Modal de Múltiplos Passos -->
-<div class="modal fade" id="userFormModal" tabindex="-1" aria-labelledby="userFormModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
-      <!-- Cabeçalho -->
-      <div class="modal-header text-white bg-gradient-primary px-4 py-3">
-        <h5 class="modal-title d-flex align-items-center" id="userFormModalLabel"><i class="ti ti-user-plus me-2"></i>Novo Usuário</h5>
+<!-- Modal de Gestão de Membro -->
+<div class="modal fade" id="teamMemberModal" tabindex="-1" aria-labelledby="teamMemberModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <!-- Cabeçalho Moderno -->
+      <div class="modal-header bg-gradient-primary text-white border-0 p-4">
+        <h5 class="modal-title fw-bold d-flex align-items-center" id="teamMemberModalLabel">
+          <i class="ti ti-user-plus me-3 fs-4"></i>Adicionar Novo Membro
+        </h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
       </div>
 
-      <!-- Barra de Progresso dos Passos -->
-      <div class="px-4 pt-4">
-        <div class="step-progress">
-          <div class="step-progress-bar" id="progressBar"></div>
-
-          <div class="step-item" data-step="1">
-            <div class="step-circle active" id="step-circle-1">
+      <!-- Indicador de Progress Steps -->
+      <div class="px-4 pt-4 pb-0">
+        <div class="step-indicator">
+          <div class="step-progress-line"></div>
+          
+          <div class="step-item active" data-step="1">
+            <div class="step-number">
               <i class="ti ti-user"></i>
             </div>
-            <div class="step-label active">Dados Pessoais</div>
+            <div class="step-title">Informações Pessoais</div>
           </div>
-
+          
           <div class="step-item" data-step="2">
-            <div class="step-circle" id="step-circle-2">
+            <div class="step-number">
               <i class="ti ti-address-book"></i>
             </div>
-            <div class="step-label">Contato</div>
+            <div class="step-title">Contato & Localização</div>
           </div>
-
+          
           <div class="step-item" data-step="3">
-            <div class="step-circle" id="step-circle-3">
-              <i class="ti ti-key"></i>
+            <div class="step-number">
+              <i class="ti ti-lock"></i>
             </div>
-            <div class="step-label">Login</div>
+            <div class="step-title">Credenciais</div>
           </div>
-
+          
           <div class="step-item" data-step="4">
-            <div class="step-circle" id="step-circle-4">
-              <i class="ti ti-settings"></i>
+            <div class="step-number">
+              <i class="ti ti-settings-2"></i>
             </div>
-            <div class="step-label">Permissões</div>
+            <div class="step-title">Permissões & Configurações</div>
           </div>
         </div>
       </div>
 
-      <!-- Formulário Django com widget_tweaks -->
-      <form id="userForm" action="{% url 'accounts:equipe' %}" method="POST" novalidate>
-        {% csrf_token %}
-        <div class="modal-body p-4 pt-2">
-          <!-- Passo 1: Dados Pessoais -->
+      <!-- Formulário Multi-Step -->
+      <form id="teamMemberForm" novalidate>
+        <div class="modal-body p-4">
+          <!-- Step 1: Informações Pessoais -->
           <div class="step-content active" id="step-1">
-            <section class="mb-4">
-              <h6 class="section-title"><i class="ti ti-id me-1"></i>Dados Pessoais</h6>
-              <div class="row g-3">
-                <div class="col-12">
-                  <label for="{{ form.first_name.id_for_label }}" class="form-label required">Nome Completo</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-user input-icon"></i>
-                    {{ form.first_name|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.first_name.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
-                </div>
-
-                <div class="col-md-6">
-                  <label for="{{ form.document.id_for_label }}" class="form-label required">Documento (CPF/CNPJ)</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-id-badge input-icon"></i>
-                    {{ form.document|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.document.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
-                </div>
-
-                <div class="col-md-6">
-                  <label for="{{ form.birth_date.id_for_label }}" class="form-label">Data de Nascimento</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-calendar input-icon"></i>
-                    {{ form.birth_date|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.birth_date.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
+            <div class="section-header mb-4">
+              <h6 class="section-title">
+                <i class="ti ti-id-badge me-2"></i>Dados Pessoais
+              </h6>
+              <p class="text-muted mb-0">Informações básicas do membro da equipe</p>
+            </div>
+            
+            <div class="row g-4">
+              <div class="col-md-8">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="fullName" placeholder="Nome completo" required>
+                  <label for="fullName"><i class="ti ti-user me-2"></i>Nome Completo *</label>
+                  <div class="invalid-feedback">Por favor, informe o nome completo</div>
                 </div>
               </div>
-            </section>
+              
+              <div class="col-md-4">
+                <div class="form-floating">
+                  <input type="date" class="form-control modern-input" id="birthDate">
+                  <label for="birthDate"><i class="ti ti-calendar me-2"></i>Data de Nascimento</label>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="document" placeholder="000.000.000-00" required>
+                  <label for="document"><i class="ti ti-id me-2"></i>CPF/CNPJ *</label>
+                  <div class="invalid-feedback">Documento inválido</div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select modern-select" id="gender">
+                    <option value="">Selecionar...</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="O">Outro</option>
+                    <option value="N">Prefiro não informar</option>
+                  </select>
+                  <label for="gender"><i class="ti ti-gender-bigender me-2"></i>Gênero</label>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Passo 2: Contato -->
+          <!-- Step 2: Contato & Localização -->
           <div class="step-content" id="step-2">
-            <section class="mb-4">
-              <h6 class="section-title"><i class="ti ti-address-book me-1"></i>Informações de Contato</h6>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="{{ form.email.id_for_label }}" class="form-label required">Email</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-mail input-icon"></i>
-                    {{ form.email|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.email.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
-                </div>
-                <div class="col-md-6">
-                  <label for="{{ form.phone.id_for_label }}" class="form-label">Telefone</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-phone input-icon"></i>
-                    {{ form.phone|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.phone.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
+            <div class="section-header mb-4">
+              <h6 class="section-title">
+                <i class="ti ti-address-book me-2"></i>Informações de Contato
+              </h6>
+              <p class="text-muted mb-0">Como entrar em contato e localização</p>
+            </div>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control modern-input" id="email" placeholder="email@exemplo.com" required>
+                  <label for="email"><i class="ti ti-mail me-2"></i>E-mail Corporativo *</label>
+                  <div class="invalid-feedback">E-mail inválido</div>
                 </div>
               </div>
-            </section>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control modern-input" id="phone" placeholder="(11) 99999-9999">
+                  <label for="phone"><i class="ti ti-phone me-2"></i>Telefone/WhatsApp</label>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="zipCode" placeholder="00000-000">
+                  <label for="zipCode"><i class="ti ti-map-pin me-2"></i>CEP</label>
+                </div>
+              </div>
+              
+              <div class="col-md-8">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="address" placeholder="Rua, Avenida...">
+                  <label for="address"><i class="ti ti-home me-2"></i>Endereço Completo</label>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="city" placeholder="Nome da cidade">
+                  <label for="city"><i class="ti ti-building-community me-2"></i>Cidade</label>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select modern-select" id="state">
+                    <option value="">Selecionar Estado...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                  <label for="state"><i class="ti ti-map me-2"></i>Estado</label>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Passo 3: Login e Acesso -->
+          <!-- Step 3: Credenciais -->
           <div class="step-content" id="step-3">
-            <section class="mb-4">
-              <h6 class="section-title"><i class="ti ti-key me-1"></i>Login e Acesso</h6>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="{{ form.username.id_for_label }}" class="form-label required">Nome de Usuário</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-at input-icon"></i>
-                    {{ form.username|add_class:'form-control' }}
+            <div class="section-header mb-4">
+              <h6 class="section-title">
+                <i class="ti ti-key me-2"></i>Credenciais de Acesso
+              </h6>
+              <p class="text-muted mb-0">Configurações de login e segurança</p>
+            </div>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control modern-input" id="username" placeholder="usuario123" required>
+                  <label for="username"><i class="ti ti-at me-2"></i>Nome de Usuário *</label>
+                  <div class="form-text">
+                    <i class="ti ti-info-circle me-1"></i>
+                    Apenas letras, números e underscore. Mínimo 3 caracteres.
                   </div>
-                  <small class="text-muted">Este será usado para fazer login</small>
-                  {% for error in form.username.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
-                </div>
-
-                <div class="col-md-6">
-                  <label for="{{ form.password1.id_for_label }}" class="form-label">Senha</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-lock input-icon"></i>
-                    {{ form.password1|add_class:'form-control' }}
-                  </div>
-                  <div class="password-strength mt-1">
-                    <div class="password-strength-bar" id="passwordStrengthBar"></div>
-                  </div>
-                  <small class="text-muted">Mínimo 8 caracteres</small>
-                  {% for error in form.password1.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
-                </div>
-
-                <div class="col-md-6">
-                  <label for="{{ form.password2.id_for_label }}" class="form-label">Confirme a Senha</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-lock-check input-icon"></i>
-                    {{ form.password2|add_class:'form-control' }}
-                  </div>
-                  {% for error in form.password2.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
+                  <div class="invalid-feedback">Nome de usuário inválido</div>
                 </div>
               </div>
-            </section>
+              
+              <div class="col-md-6">
+                <div class="form-floating position-relative">
+                  <input type="password" class="form-control modern-input" id="password" placeholder="Senha forte" required>
+                  <label for="password"><i class="ti ti-lock me-2"></i>Senha *</label>
+                  <button type="button" class="btn btn-outline-secondary password-toggle" onclick="togglePassword('password')">
+                    <i class="ti ti-eye"></i>
+                  </button>
+                  <div class="password-strength mt-2">
+                    <div class="strength-bar">
+                      <div class="strength-fill"></div>
+                    </div>
+                    <small class="strength-text text-muted">Digite uma senha</small>
+                  </div>
+                  <div class="invalid-feedback">Senha deve ter pelo menos 8 caracteres</div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating position-relative">
+                  <input type="password" class="form-control modern-input" id="confirmPassword" placeholder="Confirme a senha" required>
+                  <label for="confirmPassword"><i class="ti ti-lock-check me-2"></i>Confirmar Senha *</label>
+                  <button type="button" class="btn btn-outline-secondary password-toggle" onclick="togglePassword('confirmPassword')">
+                    <i class="ti ti-eye"></i>
+                  </button>
+                  <div class="invalid-feedback">As senhas não coincidem</div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="security-options">
+                  <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                    <label class="form-check-label" for="twoFactorAuth">
+                      <i class="ti ti-shield-check me-2"></i>Autenticação de Dois Fatores
+                    </label>
+                  </div>
+                  
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="forcePasswordChange" checked>
+                    <label class="form-check-label" for="forcePasswordChange">
+                      <i class="ti ti-refresh me-2"></i>Forçar troca de senha no primeiro login
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Passo 4: Permissões -->
+          <!-- Step 4: Permissões & Configurações -->
           <div class="step-content" id="step-4">
-            <section>
-              <h6 class="section-title"><i class="ti ti-settings me-1"></i>Tipo e Permissões</h6>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="{{ form.user_type.id_for_label }}" class="form-label required">Tipo de Usuário</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-user-cog input-icon"></i>
-                    {{ form.user_type|add_class:'form-select' }}
-                  </div>
-                  {% for error in form.user_type.errors %}
-                    <div class="text-danger small">{{ error }}</div>
-                  {% endfor %}
+            <div class="section-header mb-4">
+              <h6 class="section-title">
+                <i class="ti ti-settings-2 me-2"></i>Permissões e Configurações
+              </h6>
+              <p class="text-muted mb-0">Defina o cargo, permissões e configurações específicas</p>
+            </div>
+            
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select modern-select" id="userRole" required>
+                    <option value="">Selecionar Cargo...</option>
+                    <option value="admin">Administrador</option>
+                    <option value="manager">Gerente</option>
+                    <option value="seller">Vendedor</option>
+                    <option value="support">Suporte</option>
+                    <option value="analyst">Analista</option>
+                  </select>
+                  <label for="userRole"><i class="ti ti-user-cog me-2"></i>Cargo/Função *</label>
+                  <div class="invalid-feedback">Selecione um cargo</div>
                 </div>
-
-                <div class="col-md-6">
-                  <label for="commission_rate" class="form-label">Taxa de Comissão (%)</label>
-                  <div class="input-icon-group">
-                    <i class="ti ti-percentage input-icon"></i>
-                    <input type="number" class="form-control" id="commission_rate" name="commission_rate" step="0.01" min="0" max="100" placeholder="0.00" />
-                  </div>
-                  <small class="text-muted">Digite o percentual (ex: 5.50 para 5,50%)</small>
-                  {% if form.commission_rate.errors %}
-                    {% for error in form.commission_rate.errors %}
-                      <div class="text-danger small">{{ error }}</div>
-                    {% endfor %}
-                  {% endif %}
+              </div>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select modern-select" id="department">
+                    <option value="">Selecionar Departamento...</option>
+                    <option value="vendas">Vendas</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="rh">Recursos Humanos</option>
+                    <option value="ti">Tecnologia da Informação</option>
+                    <option value="suporte">Suporte ao Cliente</option>
+                  </select>
+                  <label for="department"><i class="ti ti-building-store me-2"></i>Departamento</label>
                 </div>
-
-                <div class="col-12">
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="is_active" name="is_active" checked />
-                    <label class="form-check-label" for="is_active"><i class="ti ti-toggle-right me-1"></i>Usuário Ativo</label>
-                    <small class="text-muted d-block">O usuário pode fazer login no sistema</small>
+              </div>
+              
+              <div class="col-md-6" id="commissionField" style="display: none;">
+                <div class="form-floating">
+                  <input type="number" class="form-control modern-input" id="commissionRate" min="0" max="100" step="0.5" placeholder="5.5">
+                  <label for="commissionRate"><i class="ti ti-percentage me-2"></i>Taxa de Comissão (%)</label>
+                  <div class="form-text">
+                    <i class="ti ti-info-circle me-1"></i>
+                    Percentual de comissão sobre vendas (ex: 5.5 para 5,5%)
                   </div>
                 </div>
               </div>
-            </section>
+              
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="date" class="form-control modern-input" id="startDate" required>
+                  <label for="startDate"><i class="ti ti-calendar-event me-2"></i>Data de Início *</label>
+                  <div class="invalid-feedback">Selecione a data de início</div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="permissions-section p-4 bg-light rounded-3">
+                  <h6 class="fw-bold mb-3">
+                    <i class="ti ti-shield-lock me-2"></i>Permissões de Sistema
+                  </h6>
+                  
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <div class="permission-group">
+                        <h6 class="permission-title">Vendas</h6>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_view_sales">
+                          <label class="form-check-label" for="perm_view_sales">Visualizar vendas</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_create_sales">
+                          <label class="form-check-label" for="perm_create_sales">Criar vendas</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_edit_sales">
+                          <label class="form-check-label" for="perm_edit_sales">Editar vendas</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class="permission-group">
+                        <h6 class="permission-title">Clientes</h6>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_view_customers">
+                          <label class="form-check-label" for="perm_view_customers">Visualizar clientes</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_manage_customers">
+                          <label class="form-check-label" for="perm_manage_customers">Gerenciar clientes</label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class="permission-group">
+                        <h6 class="permission-title">Relatórios</h6>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_view_reports">
+                          <label class="form-check-label" for="perm_view_reports">Ver relatórios</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="perm_export_data">
+                          <label class="form-check-label" for="perm_export_data">Exportar dados</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="status-section">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="isActive" checked>
+                        <label class="form-check-label" for="isActive">
+                          <i class="ti ti-toggle-right me-2"></i>Conta Ativa
+                        </label>
+                        <small class="form-text text-muted d-block">O usuário poderá fazer login no sistema</small>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="sendWelcomeEmail" checked>
+                        <label class="form-check-label" for="sendWelcomeEmail">
+                          <i class="ti ti-mail me-2"></i>Enviar E-mail de Boas-vindas
+                        </label>
+                        <small class="form-text text-muted d-block">Envia credenciais por e-mail</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Rodapé com botões de navegação -->
-        <div class="modal-footer bg-light px-4 py-3">
-          <div class="d-flex justify-content-between w-100 align-items-center">
-            <div class="text-muted small d-flex align-items-center">
-              <i class="ti ti-info-circle me-2"></i>
-              <span id="step-info">Passo 1 de 4</span>
+        <!-- Rodapé do Modal com Navegação -->
+        <div class="modal-footer bg-light border-0 px-4 py-3">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <!-- Indicador de Progresso -->
+            <div class="step-indicator-footer">
+              <span class="text-muted">
+                <i class="ti ti-progress me-2"></i>
+                <span id="stepCounter">Passo 1 de 4</span>
+              </span>
             </div>
-            <div class="d-flex gap-2">
-              <button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="ti ti-x me-1"></i>Cancelar</button>
-              <button type="button" class="btn btn-outline-primary btn-step" id="prevBtn" style="display: none;" onclick="changeStep(-1)"><i class="ti ti-chevron-left me-1"></i>Anterior</button>
-              <button type="button" class="btn btn-primary btn-step" id="nextBtn" onclick="changeStep(1)">Próximo<i class="ti ti-chevron-right ms-1"></i></button>
-              <button type="submit" class="btn btn-success btn-step" id="submitBtn" style="display: none;"><i class="ti ti-check me-1"></i>Salvar Usuário</button>
+            
+            <!-- Botões de Navegação -->
+            <div class="button-group">
+              <button type="button" class="btn btn-light me-2" data-bs-dismiss="modal">
+                <i class="ti ti-x me-2"></i>Cancelar
+              </button>
+              
+              <button type="button" class="btn btn-outline-primary me-2" id="prevStepBtn" style="display: none;" onclick="previousStep()">
+                <i class="ti ti-chevron-left me-2"></i>Anterior
+              </button>
+              
+              <button type="button" class="btn btn-primary" id="nextStepBtn" onclick="nextStep()">
+                Próximo<i class="ti ti-chevron-right ms-2"></i>
+              </button>
+              
+              <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
+                <i class="ti ti-check me-2"></i>Criar Membro
+              </button>
             </div>
           </div>
         </div>
